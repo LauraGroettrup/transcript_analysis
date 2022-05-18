@@ -11,6 +11,7 @@
 library(data.table)
 library(dplyr)
 library(rvest)
+library(stringi)
 library(stringr)
 library(readr)
 library(filesstrings)
