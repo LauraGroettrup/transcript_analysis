@@ -34,7 +34,7 @@ clean_transcript <- function(filepath){
     line <- gsub("  ", "", line)
     line <- sub(':',':::', line)
     if(str_starts(line, "[^:]+:::.+")){
-      if(!str_starts(line, "Category") & (!str_starts(line, "es:")) & (!str_starts(line, "pl:")) & (!str_starts(line, "fr:")) & (!str_starts(line, "ja:")) & (!str_starts(line, "de:"))){ 
+      if(!str_starts(line, "Category") & (!str_starts(line, "es:")) & (!str_starts(line, "pl:")) & (!str_starts(line, "fr:")) & (!str_starts(line, "ja:")) & (!str_starts(line, "de:"))& (!str_starts(line, "{"))){ 
         cleaned_transcript <- append(cleaned_transcript, line)
       } 
     }

@@ -3,7 +3,7 @@ source("./metainfo_series_miraculous_Martin.R")
 
 process_transcript<-function(filepath){
   #muss bei wholescript am Beginn erstellt werden
-  filepath<-"./data/miraculous/processed/Gamer.txt"
+  filepath<-"./data/miraculous/processed/Oni-Chan.txt"
   ep_df_values_wholeseason <- data.frame(matrix(ncol = 8, nrow = 0))
   colnames(ep_df_values_wholeseason) <- data.frame("title", "season", "ep_per_season", "ep_overall", "air_date", "ep_edge_density_value", "ep_reciprocity_value", "ep_diameter_value")
   filetext <- readtext(filepath)
@@ -120,10 +120,10 @@ process_transcript<-function(filepath){
   #dataframe: values and metatable
   #find metadata
   subset <- season_ep_list[season_ep_list$title %like% ep_title, ]  
-  ep_overall<-paste(subset[, 1])
-  ep_per_season<-paste(subset[, 2])
-  air_date<-paste(subset[, 4])
-  season<-paste(subset[, 5])
+  ep_overall<-paste(subset[1, 1])
+  ep_per_season<-paste(subset[1, 2])
+  air_date<-paste(subset[1, 4])
+  season<-paste(subset[1, 5])
   #rm(subset)
   
   ep_dataframe_value_intermediate <- rbind(season, ep_per_season, ep_overall, air_date, ep_edge_density_value, ep_reciprocity_value, ep_diameter_value)
@@ -143,7 +143,8 @@ process_transcript<-function(filepath){
   
   #Community detection based on edge betweenness (Newman-Girvan)
   ceb <- cluster_edge_betweenness(ep_sociogram_igraph) 
-  dendPlot(ceb, mode="hclust")
+  # Fehler bei Oni-Chan.txt, Martin fragen
+  # dendPlot(ceb, mode="hclust")
   plot(ceb, ep_sociogram_igraph)
   membership(ceb)
   #Community detection based on based on propagating labels 
@@ -165,8 +166,8 @@ allEpisodes <- list.files(c("./data/miraculous/processed"))
 allCharacters <- vector(mode = "list", length = length(files))
 i <- 0
 for (file in files){
-  ep_characters <- process_transcript(file)
+  characters <- process_transcript(file)
   i <- i+1
-  allCharacters[[i]] <- unique(ep_characters)
+  allCharacters[[i]] <- unique(characters)
 }
 subset(table(unlist(allCharacters)), table(unlist(allCharacters))>20)
