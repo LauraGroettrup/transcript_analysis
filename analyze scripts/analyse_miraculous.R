@@ -1,6 +1,6 @@
 ##zielverzeichnis muss beinhalten: processed, plots, dialogtable
 source("./main.R")
-source("./metainfo_series_miraculous_Martin.R")
+source("./metadata scripts/metainfo_series_miraculous_Martin.R")
 source("./analyze scripts/sentimentAI - initiate_v3.R")
 
 process_transcript<-function(filepath){
@@ -16,6 +16,7 @@ process_transcript<-function(filepath){
   #sentimentProCharacter <- aggregate(sentimentMiraculous, by = list(script[, 1]), FUN = length)
   
   characters <- script[, 1]
+  characters <- str_trim(characters) #new
   
   nNodes <- table(characters)
   pairs <- matrix(NA, ncol = 2, nrow = length(characters))

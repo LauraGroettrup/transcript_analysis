@@ -144,8 +144,8 @@ process_transcript<-function(filepath){
   
   #Community detection based on edge betweenness (Newman-Girvan)
   ceb <- cluster_edge_betweenness(ep_sociogram_igraph) 
-  # Fehler bei Oni-Chan.txt, Martin fragen
-  # dendPlot(ceb, mode="hclust")
+  # Fehler bei Oni-Chan.txt, Martin fragen #try
+  try(dendPlot(ceb, mode="hclust"), silent = TRUE)
   plot(ceb, ep_sociogram_igraph)
   membership(ceb)
   #Community detection based on based on propagating labels 
