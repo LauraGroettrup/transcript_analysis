@@ -1,5 +1,5 @@
 source("./main.R")
-source("./metainfo_series_miraculous_Martin.R")
+source("./metadata scripts/metainfo_series_miraculous_Martin.R")
 
 process_transcript<-function(filepath){
   #muss bei wholescript am Beginn erstellt werden
@@ -102,7 +102,7 @@ process_transcript<-function(filepath){
   ep_closeness         <-closeness(ep_sociogram_igraph, mode="all") 
   
   #measure of the influence of a node in a network
-  ep_eigen_centrality  <-eigen_centrality(ep_sociogram_igraph, directed=T)$vector
+  ep_eigen_centrality  <-eigen_centrality(ep_sociogram_igraph, directed=F)$vector #neu, da doch wichtig (19.5.22)
   
   ep_betweenness       <-betweenness(ep_sociogram_igraph, directed=T) #zentralste figur
   barplot(ep_betweenness)

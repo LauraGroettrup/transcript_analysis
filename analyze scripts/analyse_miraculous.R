@@ -1,7 +1,7 @@
 ##zielverzeichnis muss beinhalten: processed, plots, dialogtable
 source("./main.R")
-source("./metadata scripts/metainfo_series_miraculous_Martin.R")
-source("./analyze scripts/sentimentAI - initiate_v3.R")
+#source("./metadata scripts/metainfo_series_miraculous_Martin.R")
+#source("./analyze scripts/sentimentAI - initiate_v3.R")
 
 process_transcript<-function(filepath){
   #filepath<-"./data/miraculous/processed/Oni-Chan.txt"
@@ -26,15 +26,6 @@ process_transcript<-function(filepath){
   
   ep_sociogram_igraph<-graph_from_adjacency_matrix(table(pairs[, 1], pairs[, 2]), weighted=TRUE) 
   
-  ### SentimentTable: Name | Sentiment
-  write.table(sentimentProCharacter,"./data/miraculous/tables/sentiment.csv", row.names = F, append = T, col.names = F, sep = "|")
-  
-  ### DialogTable for all eps: From | To | Sentiment | Text
-  dialogTable <- data.frame(pairs[, 1], pairs[, 2], sentimentMiraculous[1:(length(sentimentMiraculous))], script[, 2][1:(length(script[, 2]))])
-  write.table(dialogTable,"./data/miraculous/tables/dialogs.csv", row.names = F, append = T, col.names = F, sep = "|")
-  # For each ep
-  # write.table(dialogTable, paste("./data/miraculous/tables/",title_intermediate,".csv"), row.names = F, col.names = F, sep = "|")
-  
   ###EpisodeTable: ep_no | season | ep_per_season | air_date | ep_edge_density_value | ep_reciprocity_value | ep_diameter_value
   ep_df_values <- data.frame(matrix(ncol = 7, nrow = 0))
   colnames(ep_df_values) <- data.frame("no", "season", "ep_per_season", "air_date", "ep_edge_density_value", "ep_reciprocity_value", "ep_diameter_value")
@@ -50,6 +41,19 @@ process_transcript<-function(filepath){
   ep_diameter_value<-diameter(ep_sociogram_igraph, directed=T)
   ep_df_values <- cbind(ep_no, season, ep_per_season, air_date, ep_edge_density_value, ep_reciprocity_value, ep_diameter_value)
   write.table(ep_df_values,"./data/miraculous/tables/episodes.csv", row.names = F, append = T, col.names = F, sep = "|")
+  
+  
+  ### SentimentTable+NODE PROPERTIES: Name | Sentiment | ep_no | season | degree (in, out, all), closeness, eigen_centrality, betweenness, hub_score, authority score, rank score
+  
+  #sort(page_rank(ep_sociogram_igraph)$vector)
+  sentimentProCharacter<- c(sentimentProCharacter, season, ep_no)
+  write.table(sentimentProCharacter,"./data/miraculous/tables/sentiment.csv", row.names = F, append = T, col.names = F, sep = "|")
+  
+  ### DialogTable for all eps: From | To | Sentiment | Text | ep_no | season 
+  dialogTable <- data.frame(pairs[, 1], pairs[, 2], sentimentMiraculous[1:(length(sentimentMiraculous))], script[, 2][1:(length(script[, 2]))], season, ep_no)
+  write.table(dialogTable,"./data/miraculous/tables/dialogs.csv", row.names = F, append = T, col.names = F, sep = "|")
+  # For each ep
+  # write.table(dialogTable, paste("./data/miraculous/tables/",title_intermediate,".csv"), row.names = F, col.names = F, sep = "|")
   
   return(characters)
   
