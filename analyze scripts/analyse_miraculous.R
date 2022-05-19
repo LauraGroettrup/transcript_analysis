@@ -44,9 +44,16 @@ process_transcript<-function(filepath){
   
   
   ### SentimentTable+NODE PROPERTIES: Name | Sentiment | ep_no | season | degree (in, out, all), closeness, eigen_centrality, betweenness, hub_score, authority score, rank score
-  
-  #sort(page_rank(ep_sociogram_igraph)$vector)
-  sentimentProCharacter<- c(sentimentProCharacter, season, ep_no)
+  ep_degree_in  <-degree(ep_sociogram_igraph, mode="in") # ?degree
+  ep_degree_out <-degree(ep_sociogram_igraph, mode="out") # ?degree
+  ep_degree_all <-degree(ep_sociogram_igraph, mode="all") # ?degree
+  ep_closeness         <-closeness(ep_sociogram_igraph, mode="all") 
+  ep_eigen_centrality  <-eigen_centrality(ep_sociogram_igraph, directed=T)$vector
+  ep_betweenness       <-betweenness(ep_sociogram_igraph, directed=T) 
+  ep_hub_score         <-hub_score(ep_sociogram_igraph)$vector
+  ep_authority_score <-authority_score(ep_sociogram_igraph)$vector
+  ep_rank_score <-sort(page_rank(ep_sociogram_igraph)$vector)
+  sentimentProCharacter<- c(sentimentProCharacter, season, ep_no, ep_degree_in, ep_degree_out, ep_degree_all, ep_closeness, ep_eigen_centrality, ep_betweenness, ep_hub_score,ep_authority_score,ep_rank_score)
   write.table(sentimentProCharacter,"./data/miraculous/tables/sentiment.csv", row.names = F, append = T, col.names = F, sep = "|")
   
   ### DialogTable for all eps: From | To | Sentiment | Text | ep_no | season 
