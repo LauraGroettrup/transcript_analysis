@@ -21,7 +21,7 @@ Bis Dienstag:
 	Charaktere Namen einheitlich (Hawk moth) - Martin - dataframe(sentiment)
 
 	Serie:
-		Table: Charakter - line - sent - episode, season - Martin
+		Table: Charakter - line - sent - episode, season - Martin (done)
 
 	Episode: - laura
 		5 wichtigsten Personen pro episode (betweenness und Eigenvektor) 
