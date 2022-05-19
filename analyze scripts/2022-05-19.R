@@ -3,7 +3,7 @@ source("./metadata scripts/metainfo_series_miraculous_Martin.R")
 
 process_transcript<-function(filepath){
   #muss bei wholescript am Beginn erstellt werden
-  filepath<-"./data/miraculous/processed/Oni-Chan.txt"
+  filepath<-"./data/miraculous/processed/Befana.txt"
   ep_df_values_wholeseason <- data.frame(matrix(ncol = 8, nrow = 0))
   colnames(ep_df_values_wholeseason) <- data.frame("title", "season", "ep_per_season", "ep_overall", "air_date", "ep_edge_density_value", "ep_reciprocity_value", "ep_diameter_value")
   filetext <- readtext(filepath)
@@ -157,6 +157,7 @@ process_transcript<-function(filepath){
   V(ep_sociogram_igraph)$community <- cfg$membership
   colrs <- adjustcolor( c("gray50", "tomato", "gold", "yellowgreen"), alpha=.6) 
   plot(ep_sociogram_igraph, vertex.color=colrs[V(ep_sociogram_igraph)$community])
+  assortativity_degree(ep_sociogram_igraph, directed = TRUE) #new
   #IGRAPH END
   
   return(ep_characters)

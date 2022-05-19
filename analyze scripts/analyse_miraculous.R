@@ -39,8 +39,8 @@ process_transcript<-function(filepath){
   ep_edge_density_value<-edge_density(ep_sociogram_igraph) #Anzahl an Verbindungen im Verhältnis zu Anzahl aller möglichen Verbindungen; The density of a graph is the ratio of the number of edges and the number of possible edges.
   ep_reciprocity_value<-reciprocity(ep_sociogram_igraph) #Aussage wird getätigt, Antwort an diese Person auf Episodenebene
   ep_diameter_value<-diameter(ep_sociogram_igraph, directed=T)
-  ep_df_values <- cbind(ep_no, season, ep_per_season, air_date, ep_edge_density_value, ep_reciprocity_value, ep_diameter_value)
-  write.table(ep_df_values,"./data/miraculous/tables/episodes.csv", row.names = F, append = T, col.names = F, sep = "|")
+  ep_df_values <- cbind(ep_no, season, ep_per_season, air_date, ep_edge_density_value, ep_reciprocity_value, ep_diameter_value) #erweitern #todo:
+  write.table(ep_df_values,"./data/miraculous/tables/episodes.csv", row.names = F, append = T, col.names = F, sep = "|") #erweitern #todo:
   
   
   ### SentimentTable+NODE PROPERTIES: Name | Sentiment | ep_no | season | degree (in, out, all), closeness, eigen_centrality, betweenness, hub_score, authority score, rank score
@@ -53,14 +53,20 @@ process_transcript<-function(filepath){
   ep_hub_score         <-hub_score(ep_sociogram_igraph)$vector
   ep_authority_score <-authority_score(ep_sociogram_igraph)$vector
   ep_rank_score <-sort(page_rank(ep_sociogram_igraph)$vector)
-  sentimentProCharacter<- c(sentimentProCharacter, season, ep_no, ep_degree_in, ep_degree_out, ep_degree_all, ep_closeness, ep_eigen_centrality, ep_betweenness, ep_hub_score,ep_authority_score,ep_rank_score)
+  sentimentProCharacter<- c(sentimentProCharacter, season, ep_no)
+  #todo: funktioniert-nicht: sentimentProCharacter<- c(sentimentProCharacter, season, ep_no, ep_degree_in, ep_degree_out, ep_degree_all, ep_closeness, ep_eigen_centrality, ep_betweenness, ep_hub_score,ep_authority_score,ep_rank_score)
   write.table(sentimentProCharacter,"./data/miraculous/tables/sentiment.csv", row.names = F, append = T, col.names = F, sep = "|")
+  
+  #todo
+  -betweenness 
   
   ### DialogTable for all eps: From | To | Sentiment | Text | ep_no | season 
   dialogTable <- data.frame(pairs[, 1], pairs[, 2], sentimentMiraculous[1:(length(sentimentMiraculous))], script[, 2][1:(length(script[, 2]))], season, ep_no)
   write.table(dialogTable,"./data/miraculous/tables/dialogs.csv", row.names = F, append = T, col.names = F, sep = "|")
   # For each ep
   # write.table(dialogTable, paste("./data/miraculous/tables/",title_intermediate,".csv"), row.names = F, col.names = F, sep = "|")
+  
+
   
   return(characters)
   
