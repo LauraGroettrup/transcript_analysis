@@ -55,7 +55,7 @@ process_transcript<-function(filepath){
   ep_hub_score         <-hub_score(ep_sociogram_igraph)$vector
   ep_authority_score <-authority_score(ep_sociogram_igraph)$vectorsumm
   ep_rank_score <-sort(page_rank(ep_sociogram_igraph)$vector)
-  sentimentProCharacter<- c(sentimentProCharacter, season, ep_no, ep_title,ep_degree_in, ep_degree_out, ep_degree_all)
+  sentimentProCharacter<- c(sentimentProCharacter, season, ep_no, ep_title)
   #sentimentProCharacter<- c(sentimentProCharacter, season, ep_no, ep_title, ep_degree_in, ep_degree_out, ep_degree_all, ep_closeness, ep_eigen_centrality, ep_betweenness, ep_hub_score,ep_authority_score,ep_rank_score)
   write.table(sentimentProCharacter,"./data/miraculous/tables/sentiment.csv", row.names = F, append = T, col.names = F, sep = "|")
   
@@ -102,8 +102,20 @@ lineTable[2] <- NULL
 write.table(lineTable,"./data/miraculous/tables/lines.csv", row.names = F, append = T, col.names = F, sep = "|")
 colnames(dialogTable) <- c("From", "To", "Sentiment", "Text","Season", "Episode Overall", "Episode Title")
 colnames(lineTable) <- c("Character", "Sentiment", "Text", "Season", "Episode Overall", "Episode Title")
-colnames(episodeTable) <- c("Episode Overall", "Season", "Season's Episode", "Air Date", "Edge Density", "Reciprocity", "Diameter", "Assortativity")
-colnames(sentimentTable) <- c("Name", "Sentiment","Season", "Episode Overall")
+colnames(episodeTable) <- c("Episode Title", "Episode Overall", "Season", "Season's Episode", "Air Date", "Edge Density", "Reciprocity", "Diameter", "Assortativity")
+colnames(sentimentTable) <- c("Character", "Sentiment","Season", "Episode Overall", "Episode Title")
+
+#sorting
+dialogTable <-dialogTable[order(dialogTable$'Episode Overall'),]
+episodeTable <-episodeTable[order(episodeTable$'Episode Overall'),]
+lineTable <-lineTable[order(lineTable$'Episode Overall'),]
+sentimentTable <-sentimentTable[order(sentimentTable$'Episode Overall'),]
+
+#trim Characters
+dialogTable$From <- trimws(dialogTable$From, which = c("both"))
+dialogTable$To <- trimws(dialogTable$To, which = c("both"))
+lineTable$To <- trimws(lineTable$Character, which = c("both"))
+sentimentTable$Character <- trimws(sentimentTable$Character, which = c("both"))
 
 #processing - name
 #dub<-table(lineTable$Character)

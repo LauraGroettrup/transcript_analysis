@@ -55,7 +55,8 @@ clean_transcript <- function(filepath){
     line <- sub("Civillian","Civilian", line)
     line <- sub("Dider Roustan","Didier Roustan", line)
     line <- sub("Tom'","Tom", line)
-    line <- sub("Veronique'","Véronique", line)
+    line <- sub("Veronique","Véronique", line)
+    line <- sub(" ) Marinette","Marinette", line)
     if(str_starts(line, "[^:]+:::.+")){
       if(!str_starts(line, "Category") & (!str_starts(line, "es:")) & (!str_starts(line, "pl:")) & (!str_starts(line, "fr:")) & (!str_starts(line, "ja:")) & (!str_starts(line, "de:")) & (!str_starts(line, "\\{"))){
       #if(!str_starts(line, "Category") & (!str_starts(line, "es:")) & (!str_starts(line, "pl:")) & (!str_starts(line, "fr:")) & (!str_starts(line, "ja:")) & (!str_starts(line, "de:")){ 
