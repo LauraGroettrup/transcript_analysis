@@ -29,6 +29,7 @@ clean_transcript <- function(filepath){
     line <- gsub("\\♪", "", line)
     line <- gsub("-->", "", line)
     line <- gsub("--", "", line)
+    #ausprobieren, 3x und 2x leerzeichen - ok
     line <- gsub("   ", "", line)
     line <- gsub("  ", "", line)
     line <- sub(':',':::', line)
@@ -42,14 +43,22 @@ clean_transcript <- function(filepath){
     line <- sub("Myléne","Mylène", line)
     line <- sub("Najda","Nadja", line)
     line <- sub("Natalie","Nathalie", line)
-    line <- sub("Officer Roger","Officer Rogers", line)
+    line <- sub("Officer Rogers","Officer Roger", line)
     line <- sub("Robustus","Robostus", line)
     line <- sub("Rytym","Rythm", line)
     line <- sub("Santa","Santa Claus", line)
     line <- sub("The rest of the kwamis","The rest of the Kwamis", line)
     line <- sub("Hawkmoth","Hawk Moth", line)
+    line <- sub("All three","All Three", line)
+    line <- sub("boy","Boy", line)
+    line <- sub("bus driver","Bus driver", line)
+    line <- sub("Civillian","Civilian", line)
+    line <- sub("Dider Roustan","Didier Roustan", line)
+    line <- sub("Tom'","Tom", line)
+    line <- sub("Veronique'","Véronique", line)
     if(str_starts(line, "[^:]+:::.+")){
-      if(!str_starts(line, "Category") & (!str_starts(line, "es:")) & (!str_starts(line, "pl:")) & (!str_starts(line, "fr:")) & (!str_starts(line, "ja:")) & (!str_starts(line, "de:"))& (!str_starts(line, "{"))){ 
+      if(!str_starts(line, "Category") & (!str_starts(line, "es:")) & (!str_starts(line, "pl:")) & (!str_starts(line, "fr:")) & (!str_starts(line, "ja:")) & (!str_starts(line, "de:")) & (!str_starts(line, "\\{"))){
+      #if(!str_starts(line, "Category") & (!str_starts(line, "es:")) & (!str_starts(line, "pl:")) & (!str_starts(line, "fr:")) & (!str_starts(line, "ja:")) & (!str_starts(line, "de:")){ 
         cleaned_transcript <- append(cleaned_transcript, line)
       } 
     }
