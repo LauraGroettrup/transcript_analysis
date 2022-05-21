@@ -18,7 +18,7 @@ Martin:
 Bis Dienstag: 
 
 
-	Charaktere Namen einheitlich (Hawk moth) - Martin - dataframe(sentiment)
+	Charaktere Namen einheitlich (Hawk moth) - Martin - dataframe(sentiment) - done_
 
 	Serie:
 		Table: Charakter - line - sent - episode, season - Martin (done)

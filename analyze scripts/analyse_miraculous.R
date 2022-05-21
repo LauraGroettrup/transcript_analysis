@@ -5,7 +5,7 @@ source("./metadata scripts/metainfo_series_miraculous_Martin.R")
 
 
 process_transcript<-function(filepath){
-  #filepath<-"./data/miraculous/processed/Oni-Chan.txt"
+  #filepath<-"./data/miraculous/processed/Gang Of Secrets.txt"
   filetext <- readtext(filepath)
   transcript_lines <- str_split(filetext, "\\n")[[1]]
   characterName <- strsplit(transcript_lines, ":::")
@@ -37,6 +37,14 @@ process_transcript<-function(filepath){
   ep_per_season<-paste(subset[1, 2])
   air_date<-paste(subset[1, 4])
   season<-paste(subset[1, 5])
+  #problem: wenn season NA ist, führt dies zu Problemen bei Berechnung, s. Sentiment von Marinette über dies Seasons
+  #problem: was tun, wenn ep_no,ep_per_season, air_date, season "NA" ist => ersetzen mit "99999" sinnvoll?
+    ep_no<-gsub("NA", "99999",ep_no, perl = TRUE)
+    ep_per_season<-gsub("NA", "99999",ep_per_season, perl = TRUE)
+    air_date<-gsub("NA", "99999",air_date, perl = TRUE)
+    season<-gsub("NA", "99999",season, perl = TRUE)
+    #season[is.na(season)] <- 99999
+  #end:missing data from metadata
   ep_edge_density_value<-edge_density(ep_sociogram_igraph) #Anzahl an Verbindungen im Verhältnis zu Anzahl aller möglichen Verbindungen; The density of a graph is the ratio of the number of edges and the number of possible edges.
   ep_reciprocity_value<-reciprocity(ep_sociogram_igraph) #Aussage wird getätigt, Antwort an diese Person auf Episodenebene
   ep_diameter_value<-diameter(ep_sociogram_igraph, directed=T)
@@ -110,12 +118,43 @@ dialogTable <-dialogTable[order(dialogTable$'Episode Overall'),]
 episodeTable <-episodeTable[order(episodeTable$'Episode Overall'),]
 lineTable <-lineTable[order(lineTable$'Episode Overall'),]
 sentimentTable <-sentimentTable[order(sentimentTable$'Episode Overall'),]
+#sentimentTable <-sentimentTable[order(sentimentTable$'Character'),] #problem: pro episode sollte jeder name nur einmal vorkommen, leider kommt bspw. "Adrien" in Stormy-Weather und anderen mehrfach vor!
 
 #trim Characters
 dialogTable$From <- trimws(dialogTable$From, which = c("both"))
 dialogTable$To <- trimws(dialogTable$To, which = c("both"))
 lineTable$To <- trimws(lineTable$Character, which = c("both"))
 sentimentTable$Character <- trimws(sentimentTable$Character, which = c("both"))
+
+#Sentiment pro Character over whole Series
+sentimentCharacterOverSeries <-sentimentTable %>%
+  group_by(Character) %>%
+  summarize(Sentiment_Over_Series = mean(Sentiment, na.rm = TRUE), Frequency = n())%>% arrange(desc(Frequency))
+
+#Sentiment pro Character over Seasons
+sentimentCharacterOverSeasons <-sentimentTable %>%
+  group_by(Character, Season) %>%
+  summarize(Sentiment_Over_Series = mean(Sentiment, na.rm = TRUE), Frequency = n()) %>% 
+  arrange(desc(Season))
+
+#looking up one character
+sentimentCharacterOverSeasons_M <-sentimentTable %>%
+  group_by(Character, Season) %>%
+  summarize(Sentiment_Over_Series = mean(Sentiment, na.rm = TRUE), Frequency = n()) %>% 
+  arrange(desc(Season))%>% #bish hierher
+  filter(Character == 'Marinette') #plus filter
+
+plot_S_Marinette_series <- sentimentCharacterOverSeasons_M %>%
+  tail(10) %>%
+  ggplot( aes(x=Frequency, y=Sentiment_Over_Series)) + #problem aufgrund von missing data
+  geom_line( color="grey") +
+  geom_point(shape=21, color="black", fill="#69b3a2", size=3) +
+  ylim(-1,1)
+plot_S_Marinette_series + labs(title = "Time Evolution of mean sentiment over seasons", subtitle = "Marinette")
+
+#subsets with missing values in episode table
+missing_entries_episode_table <- episodeTable[rowSums(is.na(episodeTable)) > 0,]
+missing_entries_episode_table99999 <- episodeTable[episodeTable$Season %like% "99999", ]
 
 #processing - name
 #dub<-table(lineTable$Character)
