@@ -1,4 +1,4 @@
-##zielverzeichnis muss beinhalten: processed, plots, dialogtable
+###zielverzeichnis muss beinhalten: processed, plots, dialogtable
 source("./main.R")
 source("./metadata scripts/metainfo_series_miraculous.R")
 #source("./analyze scripts/sentimentAI - initiate.R")

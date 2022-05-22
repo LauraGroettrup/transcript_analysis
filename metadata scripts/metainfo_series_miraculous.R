@@ -1,4 +1,4 @@
-#-----EINTRAGUNGEN-------------------------------------------------------
+##-----EINTRAGUNGEN-------------------------------------------------------
 prefix_series = "miraculous"
 anzahlseasons=5
 link="https://en.wikipedia.org/wiki/List_of_Miraculous:_Tales_of_Ladybug_%26_Cat_Noir_episodes"

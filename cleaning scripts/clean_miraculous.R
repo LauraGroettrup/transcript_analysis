@@ -1,4 +1,4 @@
-##zielverzeichnis muss beinhalten: raw_proscessed dateien in root; leere verzeichnisse: raw, abandoned, processed
+###zielverzeichnis muss beinhalten: raw_proscessed dateien in root; leere verzeichnisse: raw, abandoned, processed
 source("./main.R")
 
 clean_transcript <- function(filepath){
