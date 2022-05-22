@@ -50,7 +50,7 @@ Sentialec::: At your command, Shadow Moth.
 Audrey::: It's about time.
 Unnamed presenter::: Roll!
 Sentialec::: You won't be disappointed!
- Shadow Moth:::You'll see. It was worth the wait.
+Shadow Moth:::You'll see. It was worth the wait.
 Sentialec:::Ladies and gentlemen, welcome to the outdated headquarters of Style Queen magazine, that's almost as outdated as Audrey Bourgeois herself!
 Sentialec:::Well, well, has the Queen suddenly lost her voice?
 Shadow Moth:::What a shame. She could have told you that this whole award ceremony is rigged.
@@ -67,7 +67,7 @@ Style Queen::: 'You're' the only victim around here!
 Kagami::: Go, Adrien! Run!
 Adrien::: Kagami, NO!
 Style Queen:::Since you want to play the hero, you'll be the first to get fired! 
- Nathalie:::Kagami Tsurugi, Holder of the Miraculous of the Dragon, neutralized. 
+Nathalie:::Kagami Tsurugi, Holder of the Miraculous of the Dragon, neutralized. 
 Shadow Moth::: We must find the others before Ladybug shows up.
 Adrien::: Plagg, Cl-
 Marinette::: Tik--ki!! Tik! Tik! Tik! Tik! Tok! Tik! It's time to get out of here!
@@ -78,7 +78,7 @@ Adrien::: Yes, and Cat Noir.
 Style Queen::: Alec...
 Chloé:::This way, mom! I saw him!
 Style Queen::: I saw you laugh when that MC ridiculed me.You're fired, haha!
- Nathalie::: Chloé Bourgeois, holder of the Miraculous of the Bee, neutralized. Optigami, go find the others.
+Nathalie::: Chloé Bourgeois, holder of the Miraculous of the Bee, neutralized. Optigami, go find the others.
 Max::: This is the safest way, run, run, go, go!
 Nathalie::: Max Kanté, holder of the Miraculous of the Horse, located.
 Shadow Moth::: It seems like some know-it-alls are trying to get out of here, my dear queen.

@@ -94,10 +94,10 @@ Cat Noir::: Cataclysm!
 Cat Noir::: No!
 Strikeback::: Strikeback!
 Ladybug::: Cat Noir! No, I told him! This is a nightmare...Unless...
- Superpower sequence Ladybug::: Lucky Charm!
+Superpower sequence Ladybug::: Lucky Charm!
 Ladybug::: A ticket for the Jardin des Plantes? It's from yesterday...I know! I've gotta put an end to this madness ASAP! 
 Ladybug::: Okay! I need someone who hasn't been hit.
-Félix ::: Farewell, Ladybug.
+Félix::: Farewell, Ladybug.
 Ladybug:::Adrien! But I've been hit by Risk! Maybe my idea's way too risky, or is it a risk not to take this risk? Am I doing this for the love of risk, or the risk of love? 
 Ladybug::: No. It's Adrien, and he doesn't have the mark. It's a good idea! Tikki, Fluff, Kaalki, unify! 
 Pennybug::: Voyage!
@@ -155,7 +155,7 @@ Cat Noir:::Hilarious.
 Flairmidable::: Nice working with you, Cat Noir.
 Ladybug::: Come on! Shake paws.
 Ladybug::: I knew you two would get along. That's the magic of the Miraculous, even dogs and cats can exist in harmony! You're gonna be spending a lot of time together now that he's joined the team!Forever.Ready Miraculous team?
- Superpower sequence Ladybug::: Lucky Charm!
+Superpower sequence Ladybug::: Lucky Charm!
 Ladybug::: Since we can't attack them, we're gonna trap them. We'll be cunning, no needless risks. Rooster Bold, since you can choose you power, give yourself the power to multiply objects. We'll need more pairs of sunglasses.
 Rooster Bold::: Sublimation!
 Ladybug::: Next, we'll lure all the sentimonsters to the same place. Carapace, you'll create a shield so that they can't escape, and finally, I'll transform into Pegabug and open a portal that the sentimonsters will fall into.

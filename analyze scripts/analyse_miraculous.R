@@ -1,7 +1,7 @@
 ##zielverzeichnis muss beinhalten: processed, plots, dialogtable
 source("./main.R")
-source("./metadata scripts/metainfo_series_miraculous_Martin.R")
-#source("./analyze scripts/sentimentAI - initiate_v3.R")
+source("./metadata scripts/metainfo_series_miraculous.R")
+#source("./analyze scripts/sentimentAI - initiate.R")
 
 
 process_transcript<-function(filepath){
@@ -9,7 +9,7 @@ process_transcript<-function(filepath){
   filetext <- readtext(filepath)
   transcript_lines <- str_split(filetext, "\\n")[[1]]
   characterName <- strsplit(transcript_lines, ":::")
-
+  
   #### DIAGRAMS ####
   script <- matrix(unlist(characterName), ncol = 2, nrow=length(characterName), byrow = T) # file format suitable for sentiment analysis and graph
   sentimentMiraculous <- sentiment_score(script[, 2])
@@ -27,31 +27,34 @@ process_transcript<-function(filepath){
   
   ep_sociogram_igraph<-graph_from_adjacency_matrix(table(pairs[, 1], pairs[, 2]), weighted=TRUE) 
   
-  ###EpisodeTable: ep_title | ep_no | season | ep_per_season | air_date | ep_edge_density_value | ep_reciprocity_value | ep_diameter_value
-  ep_df_values <- data.frame(matrix(ncol = 7, nrow = 0))
-  colnames(ep_df_values) <- data.frame("no", "season", "ep_per_season", "air_date", "ep_edge_density_value", "ep_reciprocity_value", "ep_diameter_value")
+  ### Metadata
   ep_title <- gsub(".txt", "", filepath)
   ep_title <- gsub("./data/miraculous/processed/", "", ep_title)
-  subset <- season_ep_list[season_ep_list$title %like% ep_title, ] 
+  #Änderung-IN
+  #ep_title="Mayura (Heroes' Day - Part 2)"
+  #ep_title="Catalyst (Heroes' Day - Part 1)"
+  ep_title <-strsplit(ep_title, "\\(")
+  ep_title <-matrix(unlist(ep_title), ncol = 1)
+  ep_title<- paste(ep_title[1, 1])
+  ep_title <-str_trim(ep_title)
+  if (ep_title == "Felix") {
+    ep_title <- "Félix"
+  }
+  subset <- season_ep_list[grep(ep_title, season_ep_list$title, ignore.case = T), ] #new:ignorecase
+  #subset <- season_ep_list[season_ep_list$title %like% ep_title, ] #old
+  #Änderung-OUT
   ep_no <- paste(subset[1, 1])
   ep_per_season<-paste(subset[1, 2])
   air_date<-paste(subset[1, 4])
   season<-paste(subset[1, 5])
-  #problem: wenn season NA ist, führt dies zu Problemen bei Berechnung, s. Sentiment von Marinette über dies Seasons
-  #problem: was tun, wenn ep_no,ep_per_season, air_date, season "NA" ist => ersetzen mit "99999" sinnvoll?
-    ep_no<-gsub("NA", "99999",ep_no, perl = TRUE)
-    ep_per_season<-gsub("NA", "99999",ep_per_season, perl = TRUE)
-    air_date<-gsub("NA", "99999",air_date, perl = TRUE)
-    season<-gsub("NA", "99999",season, perl = TRUE)
-    #season[is.na(season)] <- 99999
+  #problem-gelöst: wenn season NA ist, führt dies zu Problemen bei Berechnung, s. Sentiment von Marinette über dies Seasons
+  #problem-gelöst: was tun, wenn ep_no,ep_per_season, air_date, season "NA" ist => ersetzen mit "99999" sinnvoll?
+  #ep_no<-gsub("NA", "99999",ep_no, perl = TRUE)
+  #ep_per_season<-gsub("NA", "99999",ep_per_season, perl = TRUE)
+  #air_date<-gsub("NA", "99999",air_date, perl = TRUE)
+  #season<-gsub("NA", "99999",season, perl = TRUE)
+  #season[is.na(season)] <- 99999
   #end:missing data from metadata
-  ep_edge_density_value<-edge_density(ep_sociogram_igraph) #Anzahl an Verbindungen im Verhältnis zu Anzahl aller möglichen Verbindungen; The density of a graph is the ratio of the number of edges and the number of possible edges.
-  ep_reciprocity_value<-reciprocity(ep_sociogram_igraph) #Aussage wird getätigt, Antwort an diese Person auf Episodenebene
-  ep_diameter_value<-diameter(ep_sociogram_igraph, directed=T)
-  ep_assortativity_value<-assortativity_degree(ep_sociogram_igraph, directed = TRUE)
-  ep_df_values <- cbind(ep_title, ep_no, season, ep_per_season, air_date, ep_edge_density_value, ep_reciprocity_value, ep_diameter_value, ep_assortativity_value) #erweitern
-  write.table(ep_df_values,"./data/miraculous/tables/episodes.csv", row.names = F, append = T, col.names = F, sep = "|") #erweitern #todo:
-  
   
   ### SentimentTable+NODE PROPERTIES: Name | Sentiment | season | ep_no | ep_title | degree (in, out, all), closeness, eigen_centrality, betweenness, hub_score, authority score, rank score
   ep_degree_in  <-degree(ep_sociogram_igraph, mode="in") # ?degree
@@ -67,6 +70,19 @@ process_transcript<-function(filepath){
   #sentimentProCharacter<- c(sentimentProCharacter, season, ep_no, ep_title, ep_degree_in, ep_degree_out, ep_degree_all, ep_closeness, ep_eigen_centrality, ep_betweenness, ep_hub_score,ep_authority_score,ep_rank_score)
   write.table(sentimentProCharacter,"./data/miraculous/tables/sentiment.csv", row.names = F, append = T, col.names = F, sep = "|")
   
+  ###EpisodeTable: ep_title | ep_no | season | ep_per_season | air_date | ep_edge_density_value | ep_reciprocity_value | ep_diameter_value | betweenness_1 | betweenness_2 | betweenness_3 | betweenness_4 | betweenness_5 | eigenvector_1 | eigenvector_2 | eigenvector_3 | eigenvector_4 | eigenvector_5
+  ep_df_values <- data.frame(matrix(ncol = 19, nrow = 0))
+  ep_edge_density_value<-edge_density(ep_sociogram_igraph) #Anzahl an Verbindungen im Verhältnis zu Anzahl aller möglichen Verbindungen; The density of a graph is the ratio of the number of edges and the number of possible edges.
+  ep_reciprocity_value<-reciprocity(ep_sociogram_igraph) #Aussage wird getätigt, Antwort an diese Person auf Episodenebene
+  ep_diameter_value<-diameter(ep_sociogram_igraph, directed=T)
+  ep_assortativity_value<-assortativity_degree(ep_sociogram_igraph, directed = TRUE)
+  ep_betweenness_values <- names(sort(ep_betweenness, decreasing = T)[1:5])
+  ep_eigenvector_values <- names(sort(ep_eigen_centrality, decreasing = T)[1:5])
+  ep_list_values <- c(ep_title, ep_no, season, ep_per_season, air_date, ep_edge_density_value, ep_reciprocity_value, ep_diameter_value, ep_assortativity_value) #erweitern
+  ep_list_values <- do.call(c, list(ep_list_values, ep_betweenness_values,  ep_eigenvector_values))
+  ep_df_values <- rbind(ep_list_values)
+  colnames(ep_df_values) <- data.frame("title", "no", "season", "ep_per_season", "air_date", "ep_edge_density_value", "ep_reciprocity_value", "ep_diameter_value", "ep_assortativity_value", "betweenness_1", "betweenness_2", "betweenness_3", "betweenness_4", "betweenness_5", "eigenvector_1", "eigenvector_2", "eigenvector_3", "eigenvector_4", "eigenvector_5")
+  write.table(ep_df_values,"./data/miraculous/tables/episodes.csv", row.names = F, append = T, col.names = F, sep = "|") #erweitern #todo:
   
   #todo
   #-betweenness 
@@ -76,8 +92,6 @@ process_transcript<-function(filepath){
   write.table(dialogTable,"./data/miraculous/tables/dialogs.csv", row.names = F, append = T, col.names = F, sep = "|")
   # For each ep
   # write.table(dialogTable, paste("./data/miraculous/tables/",title_intermediate,".csv"), row.names = F, col.names = F, sep = "|")
-  
-
   
   return(characters)
   
@@ -102,29 +116,28 @@ for (file in files){
   allCharacters[[i]] <- unique(characters)
 }
 subset(table(unlist(allCharacters)), table(unlist(allCharacters))>20)
-dialogTable <- read.csv("./data/miraculous/tables/dialogs.csv", sep="|")
-episodeTable <- read.csv("./data/miraculous/tables/episodes.csv", sep="|")
-sentimentTable <- read.csv("./data/miraculous/tables/sentiment.csv", sep="|")
+dialogTable <- read.csv("./data/miraculous/tables/dialogs.csv", sep="|", header = F)
+episodeTable <- read.csv("./data/miraculous/tables/episodes.csv", sep="|", header = F)
+sentimentTable <- read.csv("./data/miraculous/tables/sentiment.csv", sep="|", header = F)
 lineTable <- dialogTable
 lineTable[2] <- NULL
 write.table(lineTable,"./data/miraculous/tables/lines.csv", row.names = F, append = T, col.names = F, sep = "|")
-colnames(dialogTable) <- c("From", "To", "Sentiment", "Text","Season", "Episode Overall", "Episode Title")
-colnames(lineTable) <- c("Character", "Sentiment", "Text", "Season", "Episode Overall", "Episode Title")
-colnames(episodeTable) <- c("Episode Title", "Episode Overall", "Season", "Season's Episode", "Air Date", "Edge Density", "Reciprocity", "Diameter", "Assortativity")
-colnames(sentimentTable) <- c("Character", "Sentiment","Season", "Episode Overall", "Episode Title")
+colnames(dialogTable) <- c("From", "To", "Sentiment", "Text","Season", "Episode_No_Overall", "Episode_Title")
+colnames(lineTable) <- c("Character", "Sentiment", "Text", "Season", "Episode_No_Overall", "Episode_Title")
+colnames(episodeTable) <- c("Episode_Title", "Episode_No_Overall", "Season", "Episode_No_perSeason", "Air_Date", "Edge_Density", "Reciprocity", "Diameter", "Assortativity","Betweenness_1", "Betweenness_2", "Betweenness_3", "Betweenness_4", "Betweenness_5", "Eigenvector_1", "Eigenvector_2", "Eigenvector_3", "Eigenvector_4", "Eigenvector_5")
+colnames(sentimentTable) <- c("Character", "Sentiment","Season", "Episode_Overall", "Episode_Title")
 
 #sorting
 dialogTable <-dialogTable[order(dialogTable$'Episode Overall'),]
 episodeTable <-episodeTable[order(episodeTable$'Episode Overall'),]
 lineTable <-lineTable[order(lineTable$'Episode Overall'),]
 sentimentTable <-sentimentTable[order(sentimentTable$'Episode Overall'),]
-#sentimentTable <-sentimentTable[order(sentimentTable$'Character'),] #problem: pro episode sollte jeder name nur einmal vorkommen, leider kommt bspw. "Adrien" in Stormy-Weather und anderen mehrfach vor!
+#sentimentTable <-sentimentTable[order(sentimentTable$'Character'),] #problem-gelöst: pro episode sollte jeder name nur einmal vorkommen, leider kommt bspw. "Adrien" in Stormy-Weather und anderen mehrfach vor!
 
-#trim Characters
-dialogTable$From <- trimws(dialogTable$From, which = c("both"))
-dialogTable$To <- trimws(dialogTable$To, which = c("both"))
-lineTable$To <- trimws(lineTable$Character, which = c("both"))
-sentimentTable$Character <- trimws(sentimentTable$Character, which = c("both"))
+#trim Characters, already done in cleaning script
+#dialogTable$From <- trimws(dialogTable$From, which = c("both"))
+#dialogTable$To <- trimws(dialogTable$To, which = c("both"))
+#sentimentTable$Character <- trimws(sentimentTable$Character, which = c("both"))
 
 #Sentiment pro Character over whole Series
 sentimentCharacterOverSeries <-sentimentTable %>%
@@ -146,7 +159,7 @@ sentimentCharacterOverSeasons_M <-sentimentTable %>%
 
 plot_S_Marinette_series <- sentimentCharacterOverSeasons_M %>%
   tail(10) %>%
-  ggplot( aes(x=Frequency, y=Sentiment_Over_Series)) + #problem aufgrund von missing data
+  ggplot( aes(x=Season, y=Sentiment_Over_Series)) +
   geom_line( color="grey") +
   geom_point(shape=21, color="black", fill="#69b3a2", size=3) +
   ylim(-1,1)
@@ -154,7 +167,7 @@ plot_S_Marinette_series + labs(title = "Time Evolution of mean sentiment over se
 
 #subsets with missing values in episode table
 missing_entries_episode_table <- episodeTable[rowSums(is.na(episodeTable)) > 0,]
-missing_entries_episode_table99999 <- episodeTable[episodeTable$Season %like% "99999", ]
+#missing_entries_episode_table99999 <- episodeTable[episodeTable$Season %like% "99999", ]
 
 #processing - name
 #dub<-table(lineTable$Character)

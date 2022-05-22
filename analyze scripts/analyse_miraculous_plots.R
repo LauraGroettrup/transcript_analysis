@@ -162,7 +162,7 @@ process_transcript<-function(filepath){
   return(ep_characters)
 }     
 
-files <- list.files(path='./data/miraculous/processed', full.names=TRUE, recursive=TRUE, include.dirs=FALSE)
+files <- list.files(path='./data/miraculous/processed', full.names=TRUE, recursive=TRUE, include.dirs=FALSE,pattern = ".*.txt")
 allEpisodes <- list.files(c("./data/miraculous/processed"))
 allCharacters <- vector(mode = "list", length = length(files))
 i <- 0
