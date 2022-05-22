@@ -2,6 +2,7 @@
 source("./main.R")
 
 clean_transcript <- function(filepath){
+  filepath <- file 
   filetext <- readtext(filepath)
   transcript <- str_split(filetext, "\\n")[[1]]
   transcript_lines <- c()
@@ -35,7 +36,7 @@ clean_transcript <- function(filepath){
     line <- sub(':',':::', line)
     if(str_starts(line, "[^:]+:::.+")){
       #not workingif(!str_starts(line, "Category") & (!str_starts(line, "es:")) & (!str_starts(line, "pl:")) & (!str_starts(line, "fr:")) & (!str_starts(line, "ja:")) & (!str_starts(line, "de:")) & (!str_starts(line, "{"))){
-      if(!str_starts(line, "Category") & (!str_starts(line, "es:")) & (!str_starts(line, "pl:")) & (!str_starts(line, "fr:")) & (!str_starts(line, "ja:")) & (!str_starts(line, "de:")){ 
+      if(!str_starts(line, "Category") & (!str_starts(line, "es:")) & (!str_starts(line, "pl:")) & (!str_starts(line, "fr:")) & (!str_starts(line, "ja:")) & (!str_starts(line, "de:") )& (!str_starts(line, "\\{"))){ 
         cleaned_transcript <- append(cleaned_transcript, line)
       } 
     }
@@ -49,7 +50,7 @@ clean_transcript <- function(filepath){
   writeLines(cleaned_transcript, filepath)
 }
 
-files <- list.files(path='./data/miraculous/', full.names=TRUE, recursive=TRUE, include.dirs=FALSE)
+files <- list.files(path='./data/miraculous/', full.names=TRUE, pattern = ".*.txt", include.dirs=FALSE)
 for (file in files){
   clean_transcript(file)
 }
