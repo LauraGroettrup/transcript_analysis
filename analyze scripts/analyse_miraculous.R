@@ -27,9 +27,7 @@ process_transcript<-function(filepath){
   
   ep_sociogram_igraph<-graph_from_adjacency_matrix(table(pairs[, 1], pairs[, 2]), weighted=TRUE) 
   
-  ###EpisodeTable: ep_title | ep_no | season | ep_per_season | air_date | ep_edge_density_value | ep_reciprocity_value | ep_diameter_value
-  ep_df_values <- data.frame(matrix(ncol = 7, nrow = 0))
-  colnames(ep_df_values) <- data.frame("no", "season", "ep_per_season", "air_date", "ep_edge_density_value", "ep_reciprocity_value", "ep_diameter_value")
+  ### Metadata
   ep_title <- gsub(".txt", "", filepath)
   ep_title <- gsub("./data/miraculous/processed/", "", ep_title)
   subset <- season_ep_list[season_ep_list$title %like% ep_title, ] 
@@ -45,13 +43,6 @@ process_transcript<-function(filepath){
     season<-gsub("NA", "99999",season, perl = TRUE)
     #season[is.na(season)] <- 99999
   #end:missing data from metadata
-  ep_edge_density_value<-edge_density(ep_sociogram_igraph) #Anzahl an Verbindungen im Verhältnis zu Anzahl aller möglichen Verbindungen; The density of a graph is the ratio of the number of edges and the number of possible edges.
-  ep_reciprocity_value<-reciprocity(ep_sociogram_igraph) #Aussage wird getätigt, Antwort an diese Person auf Episodenebene
-  ep_diameter_value<-diameter(ep_sociogram_igraph, directed=T)
-  ep_assortativity_value<-assortativity_degree(ep_sociogram_igraph, directed = TRUE)
-  ep_df_values <- cbind(ep_title, ep_no, season, ep_per_season, air_date, ep_edge_density_value, ep_reciprocity_value, ep_diameter_value, ep_assortativity_value) #erweitern
-  write.table(ep_df_values,"./data/miraculous/tables/episodes.csv", row.names = F, append = T, col.names = F, sep = "|") #erweitern #todo:
-  
   
   ### SentimentTable+NODE PROPERTIES: Name | Sentiment | season | ep_no | ep_title | degree (in, out, all), closeness, eigen_centrality, betweenness, hub_score, authority score, rank score
   ep_degree_in  <-degree(ep_sociogram_igraph, mode="in") # ?degree
@@ -67,6 +58,19 @@ process_transcript<-function(filepath){
   #sentimentProCharacter<- c(sentimentProCharacter, season, ep_no, ep_title, ep_degree_in, ep_degree_out, ep_degree_all, ep_closeness, ep_eigen_centrality, ep_betweenness, ep_hub_score,ep_authority_score,ep_rank_score)
   write.table(sentimentProCharacter,"./data/miraculous/tables/sentiment.csv", row.names = F, append = T, col.names = F, sep = "|")
   
+  ###EpisodeTable: ep_title | ep_no | season | ep_per_season | air_date | ep_edge_density_value | ep_reciprocity_value | ep_diameter_value | betweenness_1 | betweenness_2 | betweenness_3 | betweenness_4 | betweenness_5 | eigenvector_1 | eigenvector_2 | eigenvector_3 | eigenvector_4 | eigenvector_5
+  ep_df_values <- data.frame(matrix(ncol = 19, nrow = 0))
+  ep_edge_density_value<-edge_density(ep_sociogram_igraph) #Anzahl an Verbindungen im Verhältnis zu Anzahl aller möglichen Verbindungen; The density of a graph is the ratio of the number of edges and the number of possible edges.
+  ep_reciprocity_value<-reciprocity(ep_sociogram_igraph) #Aussage wird getätigt, Antwort an diese Person auf Episodenebene
+  ep_diameter_value<-diameter(ep_sociogram_igraph, directed=T)
+  ep_assortativity_value<-assortativity_degree(ep_sociogram_igraph, directed = TRUE)
+  ep_betweenness_values <- names(sort(ep_betweenness, decreasing = T)[1:5])
+  ep_eigenvector_values <- names(sort(ep_eigen_centrality, decreasing = T)[1:5])
+  ep_list_values <- c(ep_title, ep_no, season, ep_per_season, air_date, ep_edge_density_value, ep_reciprocity_value, ep_diameter_value, ep_assortativity_value) #erweitern
+  ep_list_values <- do.call(c, list(ep_list_values, ep_betweenness_values,  ep_eigenvector_values))
+  ep_df_values <- rbind(ep_list_values)
+  colnames(ep_df_values) <- data.frame("title", "no", "season", "ep_per_season", "air_date", "ep_edge_density_value", "ep_reciprocity_value", "ep_diameter_value", "ep_assortativity_value", "betweenness_1", "betweenness_2", "betweenness_3", "betweenness_4", "betweenness_5", "eigenvector_1", "eigenvector_2", "eigenvector_3", "eigenvector_4", "eigenvector_5")
+  write.table(ep_df_values,"./data/miraculous/tables/episodes.csv", row.names = F, append = T, col.names = F, sep = "|") #erweitern #todo:
   
   #todo
   #-betweenness 
