@@ -83,11 +83,11 @@ Nightmare Adrien::: Marinette. Do you wanna know my secret?
 Marinette:::Adrien?
 Nightmare Adrien::: I'm in love with a girl and her name is Chloé!
 Marinette::: What kind of a nightmare is this? 
-Sandboy::: The Sandboy just checked in!Now nightmares can begin! 
+SandBoy::: The Sandboy just checked in!Now nightmares can begin! 
 Marinette::: He must be bringing nightmares to life.
 Nightmare Adrien::: One day, Chloé and I will have a house togetherand we'll have a hamster named Marinette.
 Marinette:::Ssh!
-Sandboy::: The Sandboy just checked in!Now nightmares can begin! 
+SandBoy::: The Sandboy just checked in!Now nightmares can begin! 
 Marinette::: Tikki, spots on! Oh, no! I forgot! It's… I've gotta find Tikki!
 Nightmare Adrien::: Marinette. The prettiest and smartest one of all is Chloé!
 Tom:::The little grain of wheat goes to bed and wakes up as some lovely bread.Hmm?
@@ -97,7 +97,7 @@ Adrien::: What's going on?! Plagg! Wake up!Plagg! No! Who turned you into a sock
 Sass::: My friends, the time has come.Fellow kwamis, tonight, as you know, we have a special opportunity to create a connection with Nooroo. But we must put our voices together in order to achieve this. Kwamis, sing!
 All::: 
 Roger::: Stop! In the name of the law. 
-Sandboy::: The Sandboy just checked in!Now nightmares can begin! 
+SandBoy::: The Sandboy just checked in!Now nightmares can begin! 
 Nightmare Adrien::: Marinette. I'm in love with Chloé!
 Adrien::: Nathalie! Father! Can anybody hear me?!
 Tikki:::We won't make it, Sass.
@@ -108,7 +108,7 @@ Wayzz:::Mm-mm. I have to stand guard.
 Plagg::: But this could be our only chance of finding Nooroo… and Hawk Moth!
 Wayzz:::Okay! Let's go!
 Marinette:::The code… What's the code?Tikki! Can you hear me? Tikki?!
-Sandboy::: The Sandboy just checked in!Now nightmares can begin! 
+SandBoy::: The Sandboy just checked in!Now nightmares can begin! 
 Marinette::: Master, Master, wake up! 
 Master Fu::: Huh… Marinette?!Wha… what-a…
 Marinette::: Quick, Master.Don't stay here.
@@ -120,7 +120,7 @@ Marinette::: I can't, Master. Tikki is inside the Miracle Box!
 Nightmare Adrien:::I'm in love with a girl and her name is Chloé!
 Master Fu::: This is disastrous, Marinette. There's no way of communicating with the kwamis when they are in their magic world. 
 Adrien::: Help me! Father!
-Hawk Moth::: Sandboy is turning Paris into one huge nightmare… and yet there's no sign of Ladybug or Cat Noir. What is going on?!
+Hawk Moth::: SandBoy is turning Paris into one huge nightmare… and yet there's no sign of Ladybug or Cat Noir. What is going on?!
 Kwamis::: Nooroo! Nooroo! Nooroo! Nooroo! Nooroo!
 Hawk Moth::: Argh! What is that?!
 Tikki::: That's not Nooroo!
@@ -133,7 +133,7 @@ Wayzz::: Hey, wait. The reason we can't speak to Nooroo is because he's powering
 Ziggy::: And since Plagg and Tikki are here with us…
 Kaalki::: Ladybug and Cat Noir aren't able to transform.Go and find your owners right away! 
 Hawk Moth:::They're making a serious mistake. I just felt the kwamis somewhere on the right bank of the Seine. Find them! Capture them!
-Sandboy::: Yes, Hawk Moth.
+SandBoy::: Yes, Hawk Moth.
 Nightmare Adrien::: Marinette, for your birthday, I'm going to buy you flowers—
 Tikki::: Hey! Isn't that your owner?
 Plagg::: Of course not! Flowers? Pwah!No way! The real one talks nonsense but it's never this bad.
@@ -144,9 +144,9 @@ Wayzz::: I'm sorry, Master, we should've warned you.
 Master Fu::: We'll talk about it later, Wayzz!
 Marinette::: Right now, we have to end this nightmare!
 Marinette::: Tikki, spots on! Yeah!
-Sandboy::: Kwami in sight.
+SandBoy::: Kwami in sight.
 Hawk Moth:::That's Cat Noir's kwami. Capture it or follow it all the way to its owner. 
-Sandboy::: The Sandboy just checked in. Now nightmares can begin! 
+SandBoy::: The Sandboy just checked in. Now nightmares can begin! 
 Plagg:::I already know what my nightmare is; and you'll never get me to eat dairy-free cheese.
 Plagg:::I'm your worst nightmare. 
 Hawk Moth:::Argh! You failed. Ladybug and Cat Noir will be here soon! You must get me their Miraculous!
@@ -158,15 +158,15 @@ Cat Noir::: Cataclysm!No time for daydreaming.
 Cat Noir::: What is this mess?M'Lady! Tonight's been a total nightmare… until you showed up. 
 Ladybug:::This is no time for lullabies. We've got to stay focused!Look! His cloud is shaped like a pillow! I'll bet you anything that's where his akuma is.
 Cat Noir::: Awesome! Then time for a pillow fight!
-Sandboy::: You won't be able to fight your worst nightmare for long. 
+SandBoy::: You won't be able to fight your worst nightmare for long. 
 Ladybug::: He's moving around too much!
 Cat Noir::: And his evil sand is blowing everywhere.
 Ladybug::: no Lucky Charm-item appears) Oh, no!
-Sandboy::: Who's about to get a pretty magic jewel? 
+SandBoy::: Who's about to get a pretty magic jewel? 
 Cat Noir::: Ladybug!
 Ladybug::: What's happening? Aaah! 
-Hawk Moth:::Good job, Sandboy. Without her powers, she won't be able to stop you from taking her Miraculous. Ladybug, your nightmare is my dream come true!
-Sandboy::: The Sandboy just checked in! Now nightmares can begin! 
+Hawk Moth:::Good job, SandBoy. Without her powers, she won't be able to stop you from taking her Miraculous. Ladybug, your nightmare is my dream come true!
+SandBoy::: The Sandboy just checked in! Now nightmares can begin! 
 Cat Noir::: Stay behind me, M'Lady.
 Ladybug:::You still have your powers.
 Cat Noir::: Losing mine is not what I'm afraid of.
@@ -180,7 +180,7 @@ Nightmare Ladybug::: I am gonna destroy you. Lucky Charm!
 Cat Noir::: Oops. Sorry, M'Lady. Stay behind me, I'll protect you.
 Nightmare Ladybug:::Stay still, you mangy cat!Here, kitty, kitty, kitty. Come on!
 Cat Noir::: We need to figure out a plan. Fast!
-Sandboy::: Stay! Still! Give me your Miraculous, Ladybug! 
+SandBoy::: Stay! Still! Give me your Miraculous, Ladybug! 
 Nightmare Ladybug::: So, you want to play hide and seek, kitty?Come on, kitty! 
 Cat Noir::: Watch out, Ladybug!
 Cat Noir::: Ladybug! I'm about to transform back. Any ideas?
@@ -190,19 +190,19 @@ Nightmare Ladybug::: You'll be kitty-kibble before you know it!
 Ladybug::: Now!
 Ladybug::: Follow me!
 Cat Noir::: Anywhere, M'Lady. 
-Sandboy::: Give me your Mirac—Aaah!
+SandBoy::: Give me your Mirac—Aaah!
 Ladybug::: Cat Noir, now! 
-Sandboy::: Whoa! Whoa! Aaah!
+SandBoy::: Whoa! Whoa! Aaah!
 Hawk Moth:::Nooo!!!
 Ladybug::: Miraculous Ladybug! 
 Nightmare Adrien:::Marinette! 
 Ladybug and Cat Noir::: Pound it! 
 Ladybug:::It works again. No more evil-doing for you, little akuma. Time to de-evilize!Gotcha!Bye-bye, little butterfly.Wow, what was that all about, little friend?
-boy::: Oh, Ladybug. I watched a movie on TV. It was kinda scary. And then I went to bed and had a really bad nightmare. I woke up and there was a black butterfly in my room a-and a weird man spoke right in my face.
+Boy::: Oh, Ladybug. I watched a movie on TV. It was kinda scary. And then I went to bed and had a really bad nightmare. I woke up and there was a black butterfly in my room a-and a weird man spoke right in my face.
 Ladybug::: Hawk Moth. He fed of the negative emotion from a nightmare.
 Cat Noir::: That's what happens when you let kids watch anything they want on TV. Oh…Can I leave you to take this young man back to his parents?
-Ladybug::: No problem. Right, big boy?
-boy:::Yay! Awesome, Ladybug!
+Ladybug::: No problem. Right, big Boy?
+Boy:::Yay! Awesome, Ladybug!
 Ladybug::: Cat Noir? You don't really think I'm as evil as your nightmare, do you?
 Cat Noir::: 'Course I don't. You're the lady of my dreams. 
 Master Fu::: Hmm.

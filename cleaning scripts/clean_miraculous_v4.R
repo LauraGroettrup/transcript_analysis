@@ -73,7 +73,7 @@ clean_transcript <- function(filepath){
   writeLines(cleaned_transcript, filepath)
 }
 
-files <- list.files(path='./data/miraculous', full.names=TRUE, recursive=TRUE, include.dirs=FALSE)
+files <- list.files(path='./data/miraculous/', full.names=TRUE, pattern = ".*.txt", include.dirs=FALSE)
 for (file in files){
   clean_transcript(file)
 }
