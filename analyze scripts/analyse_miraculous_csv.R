@@ -1,7 +1,7 @@
 ##zielverzeichnis muss beinhalten: processed, plots, dialogtable
 source("./main.R")
 source("./metadata scripts/metainfo_series_miraculous_Martin.R")
-#source("./analyze scripts/sentimentAI - initiate_v3.R")
+# source("./analyze scripts/sentimentAI - initiate_v3.R")
 
 
 process_transcript<-function(filepath){
