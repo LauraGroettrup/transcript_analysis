@@ -1,13 +1,11 @@
 ##zielverzeichnis muss beinhalten: processed, plots, dialogtable
 source("./main.R")
-source("./metadata scripts/metainfo_series_miraculous_v4.R")
-#source("./analyze scripts/sentimentAI - initiate_v3.R")
+source("./metadata scripts/metainfo_series_miraculous_Martin.R")
+# source("./analyze scripts/sentimentAI - initiate_v3.R")
 
 
 process_transcript<-function(filepath){
-  #filepath<-"./data/miraculous/processed/Gang Of Secrets.csv"
-  #filepath<-"./data/miraculous/processed/Mayura (Heroes' Day - Part 2).csv"
-  #filepath<-"./data/miraculous/processed/Felix.csv"
+  #filepath<-"./data/miraculous/processed/Stormy Weather.csv"
   filetext <- read.csv(filepath, header = F, sep="|")
   #filetext <- readtext(filepath)#old
   
@@ -37,29 +35,17 @@ process_transcript<-function(filepath){
   colnames(ep_df_values) <- data.frame("no", "season", "ep_per_season", "air_date", "ep_edge_density_value", "ep_reciprocity_value", "ep_diameter_value")
   ep_title <- gsub(".csv", "", filepath)
   ep_title <- gsub("./data/miraculous/processed/", "", ep_title)
-  #Änderung-IN
-  #ep_title="Mayura (Heroes' Day - Part 2)"
-  #ep_title="Catalyst (Heroes' Day - Part 1)"
-  ep_title <-strsplit(ep_title, "\\(")
-  ep_title <-matrix(unlist(ep_title), ncol = 1)
-  ep_title<- paste(ep_title[1, 1])
-  ep_title <-str_trim(ep_title)
-  if (ep_title == "Felix") {
-    ep_title <- "Félix"
-  }
-  subset <- season_ep_list[grep(ep_title, season_ep_list$title, ignore.case = T), ] #new:ignorecase
-  #subset <- season_ep_list[season_ep_list$title %like% ep_title, ] #old
-  #Änderung-OUT
+  subset <- season_ep_list[season_ep_list$title %like% ep_title, ] 
   ep_no <- paste(subset[1, 1])
   ep_per_season<-paste(subset[1, 2])
   air_date<-paste(subset[1, 4])
   season<-paste(subset[1, 5])
   #problem: wenn season NA ist, führt dies zu Problemen bei Berechnung, s. Sentiment von Marinette über dies Seasons
   #problem: was tun, wenn ep_no,ep_per_season, air_date, season "NA" ist => ersetzen mit "99999" sinnvoll?
-    #ep_no<-gsub("NA", "99999",ep_no, perl = TRUE)
-    #ep_per_season<-gsub("NA", "99999",ep_per_season, perl = TRUE)
-    #air_date<-gsub("NA", "99999",air_date, perl = TRUE)
-    #season<-gsub("NA", "99999",season, perl = TRUE)
+    ep_no<-gsub("NA", "99999",ep_no, perl = TRUE)
+    ep_per_season<-gsub("NA", "99999",ep_per_season, perl = TRUE)
+    air_date<-gsub("NA", "99999",air_date, perl = TRUE)
+    season<-gsub("NA", "99999",season, perl = TRUE)
     #season[is.na(season)] <- 99999
   #end:missing data from metadata
   ep_edge_density_value<-edge_density(ep_sociogram_igraph) #Anzahl an Verbindungen im Verhältnis zu Anzahl aller möglichen Verbindungen; The density of a graph is the ratio of the number of edges and the number of possible edges.
@@ -83,6 +69,10 @@ process_transcript<-function(filepath){
   sentimentProCharacter<- c(sentimentProCharacter, season, ep_no, ep_title)
   #sentimentProCharacter<- c(sentimentProCharacter, season, ep_no, ep_title, ep_degree_in, ep_degree_out, ep_degree_all, ep_closeness, ep_eigen_centrality, ep_betweenness, ep_hub_score,ep_authority_score,ep_rank_score)
   write.table(sentimentProCharacter,"./data/miraculous/tables/sentiment.csv", row.names = F, append = T, col.names = F, sep = "|")
+  
+  
+  #todo
+  #-betweenness 
   
   ### DialogTable for all eps: From | To | Sentiment | Text | season | ep_no | ep_title 
   dialogTable <- data.frame(pairs[, 1], pairs[, 2], sentimentMiraculous[1:(length(sentimentMiraculous))], script[, 2][1:(length(script[, 2]))], season, ep_no, ep_title)
@@ -115,9 +105,9 @@ for (file in files){
   allCharacters[[i]] <- unique(characters)
 }
 subset(table(unlist(allCharacters)), table(unlist(allCharacters))>20)
-dialogTable <- read.csv("./data/miraculous/tables/dialogs.csv", sep="|", header = F)
-episodeTable <- read.csv("./data/miraculous/tables/episodes.csv", sep="|",header = F)
-sentimentTable <- read.csv("./data/miraculous/tables/sentiment.csv", sep="|",header = F)
+dialogTable <- read.csv("./data/miraculous/tables/dialogs.csv", sep="|")
+episodeTable <- read.csv("./data/miraculous/tables/episodes.csv", sep="|")
+sentimentTable <- read.csv("./data/miraculous/tables/sentiment.csv", sep="|")
 lineTable <- dialogTable
 lineTable[2] <- NULL
 write.table(lineTable,"./data/miraculous/tables/lines.csv", row.names = F, append = T, col.names = F, sep = "|")

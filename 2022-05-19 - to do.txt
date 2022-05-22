@@ -25,10 +25,10 @@ Bis Dienstag:
 
 	Episode: - laura
 		5 wichtigsten Personen pro episode (betweenness und Eigenvektor) 
-		assortativity_degree - directed
+		assortativity_degree - directed - done
 	
 
 		names(sort(betweenness, decreasing)[[
-		-> dataframe mit metadaten einfügen (5x für beetween, 5x Eigenvektor)
+		-> dataframe mit metadaten einfügen (5x für beetween, 5x Eigenvektor) -done
 
 	-Darstellung der Retrieval, Cleaning,….

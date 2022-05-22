@@ -57,6 +57,8 @@ clean_transcript <- function(filepath){
     line <- sub("Tom'","Tom", line)
     line <- sub("Veronique","Véronique", line)
     line <- sub(" ) Marinette","Marinette", line)
+    #Delte all white spaces
+    line <- gsub(".*:::", paste(str_trim(sub(":::.*", "",line)), ":::", sep = ""), line)
     if(str_starts(line, "[^:]+:::.+")){
       if(!str_starts(line, "Category") & (!str_starts(line, "es:")) & (!str_starts(line, "pl:")) & (!str_starts(line, "fr:")) & (!str_starts(line, "ja:")) & (!str_starts(line, "de:")) & (!str_starts(line, "\\{"))){
       #if(!str_starts(line, "Category") & (!str_starts(line, "es:")) & (!str_starts(line, "pl:")) & (!str_starts(line, "fr:")) & (!str_starts(line, "ja:")) & (!str_starts(line, "de:")){ 
