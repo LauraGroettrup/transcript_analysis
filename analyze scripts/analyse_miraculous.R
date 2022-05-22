@@ -5,7 +5,7 @@ source("./metadata scripts/metainfo_series_miraculous_Martin.R")
 
 
 process_transcript<-function(filepath){
-  #filepath<-"./data/miraculous/processed/Gang Of Secrets.txt"
+  #filepath<-"./data/miraculous/processed/Stormy Weather.txt"
   filetext <- readtext(filepath)
   transcript_lines <- str_split(filetext, "\\n")[[1]]
   characterName <- strsplit(transcript_lines, ":::")
