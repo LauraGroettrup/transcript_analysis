@@ -81,7 +81,7 @@ Adrien:::Follow that car!
 Marinette:::An akuma!Better capture it before it turns someone into a villain!
 Tikki::: At your service, Marinette!
 Marinette::: Quick! Adrien is in danger!
- Marinette::: Tikki, spots on! Ha!
+Marinette::: Tikki, spots on! Ha!
 Tomoe:::I'm not available at the moment. Leave a message. 
 Kagami::: Mother, you thought I was good enough, but... I lost. I won't be joining the D'Argencourt Academy.
 Hawk Moth::: Riposte! I am Hawk Moth. I'm giving you a second chance to prove that you are the best fencer of all, but in return, you must bring me Ladybug and Cat Noir's Miraculous.
@@ -118,7 +118,7 @@ Riposte::: It's too late! The damage has been done! This time, I shall be the re
 Ladybug::: Stay back, Adrien. 
 Plagg::: You're sure taking some risks today.
 Adrien::: Don't really have a choice do I? Ladybug needs me.
- Adrien::: Plagg, c-! 
+Adrien::: Plagg, c-! 
 Ladybug::: Adrien, you okay? 
 Adrien::: Uhh, yeah, and you?
 Ladybug::: I'll feel better once your safe, far away from that girl. Come on, let's go.
@@ -136,7 +136,7 @@ Ladybug::: I won't let you lay a hand on him!
 Adrien::: It's time we went and joined Ladybug.
 Plagg::: Didn't you hear what she said? She said to wait here! You can't disobey her!
 Adrien::: I've gotta help her!
- Adrien::: Plagg, claws out!
+Adrien::: Plagg, claws out!
 Riposte::: Cat Noir!
 Cat Noir::: A fencing tournament at the Louvre? How come I wasn't invited?
 Ladybug:::Let me guess: you were late because you were at the groomers again?

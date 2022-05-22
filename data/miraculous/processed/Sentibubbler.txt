@@ -156,18 +156,18 @@ Marinette::: Rena Rouge created an illusion of Ladybug to fool the Bubbler who's
 Cat Noir:::And you know this... how?
 Marinette:::Uh- Oh, well... i-it's because I-I have a really good view of the whole thing since the very beginning. You might even say I have front row seats here! 
 Rena Rouge:::What's going on?The Bubbler has captured my family, my friends!
-Ladybug ::: What's going on? 
-Alya ::: The Bubbler has captured my family, my friends!
-Ladybug ::: Hmm, but not you?
-Alya ::: I don't know. He was already gone when I got here. 
-Ladybug ::: That's strange. It would have made more sense if he threatened your family in order to force you to betray me.
-Alya ::: I'd never betray you, Ladybug. 
-Ladybug ::: Shadow Moth attacked your family because he found out that you're a superhero. Unfortunately, I won't be able to give you the Miraculous of the Fox ever again. 
+Ladybug::: What's going on? 
+Alya::: The Bubbler has captured my family, my friends!
+Ladybug::: Hmm, but not you?
+Alya::: I don't know. He was already gone when I got here. 
+Ladybug::: That's strange. It would have made more sense if he threatened your family in order to force you to betray me.
+Alya::: I'd never betray you, Ladybug. 
+Ladybug::: Shadow Moth attacked your family because he found out that you're a superhero. Unfortunately, I won't be able to give you the Miraculous of the Fox ever again. 
 Shadow Moth::: No!! This isn't the plan!
 Sentibubbler:::Shall I capture Ladybug?
 Shadow Moth::: Wait! Just a moment!
 Rena Rouge:::I was proud to fight by your side, Ladybug.Don't worry...
-Ladybug ::: ...I'll find another holder and give him a different, but very powerful Miraculous! We'll save your loved ones!
+Ladybug::: ...I'll find another holder and give him a different, but very powerful Miraculous! We'll save your loved ones!
 Rena Rouge:::Thank you, Ladybug!
 Shadow Moth::: I'm looking forward on getting my hands on this new and powerful Miraculous, as well! Let's follow her!
 Cat Noir::: If the sentimonster touches the illusion, it'll disappear! He'll know it's a trap! I gotta stop him!
@@ -211,7 +211,7 @@ Sentibubbler::: Hurry up! The bubbles are rising! Tick-tock, Ladybug!
 Cat Noir:::It's now or never for your awesome two-person plan, m'lady!
 Pegabug::: I won't be able to seize everything at once! First, the object that controls the sentimonster. Voyage!
 Shadow Moth::: Ladybug!
- Post- Pegabug::: No, Pegabug!
+Post- Pegabug::: No, Pegabug!
 Pegabug::: Sentibubbler! Bring the bubbles down and free the prisoners!
 Sentibubbler::: At your command! 
 Shadow Moth::: You're forgetting something, Pegabug! I created him! Sentibubbler, I release you from existence! 

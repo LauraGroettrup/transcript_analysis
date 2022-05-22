@@ -55,7 +55,7 @@ Tikki::: You realize, based on Master Fu's theory, Adrien's father could be Hawk
 Marinette::: No way! It couldn't be! Hmm... An eccentric artist who never leaves his home. Mysterious, very intelligent, but cold, even with his own son. This is a very strong lead, Tikki!
 Tikki::: Please be careful, Marinette!
 Marinette::: I will.
- Marinette::: Tikki, spots on! Ha!
+Marinette::: Tikki, spots on! Ha!
 Cat Noir:::Has the cat got your tongue? Leave a message!
 Ladybug::: Cat Noir, I think I know who Hawk Moth is! Get your whiskers over here fast!
 Nathalie::: What will you do without the book?
@@ -76,7 +76,7 @@ The Collector::: I am now...the Collector! My book of inspiration has been taken
 Adrien::: My father's angry because of me; he won't forgive me until I find that book.
 Plagg::: May I remind you that you're actually grounded?
 Adrien::: Adrien is, but Cat Noir isn't. 
- Adrien::: Plagg, claws out!
+Adrien::: Plagg, claws out!
 Plagg::: Oh my! 
 Ladybug:::Cat Noir, I think I know who Hawk Moth is. Get your whiskers over here, fast!
 Cat Noir::: Wow! I guess the Spellbook will have to wait a bit longer.

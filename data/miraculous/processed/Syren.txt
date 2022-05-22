@@ -80,7 +80,7 @@ Plagg:::
 Adrien::: Tome de Quraish with truffles; raw milk Camembert, aged on vine leaves marinated in Emmental juice.
 Plagg::: Looks like your whole cheese strategy will have to tread water.
 Adrien:::Don't worry, this isn't over.
- Adrien::: Plagg, claws out!
+Adrien::: Plagg, claws out!
 Markov:::My circuits are sensitive to water.
 Kim::: Wha, ho, ho, ho! Ha, ha!Come on, guys! I can teach you to swim in two seconds flat, Markov. You just put your arms like this, then you push your legs, and it's kind of like being a frog, you see. In fact, it helps to think as a frog, too, you know—
 Max:::Kim!!
@@ -122,7 +122,7 @@ Master Fu:::I don't know, uh...
 Marinette::: Because the bed won't come to you!What goes up, but doesn't move? Stairs!What does a snail say when it's riding on a turtle's back?"Wooohooo!!"
 Master Fu::: I think you have just found the magic ingredient, Marinette!
 Tikki::: Mmm! Yummy!
- Marinette::: Tikki, power up! 
+Marinette::: Tikki, power up! 
 Tikki::: Aqua-Tikki! 
 Marinette::: Aqua-Tikki, spots on! Yeah!
 Aquabug::: Master Fu, I think it's time you put those noodles into the boiling water.
@@ -168,9 +168,9 @@ Aquabug:::Cat Noir! Are you all right?
 Aqua Noir:::Yeah, Bugaboo. Like a fish in water.
 Aquabug::: Great! Now, be ready to strike!Cat Noir! Now!
 Aqua Noir::: Looks like I got a nibble!How cool! I always wanted a goldfish! 
-Aquabug ::: No more evil-doing for you, little akuma. Time to de-evilize!Gotcha! Bye bye, little butterfly.Miraculous Ladybug!
+Aquabug::: No more evil-doing for you, little akuma. Time to de-evilize!Gotcha! Bye bye, little butterfly.Miraculous Ladybug!
 Aqua Noir::: Thank you for keeping your promise, M'Lady.
-Aquabug :::We are a team, aren't we?
+Aquabug:::We are a team, aren't we?
 Aquabug & Aqua Noir:::Pound it!
 Master Fu::: Each blend corresponds to a new power.
 Marinette:::Oh wow! That's a lot of powers!

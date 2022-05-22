@@ -85,11 +85,11 @@ Lila::: Give me supervillain powers and I'll give you her and Cat Noir's Miracul
 Hawk Moth:::With pleasure. I have some new powers for you, Chameleon.
 Ladybug::: I gotta find another way. 
 Adrien:::Hey.
-Chameleon ::: Adrien, I wanted to apologize for what just happened. I've thought about it and you're right. I want us to be friends, so I'll never tell another lie again. Will you make peace with me?Whoops, I lied. 
+Chameleon::: Adrien, I wanted to apologize for what just happened. I've thought about it and you're right. I want us to be friends, so I'll never tell another lie again. Will you make peace with me?Whoops, I lied. 
 Plagg:::Adrien, Adrien!
-Chameleon ::: Nino, I have something to tell you. You don't deserve my friendship or your girlfriend or your cap. 
+Chameleon::: Nino, I have something to tell you. You don't deserve my friendship or your girlfriend or your cap. 
 Alya::: Hey!
-Chameleon ::: You should see your faces, don't miss my performance at the Eiffel Tower. You're gonna love it.
+Chameleon::: You should see your faces, don't miss my performance at the Eiffel Tower. You're gonna love it.
 Ladybug::: What? Not Adrien.
 Bus Driver::: Hey, thank you Ladybug.
 Civilian::: My balloon. Mommy!
@@ -108,12 +108,12 @@ Adrien::: Plagg, what happened? And what are you doing?
 Plagg::: Oh, me? Nothing I, uh… your friend Lila put you to sleep with an evil kiss. You should be more careful picking your friends.
 Adrien::: Lila must've been re-akumatized. Quick Plagg, claws out!
 Quentin's mother::: Quentin! Quentin!
-Chameleon ::: Ladybug, I saw the supervillain running away. 
+Chameleon::: Ladybug, I saw the supervillain running away. 
 Ladybug::: Thanks! Don't stay here, okay? It's dangerous.Come out of there, Chameleon! 
 Quentin's mother::: My Quentin! You found him, Ladybug.
 Ladybug::: Found him?
 Cat Noir::: Ladybug, look out! 
-Chameleon ::: It's down to the two of us, Ladybug. Cataclysm!
+Chameleon::: It's down to the two of us, Ladybug. Cataclysm!
 Ladybug::: I'm gonna find out who you really are, Chameleon!
 Chameleon::: I'll find out who you are first, don't you worry.Too bad Cat Noir's power is gonna destroy you. 
 Ladybug::: If you manage to touch me! 
