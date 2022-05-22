@@ -90,7 +90,7 @@ The Gorilla:::
 Adrien::: We've got a little time before school's officially over!Doing this to help my friends out.
 The girls::: Please!
 The Gorilla::: 
-Hawk Moth:::Reflekta, I am Hawk Moth. I'm giving you the power to make people look just like you again, so that everyone will notice you.
+Hawkmoth:::Reflekta, I am Hawk Moth. I'm giving you the power to make people look just like you again, so that everyone will notice you.
 Mayura::: Reflekta, I am Mayura. To help you succeed you'll be assisted by Reflekdoll. She'll be entirely under your control.
 Hawk Moth::: And in return, of course, you must get hold of Ladybug and Cat Noir's Miraculous.
 Juleka::: Hawk Moth, Mayura, you can count on me. I will succeed this time. 
@@ -171,9 +171,9 @@ Mister Bug::: You're just jealous of my mastery, that's all.
 Lady Noire::: Hmph! 
 Lady Noire:::Very effective, Mister Bug!
 Mister Bug::: But, I thought...
-Lady Noire::: May I remind you that the Lucky Charm doesn't just give you an object to defeat the villain with? You actually have to figure out exactly how to use it to win the battle! Using your head!Now that you've used up your Lucky Charm—you've only got a few minutes left— uh!Before you transform back, BugaBoy!
+Lady Noire::: May I remind you that the Lucky Charm doesn't just give you an object to defeat the villain with? You actually have to figure out exactly how to use it to win the battle! Using your head!Now that you've used up your Lucky Charm—you've only got a few minutes left— uh!Before you transform back, Bugaboy!
 Mister Bug::: Why don't you try helping me instead of making fun of me!? 
-Lady Noire::: Apparently, BugaBoy doesn't have a sense of humor.
+Lady Noire::: Apparently, Bugaboy doesn't have a sense of humor.
 Mister Bug:::Sounds like you're wearing the clown costume now!
 Lady Noire:::You bet! I'm the cunning, funny, and ultra-charming Lady Noire! Watch and learn. Cataclysm! 
 Reflekta:::Whoaah!What's happening?
@@ -221,7 +221,7 @@ Duusu::: Yahoooo!
 Gabriel::: Nathalie needs peace and quiet. Duusu, let her rest.
 Duusu::: Yes, of course. Sorry.
 Mister Bug::: Honestly, I understand why you never have any time to make jokes, m'lady.
-Lady Noire::: We both have our roles, huh BugaBoy? 
+Lady Noire::: We both have our roles, huh Bugaboy? 
 Mister Bug::: Spots off! 
 Adrien::: See you again, soon, Tikki.
 Tikki::: Goodbye, Adrien! 
