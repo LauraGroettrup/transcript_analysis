@@ -1,3 +1,9 @@
+# METAINFO
+
+#prerequisites
+# - internet connection
+
+
 ##-----EINTRAGUNGEN-------------------------------------------------------
 prefix_series = "miraculous"
 anzahlseasons=5
@@ -81,6 +87,7 @@ for (filename in filenames_list_txt){
   filename <- gsub(".txt", "", filename)
   filenames_list <- append(filenames_list, filename)
 }
-rm(filename, i, link, nam, prefix, prefix_series, anzahlseasons)
-#data_subset <- season_ep_list["Lady Wifi", ] #suchen?
+#aufräumen
+rm(filename, i, link, nam, prefix, prefix_series, anzahlseasons, filenames_list, filenames_list_txt)
+print("<End of Metainfo-Script>")
 #------------------------------------------------------------------------

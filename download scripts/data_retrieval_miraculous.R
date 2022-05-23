@@ -1,3 +1,9 @@
+# METAINFO
+
+#prerequisites
+# - internet connection
+# - empty folders "data/miraculous"must be present
+
 get_transcripts_urls <- function(overview_urls, prefix) {
   transcript_urls <- c()
   for(url in overview_urls){
@@ -69,3 +75,5 @@ files <- list.files(path='./data/miraculous/', full.names=TRUE, recursive=TRUE, 
 for (file in files){
   clean_transcript(file)
 }
+print("<End of Downloading-Script>")
+#------------------------------------------------------------------------

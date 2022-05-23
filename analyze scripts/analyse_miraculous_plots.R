@@ -1,5 +1,13 @@
+# ANALYZE PLOTS
+
+#prerequisites
+# - download script executed
+# - cleaning script executed
+# - processed transcript-files (.txt) in folder: "./data/miraculous/processed"
+# - empty folders "./data/miraculous/plots", "./data/miraculous/tables" must be present
+
 source("./main.R")
-source("./metadata scripts/metainfo_series_miraculous_Martin.R")
+source("./metadata scripts/metainfo_series_miraculous.R")
 
 process_transcript<-function(filepath){
   #muss bei wholescript am Beginn erstellt werden
@@ -173,4 +181,8 @@ for (file in files){
 }
 subset(table(unlist(allCharacters)), table(unlist(allCharacters))>20)
 
-#?try
+#------------------------------------------------------------------------
+#aufräumen
+rm(i, file)
+print("<End of Analyzing PLOTS-Script>")
+#------------------------------------------------------------------------

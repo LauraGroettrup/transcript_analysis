@@ -1,4 +1,10 @@
-###zielverzeichnis muss beinhalten: raw_proscessed dateien in root; leere verzeichnisse: raw, abandoned, processed
+# ANALYZE
+
+#prerequisites
+# - download script executed
+# - raw-transcript-files (.txt) in folder: "/data/"
+# - empty folders "data/miraculous/processed", "data/miraculous/abandoned", "data/miraculous/raw" must be present
+
 source("./main.R")
 
 clean_transcript <- function(filepath){
@@ -75,7 +81,12 @@ clean_transcript <- function(filepath){
   writeLines(cleaned_transcript, filepath)
 }
 
-files <- list.files(path='./data/miraculous/', full.names=TRUE, pattern = ".*.txt", include.dirs=FALSE)
+files <- list.files(path='./data/miraculous', full.names=TRUE, pattern = ".*.txt", include.dirs=FALSE)
 for (file in files){
   clean_transcript(file)
 }
+
+#aufräumen
+rm(clean_transcript, file, files) 
+print("<End of Cleaning-Script>")
+#------------------------------------------------------------------------

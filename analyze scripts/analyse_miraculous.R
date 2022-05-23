@@ -1,8 +1,14 @@
-###zielverzeichnis muss beinhalten: processed, plots, dialogtable
+# ANALYZE
+
+#prerequisites
+# - download script executed
+# - cleaning script executed
+  # - processed transcript-files (.txt) in folder: "./data/miraculous/processed"
+# - empty folders "./data/miraculous/plots", "./data/miraculous/tables" must be present
+#sentimentAI Initiated: source("./analyze scripts/sentimentAI - initiate.R")
+
 source("./main.R")
 source("./metadata scripts/metainfo_series_miraculous.R")
-#source("./analyze scripts/sentimentAI - initiate.R")
-
 
 process_transcript<-function(filepath){
   #filepath<-"./data/miraculous/processed/Stormy Weather.txt"
@@ -106,16 +112,16 @@ plotOverall <- function(dialogTable){
   plot(ep_sociogram_plot, main = "plot: sociogram", sub = "Miracolous_sociogram")
 }
 
-# Coming soon
+#Einlesen
 files <- list.files(path='./data/miraculous/processed', full.names=TRUE, recursive=TRUE, include.dirs=FALSE)
-allCharacters <- vector(mode = "list", length = length(files))
+character_allperep <- vector(mode = "list", length = length(files))
 i <- 0
 for (file in files){
   characters <- process_transcript(file)
   i <- i+1
-  allCharacters[[i]] <- unique(characters)
+  character_allperep[[i]] <- unique(characters)
 }
-subset(table(unlist(allCharacters)), table(unlist(allCharacters))>20)
+subset(table(unlist(character_allperep)), table(unlist(character_allperep))>20)
 dialogTable <- read.csv("./data/miraculous/tables/dialogs.csv", sep="|", header = F)
 episodeTable <- read.csv("./data/miraculous/tables/episodes.csv", sep="|", header = F)
 sentimentTable <- read.csv("./data/miraculous/tables/sentiment.csv", sep="|", header = F)
@@ -172,6 +178,10 @@ missing_entries_episode_table <- episodeTable[rowSums(is.na(episodeTable)) > 0,]
 #processing - name
 #dub<-table(lineTable$Character)
 #dub<-data.frame(dub)
+#------------------------------------------------------------------------
+#aufräumen
+rm(i)
+print("<End of Analyzing-Script>")
+#------------------------------------------------------------------------
 
-#cleanup
-#rm(characterName, ep_sociogram_plot, filetext, pairs, script, sentimentProCharacter, sociogram_intermediate, characters, ep_sentiment_plot, file, file_intermediate, filepath, files, myEdges, nNodes, sentimentMiraculous, title_intermediate, transcript_lines)
+
