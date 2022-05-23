@@ -72,7 +72,7 @@ Nooroo::: Uh, why is the akuma still here?
 Gabriel::: I must become someone else to lead them astray.
 Nooroo::: I don't understand, Master.
 Gabriel::: Nooroo, I renounce you......temporarily.Come to me, my little akuma, and evilize me!
-The Collector::: I am now...the Collector! My book of inspiration has been taken from me, so I shall build a new one! And perhaps pick up a Miraculous or two while I'm at it! 
+Collector::: I am now...the Collector! My book of inspiration has been taken from me, so I shall build a new one! And perhaps pick up a Miraculous or two while I'm at it! 
 Adrien::: My father's angry because of me; he won't forgive me until I find that book.
 Plagg::: May I remind you that you're actually grounded?
 Adrien::: Adrien is, but Cat Noir isn't. 
@@ -80,15 +80,15 @@ Adrien::: Plagg, claws out!
 Plagg::: Oh my! 
 Ladybug:::Cat Noir, I think I know who Hawk Moth is. Get your whiskers over here, fast!
 Cat Noir::: Wow! I guess the Spellbook will have to wait a bit longer.
-The Collector::: Nathalie! You'll be the first of my many inspirations to come.
+Collector::: Nathalie! You'll be the first of my many inspirations to come.
 Nathalie::: Mr. Agreste?
-The Collector::: You will call me...the Collector.
-The Collector::: Adrien...I have a great collection I want to show you.
+Collector::: You will call me...the Collector.
+Collector::: Adrien...I have a great collection I want to show you.
 August's mother::: Cheese!
 Nadja::: Don't be bemused, it's just the news. I'm Nadja Chama—
-The Collector:::Since the book that used to fill my life is gone, I'm going to use your life to fill up this new one! 
+Collector:::Since the book that used to fill my life is gone, I'm going to use your life to fill up this new one! 
 Mayor Bourgeois::: People of Paris— 
-The Collector::: Nothing can inspire me more than imprisoning Ladybug and Cat Noir in these pages forever. 
+Collector::: Nothing can inspire me more than imprisoning Ladybug and Cat Noir in these pages forever. 
 Ladybug:::Cat Noir, what did you do?Cat Noir, did you get my messages?
 Cat Noir::: Yeah, and I can't wait to know more, M'Lady-tective. So, who's the suspect?
 Ladybug::: Gabriel Agreste.You know, the fashion designer?
@@ -99,21 +99,21 @@ Ladybug::: You must trust me on this. But it all makes sense. Gabriel Agreste is
 Cat Noir:::A butterfly? 
 Ladybug::: You okay, Cat Noir?
 Cat Noir:::It's time to get the bottom of this. 
-The Collector:::My plan is working perfectly!
+Collector:::My plan is working perfectly!
 Ladybug:::Whoa, what happened here? Looks like somebody had a little tantrum.
 Ladybug::: Are you sure you're okay?
 Cat Noir::: Yeah. Yeah, let's keep going.
 Ladybug:::He's got a son! Let's go check his room; make sure nothing's happened to him.
 Cat Noir::: Where's Gabriel Agreste?
-The Collector::: There is no more Gabriel Agreste. There is only...the Collector!
-The Collector::: You won't be able to escape!
+Collector::: There is no more Gabriel Agreste. There is only...the Collector!
+Collector::: You won't be able to escape!
 Ladybug:::Wait!
-The Collector::: Nice piece, wouldn't you agree?
+Collector::: Nice piece, wouldn't you agree?
 Ladybug:::The akuma's gotta be in that book!
 Cat Noir::: Yeah, but if we touch it, we'll disappear!
 Ladybug::: A set of pedals appears) A pedal?I have no idea what to do with this. We need to stall him.
-The Collector:::Ladybug and Cat Noir, you shall be the masterpieces in my new book of inspiration.
-The Collector::: My collection's growing!
+Collector:::Ladybug and Cat Noir, you shall be the masterpieces in my new book of inspiration.
+Collector::: My collection's growing!
 Ladybug::: No!
 Cat Noir::: So that must mean...Gabriel Agreste can't possibly be Hawk Moth, since he's been akumatized!
 Ladybug::: You call Agreste turning into the Collector good news?!
@@ -121,9 +121,9 @@ Ladybug::: Gabriel Agreste's son isn't at home?
 Cat Noir::: Maybe the Collector's already captured him.
 Ladybug:::You think he'd take it out on his own son?
 Cat Noir::: Uh...
-The Collector::: You cannot escape from me. 
+Collector::: You cannot escape from me. 
 Ladybug::: What if he has no pages left in his book? 
-The Collector::: But before I immortalize you, allow me to seize your Miraculous for Hawk Moth.
+Collector::: But before I immortalize you, allow me to seize your Miraculous for Hawk Moth.
 Ladybug::: Cat Noir, I need ammunition!
 Cat Noir::: You need what?
 Ladybug::: We're gonna complete his collection!
@@ -134,8 +134,8 @@ Ladybug::: Ready, Cat Noir?
 Cat Noir::: I'm always ready for you, M'Lady!
 Ladybug::: Come on! Come on!
 Cat Noir::: No more ammo!
-The Collector::: Huh? It's already full!
-The Collector::: My book! No!
+Collector::: Huh? It's already full!
+Collector::: My book! No!
 Ladybug:::Miraculous Ladybug!
 Ladybug::: No more evildoing for you, little akuma. Time to de-evilize!Gotcha!Bye bye, little butterfly. 
 Ladybug::: Pound...Uh. 

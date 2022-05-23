@@ -55,11 +55,11 @@ Adrien:::Totally! He's shown you great respect in his own special way.
 Chloé:::Mr. Cheng, Marinette's looking for you outside.Let's see of the other judges enjoy your uncle's soup after this, Marinette Dupain-Cheng.Hmm? Hmph. 
 Wang Cheng::: Marinette wasn't there—
 Chloé::: No speak Japanese. See ya. 
-Alec::: As usual, our panel of gourmets is made up of André Bourgeois, the mayor of Paris and owner of this luxury hotel, his daughter Chloé, representing the younger generation, hot rockstar Jagged Stone and his killer crocodile Fang, and finally, the divine head chef of this very hotel, Marlena Césaire, and yours trulyAlec!It's time to determine the fate of Cheng Shifu's famous Celestial Soup. Let's get tasting!
+Alec::: As usual, our panel of gourmets is made up of André Bourgeois, the mayor of Paris and owner of this luxury hotel, his daughter Chloé, representing the younger generation, hot rockstar Jagged and his killer crocodile Fang, and finally, the divine head chef of this very hotel, Marlena Césaire, and yours trulyAlec!It's time to determine the fate of Cheng Shifu's famous Celestial Soup. Let's get tasting!
 Alec:::What IS this!? 
 Mayor Bourgeois::: Uh, I don't think this soup would fare well with our guests! I'll give it a 3/10.
 Chloé::: Seeing as it's pretty unappetizing, maybe I'll pass on the tasting, but I'll still give it a zero!
-Jagged Stone::: Ech! It's like kissing a member from the Zombeats! Negative zero.
+Jagged::: Ech! It's like kissing a member from the Zombeats! Negative zero.
 Marlena::: I'm sorry, but it's inedible. I give it 1/10.
 Wang Cheng::: Uh... I...Uch! I don't understand, I never put these ingredients in. It's a mistake. Someone sabotaged soup!
 Alec::: I'm sorry, Cheng Shifu, but I'm giving you a zero, too, which brings your score to 0.8/10the lowest so far. Celestial Soup will therefore not be in the hotel's menu this year, and you will not be named "World's Greatest Chef"!
@@ -75,7 +75,7 @@ Wang Cheng:::Marinette was right. It was evil act by that brat! No respect for C
 Hawk Moth::: Kung Food, I am Hawk Moth. Those who tasted your soup will become your servants. Everyone who wronged you will pay dearly.
 Wang Cheng::: I will show I am greatest chef in the world! 
 Alec::: Ooohhh, uhh...
-Jagged Stone::: Ohh, my guts are killing me.Nrgg!
+Jagged::: Ohh, my guts are killing me.Nrgg!
 Mayor Bourgeois:::I'm feeling quite uncomfortable...
 Kung Food::: Bwahaha! You have eaten my soup, you become my servants! Nyehehahaha! 
 Alec::: At your command, master.
@@ -109,7 +109,7 @@ Ladybug::: Let's go eat then. Shall we?
 Kung Food:::Who are those two?
 Hawk Moth:::They are Ladybug and Cat Noir. They've come to stop you from completing your soup. You must add them to your recipe!
 Kung Food::: Surprise ingredients? Hah! Delicious!You! Go capture them!
-Jagged Stone::: Yes, Master Kung Food. 
+Jagged::: Yes, Master Kung Food. 
 Kung Food::: Brat Soup even more powerful with superhero flavor.
 Chloé::: I will not eat your soup!
 Kung Food::: Foolish girl. You are not eating soup, you ARE soup!
@@ -117,19 +117,19 @@ Chloé::: Someone help! Let me down!
 Kung Food::: Don't worry, you will be let down soon enough. Hahahaha!
 Cat Noir:::Ugh! It's jammed!
 Kung Food::: 
-Jagged Stone::: Seafood appetizers.
-Ladybug::: Jagged Stone!
+Jagged::: Seafood appetizers.
+Ladybug::: Jagged!
 Cat Noir::: Seafood? This scampi happening. Let's see if you can carry a tuna!
 Ladybug::: Look out! 
-Cat Noir::: That's not very "rock and roll" of you, Jagged Stone.
-Jagged Stone::: Rock is one thing, soup is another. When I'm done with you, you'll be nothing but minced meat!
+Cat Noir::: That's not very "rock and roll" of you, Jagged.
+Jagged::: Rock is one thing, soup is another. When I'm done with you, you'll be nothing but minced meat!
 Cat Noir:::Good job. 
 Ladybug::: There's no time to lose! Chloé might just be the main dish! And we better not wait to find out!
-Jagged Stone:::Ugh, get me outta here! Come on, then!
+Jagged:::Ugh, get me outta here! Come on, then!
 Kung Food::: The soup is going to be Kung Food's masterpiece!
 Chloé::: Do you have to tie me up above this foul-smelling liquid! My designer clothes are going to stink of grease!
 Kung Food::: Soup not greasy at all! Kung Food soup very well-balanced. Hahahaha! 
-Jagged Stone::: Get me out of here! Come on!
+Jagged::: Get me out of here! Come on!
 Kung Food::: Bad sous chef.You! Do me justice!
 Mayor Bourgeois::: Yes, Master. Phew!
 Cat Noir::: Ladybug, come on. It's just you and me together. We could go places.
@@ -191,7 +191,7 @@ Chloé::: Ridiculous! Utterly ridiculous!
 Adrien::: Ahahaha... 
 Alec::: Cheng Shifu's delicious Celestial Soup has received the highest marks overall, making you the final winner! 
 Mayor Bourgeois:::Ah, and it will soon be the Mayor's Special on the restaurant menu of my prestigious hotel!
-Jagged Stone::: Rock n' Roll! I can't wait to get home and write a song about soup!
+Jagged::: Rock n' Roll! I can't wait to get home and write a song about soup!
 Wang Cheng::: Thank you, but no longer Celestial Soup. Now called: Marinette Soup.
 Marinette::: Huh? 谢谢 !
 Wang Cheng::: You're welcome.

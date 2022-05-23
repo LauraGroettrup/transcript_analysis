@@ -80,12 +80,12 @@ Shadow Moth:::Wishmaker, I am Shadow Moth. The world didn't let you realize your
 Alec::: From now on, I'll only be who I wanna be!And thanks to me, everyone will finally be able to do what they always wanted! 
 Wishmaker::: Live your childhood dream!
 Toy Vendor::: When I was a kid, I wanted to be Santa Claus!My dream has come true! Merry Christmas, everyone! I can make people happy even if it's not Christmas! 
-Jagged Stone::: Hey, I love your look! Rock and roll! 
+Jagged::: Hey, I love your look! Rock and roll! 
 Wishmaker::: Live your childhood dream!
-Jagged Stone::: Haha! I finally get to live my childhood dream! Awesome! 
-Jagged Stone:::Hey! Hi there, son!
+Jagged::: Haha! I finally get to live my childhood dream! Awesome! 
+Jagged:::Hey! Hi there, son!
 Luka::: Dad?
-Adrien and Marinette::: Jagged Stone?
+Adrien and Marinette::: Jagged?
 Toy Vendor:::Merry Christmas, everyone! 
 Adrien::: This is a nightmare, right?
 Robo Tech Ultimate Destructor::: I will turn you into mush!
@@ -94,7 +94,7 @@ Marinette:::I've got to protect Luka! Quick, Tikki! Spots on!
 Ladybug:::You'll be safe here.
 Luka::: Thank you, Ladybug!
 Luka::: Marinette!Marinette? Huh?
-Jagged Stone:::Help me! I don't know how to swim!
+Jagged:::Help me! I don't know how to swim!
 Luka::: Hold on, Dad! I'm coming! 
 Robo Tech Ultimate Destructor::: I always wanted to be Roboto Tech! 
 Ladybug::: Yeah, but we're not living in a video game! 
@@ -121,9 +121,9 @@ Cat Noir::: Viperion?
 Ladybug::: I think we need the insurance!
 Cat Noir::: You go, I'll cover you!
 Luka::: But Dad, crocodiles know how to swim.
-Jagged Stone:::I didn't when I was a kid.
+Jagged:::I didn't when I was a kid.
 Ladybug::: Hello there, Croco-Jagged! I need a word with your son if that's okay with you.
-Jagged Stone:::Rock and roll, Ladybug!
+Jagged:::Rock and roll, Ladybug!
 Sass::: Nice to see you again, Luka.
 Luka::: You too, Sass.
 Ladybug::: Use your power now. If Cat Noir and I get hit, you must come back to this exact moment.

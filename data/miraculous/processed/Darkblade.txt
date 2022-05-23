@@ -58,8 +58,8 @@ Tikki::: I'm proud of you, I'm sure you're gonna win! You'll make an awesome cla
 Marinette::: They're all relying on me to defeat Chloé. Even Adrien, do you realize that?
 Alya:::Marinette, battle's on.
 Marinette::: Why? What's going on?
-Alya::: Chloé's invited the whole class to her campaign launch party at City Hall and she's got Jagged Stone coming, too!
-Marinette::: Seriously? Jagged Stone, my favorite star?! I love him! Oh, and so does everyone else.
+Alya::: Chloé's invited the whole class to her campaign launch party at City Hall and she's got Jagged coming, too!
+Marinette::: Seriously? Jagged, my favorite star?! I love him! Oh, and so does everyone else.
 Alya::: Precisely! She's trying to buy student votes with autographs!
 Marinette::: Not if I have anything to say about it! Meet you there!
 Sabrina::: I'm going in, Chloé. 
@@ -99,7 +99,7 @@ Chloé::: 'Course not, dingbat! A disgusting photo of her or some really tacky p
 Sabrina:::Ohh... how about her diary?
 Chloé::: Wow! You can actually accomplish something when you put my mind to it!
 Chloé::: Sabrina? Sabrina?!
-Mr. Bourgeois::: I'm pleased to welcome you all to the official launch of Chloé's electoral campaign. And a special thank-you to world-famous pop-star Jagged Stone for endorsing her.
+Mr. Bourgeois::: I'm pleased to welcome you all to the official launch of Chloé's electoral campaign. And a special thank-you to world-famous pop-star Jagged for endorsing her.
 Chloé::: And, when you vote for me, you'll get free tickets to Jagged's next concert!
 Marinette::: Huh! You got an autograph?
 Alya::: Uh... Yeah, got you one too. Sorry, couldn't help myself.
@@ -133,11 +133,11 @@ Cat Noir::: Guys, do you only know heavy metal?
 Marinette::: Ouch! Cat Noir... Hurry!
 Cat Noir:::That was a nice warm-up!
 Darkblade::: Part le fer! 
-Jagged Stone::: Wait, do I hear the sounds of crazed fans? I can totally get them under control.
+Jagged::: Wait, do I hear the sounds of crazed fans? I can totally get them under control.
 Darkblade::: Behold, a minstrel!
-Jagged Stone::: Guys, guys, I know you love me, but no reason to fight over it.
+Jagged::: Guys, guys, I know you love me, but no reason to fight over it.
 Darkblade::: Are you the usurper's champion?
-Jagged Stone::: Say what? 
+Jagged::: Say what? 
 Chloé::: Oh no!
 Ivan::: What are we gonna do?
 Marinette::: The doors, quickly!

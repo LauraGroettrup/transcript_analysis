@@ -38,7 +38,7 @@ colnames(character_gender_lookup) <- c("Character", "Gender")
     colnames(character_eigenvector) <- data.frame("Character", "Frequency")
     write.table(character_eigenvector,"./data/miraculous/tables/gender_eigenvector.csv", row.names = F, append = F, col.names = T, sep = "|")
     #match mit gender
-    character_eigenvector<-character_eigenvector %>%left_join(character_gender_lookup, by='Character')
-    
+    character_eigenvector<-character_eigenvector %>% left_join(character_gender_lookup, by='Character')
+  
 print("<End of Script>")
 #------------------------------------------------------------------------

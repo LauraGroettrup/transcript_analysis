@@ -49,20 +49,20 @@ Luka::: Was there something else?
 Juleka::: No.No.
 Luka:::Juleka, I know that look. You're holding back something in there. That needs to come out.
 Luka::: Dad? 
-Jagged Stone::: Luka! Hey, son! How's it strumming? 
+Jagged::: Luka! Hey, son! How's it strumming? 
 Luka and Jagged::: Rock and roll!
 Juleka:::Hi. 
-Jagged Stone::: Ready for the chord of the day, my Boy? The diminished D7. I use it in all my tear-jerking ballads.
-Anarka:::Jagged Stone, you scallywag! No stowaways on my ship! Disembark my house right this instant!
-Jagged Stone:::Hey, Anarka! Rock and roll! How'd you know I was here? I was being so sneaky!
+Jagged::: Ready for the chord of the day, my Boy? The diminished D7. I use it in all my tear-jerking ballads.
+Anarka:::Jagged, you scallywag! No stowaways on my ship! Disembark my house right this instant!
+Jagged:::Hey, Anarka! Rock and roll! How'd you know I was here? I was being so sneaky!
 Anarka::: "Sneaky"?? Your tour bus is parked on the dock, you one-hit wonder!
-Jagged Stone::: Nanarky, you can't keep me from teaching the diminished D7 to my son!
+Jagged::: Nanarky, you can't keep me from teaching the diminished D7 to my son!
 Anarka::: I appreciate you trying to create a bond with your children, Jagged. But no one sets foot on my houseboat without the captain's permission, and that captain is me!
 Luka::: Well then, Mom, uh, with your permission, could Dad come to our birthday on Saturday? Juleka wants to throw a party.
-Jagged Stone:::Hey, Juleka! Rock and roll! I didn't see you there.
+Jagged:::Hey, Juleka! Rock and roll! I didn't see you there.
 Anarka::: Juleka, you really want this old pirate to be at your birthday?
 Juleka::: I— um...Yes.
-Jagged Stone:::Awesome! See you on Saturday then!Rock and roll! 
+Jagged:::Awesome! See you on Saturday then!Rock and roll! 
 Alya:::So, Juleka, everything good? Luka will be there, right?
 Marinette:::Hey, Juleka! Everything good? Luka won't be there, right?
 Luka:::I'm so happy that everyone will be there! 
@@ -93,29 +93,29 @@ Marinette::: Why is he here?You couldn't tell him, could you?
 Shadow Moth:::A young girl disappointed in herself and wrecked with guilt! 
 Marinette::: Of course, you couldn't tell him. I asked you to do the impossible. I'm so sorry, Juleka. 
 Shadow Moth:::Again? What's going on?
-Jagged Stone::: Hey, kids! Everything jammin'?
+Jagged::: Hey, kids! Everything jammin'?
 Luka::: Hi, Dad!
-Jagged Stone::: Sorry I'm tardy to the party, son. You have any wrapping paper I could borrow?
-Alya::: Hang on. Jagged Stone...
+Jagged::: Sorry I'm tardy to the party, son. You have any wrapping paper I could borrow?
+Alya::: Hang on. Jagged...
 Nino::: ...is the father of...
 Rose::: ...Luka and Juleka?
 Shadow Moth:::A group of friends surprised to find out that two of them have been keeping secrets.
 Ivan::: That's... so... awesome!!
 Shadow Moth:::Yes, well, I should've guessed.
 Juleka::: Oh, yeah. He's my dad.
-Marinette::: What?? Jagged Stone is your father?Why would you think he doesn't love you and likes your brother better?
-Jagged Stone::: You'll see, she's a real beauty! A sound that'll make your head spin.So you better hide it, okay?And not a word to your sister! 
+Marinette::: What?? Jagged is your father?Why would you think he doesn't love you and likes your brother better?
+Jagged::: You'll see, she's a real beauty! A sound that'll make your head spin.So you better hide it, okay?And not a word to your sister! 
 Shadow Moth:::Ah, a young girl whose biggest fears have come true!And what could be worse than not being loved by your own father.
 Marinette::: Hang on, Juleka. I'm sure this is just a misunderstanding. You need to talk to your dad. That's how problems get solved.Jagged!
-Jagged Stone:::Marinette! 
+Jagged:::Marinette! 
 Marinette:::Hi, Luka! Yes, I know we need to talk, and we will, but don't worry. But right now, I need to talk to your dad! Jagged, you can't just give an amazing electric guitar to your son and nothing......nothing......and nothing to your daughter!
-Jagged Stone:::Hey, thanks a lot for your incredible discretion, Marinette. Rock and roll. Actually, this was supposed to be a surprise gift for Juleka. Juleka plays bass for Kitty Section, right? So I thought it'd be cool if I gave her the very first bass I ever owned.Happy birthday, Juleka.
+Jagged:::Hey, thanks a lot for your incredible discretion, Marinette. Rock and roll. Actually, this was supposed to be a surprise gift for Juleka. Juleka plays bass for Kitty Section, right? So I thought it'd be cool if I gave her the very first bass I ever owned.Happy birthday, Juleka.
 Juleka::: Thank you!
-Jagged Stone::: And of course, I've got a present for my two kids. My gift for Luka was this original edition of the first LP from Crocoduo, the group I had with their mom.Happy birthday, Luka.
-Anarka::: Jagged Stone, you really are a shipwrecker. How dare you come here and give my son the album that caused our break-up?!
-Jagged Stone::: "Caused our break-up"?? You mean the album to help me get my life back after you left me!
+Jagged::: And of course, I've got a present for my two kids. My gift for Luka was this original edition of the first LP from Crocoduo, the group I had with their mom.Happy birthday, Luka.
+Anarka::: Jagged, you really are a shipwrecker. How dare you come here and give my son the album that caused our break-up?!
+Jagged::: "Caused our break-up"?? You mean the album to help me get my life back after you left me!
 Anarka:::You got a lot of nerve, pirate! You were the one who left me! 
-Jagged Stone::: No, you were!!
+Jagged::: No, you were!!
 Shadow Moth:::Finally! Two fractured lovers full of resentment and anger!
 Shadow Moth:::Crocoduel, I am Shadow Moth. I'm giving you the power to get back together, to better tear each other apart! You finally have the chance to prove to the other that you were right. All I ask in return is that one of you bring me Ladybug and Cat Noir's Miraculous. May the best rocker win!
 Marinette::: Everybody, get out of the boat! Quick!
@@ -212,25 +212,25 @@ Shadow Moth::: Ladybug, you and your friends always manage to create harmony. Bu
 Juleka::: Thanks for trusting me, Ladybug.
 Ladybug::: I knew you'd make yourself heard. And don't hesitate to speak your mind loud and clear, even without your suit, if you need to! 
 Anarka::: You shipwrecker! It's your fault we've got akumatized!
-Jagged Stone::: Are you kidding?? You were the one was completely off-key!
+Jagged::: Are you kidding?? You were the one was completely off-key!
 Juleka::: STOP!!! Now you are going to apologize and make up by talking. Not yelling! 
 Anarka:::But he was the one who...
-Jagged Stone::: It was her...
+Jagged::: It was her...
 Juleka::: No one cares! The past is the past.
-Jagged Stone::: I'm sorry, Nanarky. I was wrong.
+Jagged::: I'm sorry, Nanarky. I was wrong.
 Anarka::: No, you old pirate. It was me. 
-Jagged Stone:::No, it's my fault.
+Jagged:::No, it's my fault.
 Marinette:::Juleka, you rock!
-Jagged Stone::: No, really, it was me!
+Jagged::: No, really, it was me!
 Anarka::: No, me!
-Jagged Stone::: I was telling you it's my fault!
+Jagged::: I was telling you it's my fault!
 Anarka::: My fault!
-Jagged Stone::: No, it's mine!
+Jagged::: No, it's mine!
 Anarka::: Mine!!
-Jagged Stone::: Mine!!
-Jagged Stone::: Juleka, I know I haven't been playing to your tune; but you know, whatever you wanna say to me, I'm all ears.
+Jagged::: Mine!!
+Jagged::: Juleka, I know I haven't been playing to your tune; but you know, whatever you wanna say to me, I'm all ears.
 Juleka:::I love you, Dad!
-Jagged Stone::: You rock my world, too. 
+Jagged::: You rock my world, too. 
 Luka::: What about you, Marinette? When are you going to finally tell Adrien how you feel?
 Marinette::: Oh, uh... Adrien?
 Luka::: If Juleka was able to make her voice heard, I'm sure you'll be able to someday, too.
