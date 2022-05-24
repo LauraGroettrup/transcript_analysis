@@ -85,9 +85,9 @@ process_transcript<-function(filepath){
   ep_betweenness_values <- names(sort(ep_betweenness, decreasing = T)[1:5])
   ep_eigenvector_values <- names(sort(ep_eigen_centrality, decreasing = T)[1:5])
   ep_list_values <- c(ep_title, ep_no, season, ep_per_season, air_date, ep_edge_density_value, ep_reciprocity_value, ep_diameter_value, ep_assortativity_value) #erweitern
-  ep_list_values <- do.call(c, list(ep_list_values, ep_betweenness_values,  ep_eigenvector_values))
+  ep_list_values <- do.call(c, list(ep_list_values, ep_betweenness_values,  ep_eigenvector_values, length(nNodes)))
   ep_df_values <- rbind(ep_list_values)
-  colnames(ep_df_values) <- data.frame("title", "no", "season", "ep_per_season", "air_date", "ep_edge_density_value", "ep_reciprocity_value", "ep_diameter_value", "ep_assortativity_value", "betweenness_1", "betweenness_2", "betweenness_3", "betweenness_4", "betweenness_5", "eigenvector_1", "eigenvector_2", "eigenvector_3", "eigenvector_4", "eigenvector_5")
+  #colnames(ep_df_values) <- data.frame("title", "no", "season", "ep_per_season", "air_date", "ep_edge_density_value", "ep_reciprocity_value", "ep_diameter_value", "ep_assortativity_value", "betweenness_1", "betweenness_2", "betweenness_3", "betweenness_4", "betweenness_5", "eigenvector_1", "eigenvector_2", "eigenvector_3", "eigenvector_4", "eigenvector_5", "no_nodes")
   write.table(ep_df_values,"./data/miraculous/tables/episodes.csv", row.names = F, append = T, col.names = F, sep = "|") #erweitern #todo:
   
   #todo
