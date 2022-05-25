@@ -66,6 +66,7 @@ clean_transcript <- function(filepath){
     line <- sub("Santa Claus Claus","Santa Claus", line)
     line <- sub("The Collector","Collector", line)
     line <- sub("Jagged Stone","Jagged", line)
+    line <- sub("Gabriel Agreste","Gabriel", line)
     #Delte all white spaces
     line <- gsub(".*:::", paste(str_trim(sub(":::.*", "",line)), ":::", sep = ""), line)
     if(str_starts(line, "[^:]+:::.+")){

@@ -1,15 +1,14 @@
-# GENDER
+# GENDER, ROLES
 
 #prerequisites
 # - download script executed
 # - cleaning script executed
 # - analyzing script executed
-# - folder "./data/miraculous/gender/genderlookup.csv"
+# - folder "./data/miraculous/lookup/lookup.csv"
 
 source("./main.R")
-
-character_gender_lookup <- read.csv("./data/miraculous/gender/genderlookup.csv", sep="|", header = T)
-colnames(character_gender_lookup) <- c("Character", "Gender")
+character_lookup <- read.csv("./data/miraculous/lookup/lookup.csv", sep="|", header = T)
+colnames(character_lookup) <- c("Character", "Gender", "Role")
  
 #dataframe of all characters occuring in episodeTable$Betweenness 1 to 5
     character_betweenness<-append(episodeTable$Betweenness_1,episodeTable$Betweenness_2)
@@ -22,8 +21,8 @@ colnames(character_gender_lookup) <- c("Character", "Gender")
       summarize(Frequency=n())%>% arrange(desc(Frequency))
     colnames(character_betweenness) <- data.frame("Character", "Frequency")
     write.table(character_betweenness,"./data/miraculous/tables/gender_betweeness.csv", row.names = F, append = F, col.names = T, sep = "|")
-    #match mit gender
-    character_betweenness<-character_betweenness %>%left_join(character_gender_lookup, by='Character')
+    #match mit gender, role
+    character_betweenness<-character_betweenness %>%left_join(character_lookup, by='Character')
     
     
 #dataframe of all characters occuring in episodeTable$Eigenvector 1 to 5
@@ -38,7 +37,19 @@ colnames(character_gender_lookup) <- c("Character", "Gender")
     colnames(character_eigenvector) <- data.frame("Character", "Frequency")
     write.table(character_eigenvector,"./data/miraculous/tables/gender_eigenvector.csv", row.names = F, append = F, col.names = T, sep = "|")
     #match mit gender
-    character_eigenvector<-character_eigenvector %>% left_join(character_gender_lookup, by='Character')
-  
+    character_eigenvector<-character_eigenvector %>% left_join(character_lookup, by='Character')
+
+#allcharacters over series
+  characters_series <- lineTable %>% #all characters aus 
+    group_by(Character) %>%
+    summarize(Frequency=n())%>% arrange(desc(Frequency))
+  characters_series <-characters_series  %>% left_join(character_lookup, by='Character')
+
+#allcharacters per season
+  characters_season <- lineTable %>% #all characters aus 
+    group_by(Character, Season) %>%
+    summarize(Frequency=n())%>% arrange(desc(Frequency))
+  characters_season <-characters_season  %>% left_join(character_lookup, by='Character')
+
 print("<End of Script>")
 #------------------------------------------------------------------------

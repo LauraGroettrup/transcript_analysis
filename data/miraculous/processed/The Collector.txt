@@ -91,11 +91,11 @@ Mayor Bourgeois::: People of Paris—
 Collector::: Nothing can inspire me more than imprisoning Ladybug and Cat Noir in these pages forever. 
 Ladybug:::Cat Noir, what did you do?Cat Noir, did you get my messages?
 Cat Noir::: Yeah, and I can't wait to know more, M'Lady-tective. So, who's the suspect?
-Ladybug::: Gabriel Agreste.You know, the fashion designer?
+Ladybug::: Gabriel.You know, the fashion designer?
 Cat Noir::: You got proof?
 Ladybug:::I can't tell you.
 Cat Noir::: So, I'm supposed to just... accept that?
-Ladybug::: You must trust me on this. But it all makes sense. Gabriel Agreste is a secretive man and he never leaves his house. And get this.Check out his brand's logo.
+Ladybug::: You must trust me on this. But it all makes sense. Gabriel is a secretive man and he never leaves his house. And get this.Check out his brand's logo.
 Cat Noir:::A butterfly? 
 Ladybug::: You okay, Cat Noir?
 Cat Noir:::It's time to get the bottom of this. 
@@ -104,8 +104,8 @@ Ladybug:::Whoa, what happened here? Looks like somebody had a little tantrum.
 Ladybug::: Are you sure you're okay?
 Cat Noir::: Yeah. Yeah, let's keep going.
 Ladybug:::He's got a son! Let's go check his room; make sure nothing's happened to him.
-Cat Noir::: Where's Gabriel Agreste?
-Collector::: There is no more Gabriel Agreste. There is only...the Collector!
+Cat Noir::: Where's Gabriel?
+Collector::: There is no more Gabriel. There is only...the Collector!
 Collector::: You won't be able to escape!
 Ladybug:::Wait!
 Collector::: Nice piece, wouldn't you agree?
@@ -115,9 +115,9 @@ Ladybug::: A set of pedals appears) A pedal?I have no idea what to do with this.
 Collector:::Ladybug and Cat Noir, you shall be the masterpieces in my new book of inspiration.
 Collector::: My collection's growing!
 Ladybug::: No!
-Cat Noir::: So that must mean...Gabriel Agreste can't possibly be Hawk Moth, since he's been akumatized!
+Cat Noir::: So that must mean...Gabriel can't possibly be Hawk Moth, since he's been akumatized!
 Ladybug::: You call Agreste turning into the Collector good news?!
-Ladybug::: Gabriel Agreste's son isn't at home?
+Ladybug::: Gabriel's son isn't at home?
 Cat Noir::: Maybe the Collector's already captured him.
 Ladybug:::You think he'd take it out on his own son?
 Cat Noir::: Uh...
@@ -149,9 +149,9 @@ Gabriel::: Nothing must happen to him. He's too precious to me.
 Ladybug:::We're about to transform back. Goodbye, Mr. Agreste.
 Cat Noir::: Don't worry yourself, sir. I'm sure your son is safe and sound. 
 Gabriel::: See you very soon!
-Marinette::: So, since Gabriel Agreste was akumatized, he can't possibly be Hawk Moth, right? 
-Master Fu::: That's very probable, but...how did you find out that Gabriel Agreste was the owner of the Spellbook?
-Marinette::: At first, I was thinking the book belonged to Gabriel Agreste's son, Adrien, 'cause I saw him with it at school — well before it was stolen by a girl and before Tikki got it back; and I'd only just met you so I...I didn't know if I could tell you that, so yeah.
+Marinette::: So, since Gabriel was akumatized, he can't possibly be Hawk Moth, right? 
+Master Fu::: That's very probable, but...how did you find out that Gabriel was the owner of the Spellbook?
+Marinette::: At first, I was thinking the book belonged to Gabriel's son, Adrien, 'cause I saw him with it at school — well before it was stolen by a girl and before Tikki got it back; and I'd only just met you so I...I didn't know if I could tell you that, so yeah.
 Master Fu::: You were afraid in case the one you love turned out to be Hawk Moth.
 Marinette:::Wha... Uh, no, uh, how did you know that? I mean, I don't love him at all.Oh, all right, yes, Adrien is amazing. I couldn't stand the thought of him being a supervillain. 
 Master Fu::: You know, Marinette, if we want to be stronger than Hawk Moth, we have to trust each other.
