@@ -134,10 +134,10 @@ colnames(episodeTable) <- c("Episode_Title", "Episode_No_Overall", "Season", "Ep
 colnames(sentimentTable) <- c("Character", "Sentiment","Season", "Episode_Overall", "Episode_Title")
 
 #sorting
-dialogTable <-dialogTable[order(dialogTable$'Episode Overall'),]
-episodeTable <-episodeTable[order(episodeTable$'Episode Overall'),]
-lineTable <-lineTable[order(lineTable$'Episode Overall'),]
-sentimentTable <-sentimentTable[order(sentimentTable$'Episode Overall'),]
+dialogTable <-dialogTable[order(dialogTable$Episode_No_Overall),]
+episodeTable <-episodeTable[order(episodeTable$Episode_No_Overall),]
+lineTable <-lineTable[order(lineTable$Episode_No_Overall),]
+sentimentTable <-sentimentTable[order(sentimentTable$Episode_Overall),]
 #sentimentTable <-sentimentTable[order(sentimentTable$'Character'),] #problem-gelöst: pro episode sollte jeder name nur einmal vorkommen, leider kommt bspw. "Adrien" in Stormy-Weather und anderen mehrfach vor!
 
 #trim Characters, already done in cleaning script
