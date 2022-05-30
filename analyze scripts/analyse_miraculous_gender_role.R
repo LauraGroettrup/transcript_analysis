@@ -72,13 +72,17 @@ colnames(character_lookup) <- c("Character", "Gender", "Role")
   lineTable_gender_role<-lineTable %>%left_join(character_lookup, by='Character')
   
 #join gender and role with dialogTable
-  colnames(character_lookup) <- c("From", "Gender_From", "Role_From") #muss für join lineTable - FROM
+  colnames(character_lookup) <- c("From", "Gender_From", "Role_From") #muss für join lineTable - FROM #problem - zahl zw. dialogtable und dialogtable_gender_role stimmt nicht überein
   dialogTable_gender_role<-dialogTable %>%left_join(character_lookup, by='From') 
   colnames(character_lookup) <- c("To", "Gender_To", "Role_To") #muss für join lineTable - TO
   dialogTable_gender_role<-dialogTable_gender_role %>%left_join(character_lookup, by='To') 
   colnames(character_lookup) <- c("Character", "Gender", "Role") # soll für character_lookup
+  
+  #better with merge?
+  #outerJoin: dialogTable_gender_role<-merge(dialogTable, character_lookup, by = "From") #better?
+  #LeftOuterJoin: dialogTable_gender_role<-merge(x = dialogTable, y = character_lookup, by = "From", all.x = TRUE) #better?
 
-#join gender and role with sentimentTable
+  #join gender and role with sentimentTable
   sentimentTable_gender_role<-sentimentTable %>%left_join(character_lookup, by='Character')
   
   

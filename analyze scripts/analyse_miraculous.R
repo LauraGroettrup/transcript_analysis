@@ -73,7 +73,7 @@ process_transcript<-function(filepath){
   ep_authority_score <-authority_score(ep_sociogram_igraph)$vectorsumm
   ep_rank_score <-sort(page_rank(ep_sociogram_igraph)$vector)
   sentimentProCharacter<- c(sentimentProCharacter, season, ep_no, ep_title)
-  #sentimentProCharacter<- c(sentimentProCharacter, season, ep_no, ep_title, ep_degree_in, ep_degree_out, ep_degree_all, ep_closeness, ep_eigen_centrality, ep_betweenness, ep_hub_score,ep_authority_score,ep_rank_score)
+  #sentimentProCharacter1<- c(sentimentProCharacter, season, ep_no, ep_title, ep_degree_in, ep_degree_out, ep_degree_all, ep_closeness, ep_eigen_centrality, ep_betweenness, ep_hub_score,ep_authority_score,ep_rank_score)
   write.table(sentimentProCharacter,"./data/miraculous/tables/sentiment.csv", row.names = F, append = T, col.names = F, sep = "|")
   
   ###EpisodeTable: ep_title | ep_no | season | ep_per_season | air_date | ep_edge_density_value | ep_reciprocity_value | ep_diameter_value | betweenness_1 | betweenness_2 | betweenness_3 | betweenness_4 | betweenness_5 | eigenvector_1 | eigenvector_2 | eigenvector_3 | eigenvector_4 | eigenvector_5
@@ -156,28 +156,75 @@ sentimentCharacterOverSeasons <-sentimentTable %>%
   summarize(Sentiment_Over_Series = mean(Sentiment, na.rm = TRUE), Frequency = n()) %>% 
   arrange(desc(Season))
 
-#looking up one character
-sentimentCharacterOverSeasons_M <-sentimentTable %>%
-  group_by(Character, Season) %>%
-  summarize(Sentiment_Over_Series = mean(Sentiment, na.rm = TRUE), Frequency = n()) %>% 
-  arrange(desc(Season))%>% #bish hierher
-  filter(Character == 'Marinette') #plus filter
+#igraph over whole series
+    series_igraph <- graph_from_adjacency_matrix(table(dialogTable[, 1], dialogTable[, 2]), weighted=TRUE) 
+    series_eigen_centrality <- eigen_centrality(series_igraph, directed=F)$vector
+    series_eigen_centrality<-data.frame(series_eigen_centrality)
+    series_eigen_centrality <- series_eigen_centrality %>% as.data.frame() %>% arrange(desc(series_eigen_centrality))
+    series_betweenness <- betweenness(series_igraph, directed=T) 
+    series_betweenness<-data.frame(series_betweenness)
+    series_betweenness <- series_betweenness %>% as.data.frame() %>% arrange(desc(series_betweenness))
+    #V(sociogram_s1)
+    #E(sociogram_series)
+    #plot(series_sociogram_igraph, edge.arrow.size=.4,vertex.label=NA)
 
-plot_S_Marinette_series <- sentimentCharacterOverSeasons_M %>%
-  tail(10) %>%
-  ggplot( aes(x=Season, y=Sentiment_Over_Series)) +
-  geom_line( color="grey") +
-  geom_point(shape=21, color="black", fill="#69b3a2", size=3) +
-  ylim(-1,1)
-plot_S_Marinette_series + labs(title = "Time Evolution of mean sentiment over seasons", subtitle = "Marinette")
+#igraph over seasons
+    dialogtable_s1 <-subset(dialogTable, Season==1)
+    s1_igraph<-graph_from_adjacency_matrix(table(dialogtable_s1[, 1], dialogtable_s1[, 2]), weighted=TRUE) 
+    s1_eigen_centrality <- eigen_centrality(s1_igraph, directed=F)$vector
+    s1_eigen_centrality<-data.frame(s1_eigen_centrality)
+    s1_eigen_centrality <- s1_eigen_centrality %>% as.data.frame() %>% arrange(desc(s1_eigen_centrality))
+    s1_betweenness <- betweenness(s1_igraph, directed=T) 
+    s1_betweenness<-data.frame(s1_betweenness)
+    s1_betweenness <- s1_betweenness %>% as.data.frame() %>% arrange(desc(s1_betweenness))
+    
+    dialogtable_s2 <-subset(dialogTable, Season==2)
+    s2_igraph<-graph_from_adjacency_matrix(table(dialogtable_s2[, 1], dialogtable_s2[, 2]), weighted=TRUE) 
+    s2_eigen_centrality <- eigen_centrality(s2_igraph, directed=F)$vector
+    s2_eigen_centrality<-data.frame(s2_eigen_centrality)
+    s2_eigen_centrality <- s2_eigen_centrality %>% as.data.frame() %>% arrange(desc(s2_eigen_centrality))
+    s2_betweenness <- betweenness(s2_igraph, directed=T) 
+    s2_betweenness<-data.frame(s2_betweenness)
+    s2_betweenness <- s2_betweenness %>% as.data.frame() %>% arrange(desc(s2_betweenness))
+    
+    dialogtable_s3 <-subset(dialogTable, Season==3)
+    s3_igraph<-graph_from_adjacency_matrix(table(dialogtable_s3[, 1], dialogtable_s3[, 2]), weighted=TRUE) 
+    s3_eigen_centrality <- eigen_centrality(s3_igraph, directed=F)$vector
+    s3_eigen_centrality<-data.frame(s3_eigen_centrality)
+    s3_eigen_centrality <- s3_eigen_centrality %>% as.data.frame() %>% arrange(desc(s3_eigen_centrality))
+    s3_betweenness <- betweenness(s3_igraph, directed=T) 
+    s3_betweenness<-data.frame(s3_betweenness)
+    s3_betweenness <- s3_betweenness %>% as.data.frame() %>% arrange(desc(s3_betweenness))
+    
+    dialogtable_s4 <-subset(dialogTable, Season==4)
+    s4_igraph<-graph_from_adjacency_matrix(table(dialogtable_s4[, 1], dialogtable_s4[, 2]), weighted=TRUE) 
+    s4_eigen_centrality <- eigen_centrality(s4_igraph, directed=F)$vector
+    s4_eigen_centrality<-data.frame(s4_eigen_centrality)
+    s4_eigen_centrality <- s4_eigen_centrality %>% as.data.frame() %>% arrange(desc(s4_eigen_centrality))
+    s4_betweenness <- betweenness(s4_igraph, directed=T) 
+    s4_betweenness<-data.frame(s4_betweenness)
+    s4_betweenness <- s4_betweenness %>% as.data.frame() %>% arrange(desc(s4_betweenness))
+
+
+#looking up one character
+    sentimentCharacterOverSeasons_M <-sentimentTable %>%
+      group_by(Character, Season) %>%
+      summarize(Sentiment_Over_Series = mean(Sentiment, na.rm = TRUE), Frequency = n()) %>% 
+      arrange(desc(Season))%>% #bish hierher
+      filter(Character == 'Marinette') #plus filter
+    
+    plot_S_Marinette_series <- sentimentCharacterOverSeasons_M %>%
+      tail(10) %>%
+      ggplot( aes(x=Season, y=Sentiment_Over_Series)) +
+      geom_line( color="grey") +
+      geom_point(shape=21, color="black", fill="#69b3a2", size=3) +
+      ylim(-1,1)
+    #plot_S_Marinette_series + labs(title = "Time Evolution of mean sentiment over seasons", subtitle = "Marinette")
 
 #subsets with missing values in episode table
-missing_entries_episode_table <- episodeTable[rowSums(is.na(episodeTable)) > 0,]
-#missing_entries_episode_table99999 <- episodeTable[episodeTable$Season %like% "99999", ]
+    missing_entries_episode_table <- episodeTable[rowSums(is.na(episodeTable)) > 0,]
+    #missing_entries_episode_table99999 <- episodeTable[episodeTable$Season %like% "99999", ]
 
-#processing - name
-#dub<-table(lineTable$Character)
-#dub<-data.frame(dub)
 #------------------------------------------------------------------------
 #aufräumen
 rm(i)
