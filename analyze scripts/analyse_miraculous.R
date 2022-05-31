@@ -19,7 +19,10 @@ process_transcript<-function(filepath){
   #### DIAGRAMS ####
   script <- matrix(unlist(characterName), ncol = 2, nrow=length(characterName), byrow = T) # file format suitable for sentiment analysis and graph
   sentimentMiraculous <- sentiment_score(script[, 2])
+  vaderMiraculous <- vader_df(script[, 2])$compound
+  vaderMiraculous[is.na(vaderMiraculous)] <- 0
   sentimentProCharacter <- aggregate(sentimentMiraculous, by = list(script[, 1]), FUN = mean)
+  vaderProCharacter <- aggregate(vaderMiraculous, by = list(script[, 1]), FUN = mean)
   #sentimentProCharacter <- aggregate(sentimentMiraculous, by = list(script[, 1]), FUN = length)
   
   characters <- script[, 1]
@@ -72,6 +75,7 @@ process_transcript<-function(filepath){
   ep_hub_score         <-hub_score(ep_sociogram_igraph)$vector
   ep_authority_score <-authority_score(ep_sociogram_igraph)$vectorsumm
   ep_rank_score <-sort(page_rank(ep_sociogram_igraph)$vector)
+  sentimentProCharacter<- cbind(sentimentProCharacter, vaderProCharacter[,2])
   sentimentProCharacter<- c(sentimentProCharacter, season, ep_no, ep_title)
   #sentimentProCharacter1<- c(sentimentProCharacter, season, ep_no, ep_title, ep_degree_in, ep_degree_out, ep_degree_all, ep_closeness, ep_eigen_centrality, ep_betweenness, ep_hub_score,ep_authority_score,ep_rank_score)
   write.table(sentimentProCharacter,"./data/miraculous/tables/sentiment.csv", row.names = F, append = T, col.names = F, sep = "|")
@@ -94,7 +98,7 @@ process_transcript<-function(filepath){
   #-betweenness 
   
   ### DialogTable for all eps: From | To | Sentiment | Text | season | ep_no | ep_title 
-  dialogTable <- data.frame(pairs[, 1], pairs[, 2], sentimentMiraculous[1:(length(sentimentMiraculous))], script[, 2][1:(length(script[, 2]))], season, ep_no, ep_title)
+  dialogTable <- data.frame(pairs[, 1], pairs[, 2], sentimentMiraculous[1:(length(sentimentMiraculous))], vaderMiraculous[1:(length(vaderMiraculous))], script[, 2][1:(length(script[, 2]))], season, ep_no, ep_title)
   write.table(dialogTable,"./data/miraculous/tables/dialogs.csv", row.names = F, append = T, col.names = F, sep = "|")
   # For each ep
   # write.table(dialogTable, paste("./data/miraculous/tables/",title_intermediate,".csv"), row.names = F, col.names = F, sep = "|")
@@ -128,10 +132,10 @@ sentimentTable <- read.csv("./data/miraculous/tables/sentiment.csv", sep="|", he
 lineTable <- dialogTable
 lineTable[2] <- NULL
 write.table(lineTable,"./data/miraculous/tables/lines.csv", row.names = F, append = T, col.names = F, sep = "|")
-colnames(dialogTable) <- c("From", "To", "Sentiment", "Text","Season", "Episode_No_Overall", "Episode_Title")
-colnames(lineTable) <- c("Character", "Sentiment", "Text", "Season", "Episode_No_Overall", "Episode_Title")
+colnames(dialogTable) <- c("From", "To", "Sentiment", "Vader", "Text","Season", "Episode_No_Overall", "Episode_Title")
+colnames(lineTable) <- c("Character", "Sentiment", "Vader", "Text", "Season", "Episode_No_Overall", "Episode_Title")
 colnames(episodeTable) <- c("Episode_Title", "Episode_No_Overall", "Season", "Episode_No_perSeason", "Air_Date", "Edge_Density", "Reciprocity", "Diameter", "Assortativity","Betweenness_1", "Betweenness_2", "Betweenness_3", "Betweenness_4", "Betweenness_5", "Eigenvector_1", "Eigenvector_2", "Eigenvector_3", "Eigenvector_4", "Eigenvector_5")
-colnames(sentimentTable) <- c("Character", "Sentiment","Season", "Episode_Overall", "Episode_Title")
+colnames(sentimentTable) <- c("Character", "Sentiment", "Vader","Season", "Episode_Overall", "Episode_Title")
 
 #sorting
 dialogTable <-dialogTable[order(dialogTable$Episode_No_Overall),]
@@ -149,11 +153,20 @@ sentimentTable <-sentimentTable[order(sentimentTable$Episode_Overall),]
 sentimentCharacterOverSeries <-sentimentTable %>%
   group_by(Character) %>%
   summarize(Sentiment_Over_Series = mean(Sentiment, na.rm = TRUE), Frequency = n())%>% arrange(desc(Frequency))
+#Vader pro Character over whole serie
+VaderCharacterOverSeries <-sentimentTable %>%
+  group_by(Character) %>%
+  summarize(Sentiment_Over_Series = mean(Vader, na.rm = TRUE), Frequency = n())%>% arrange(desc(Frequency))
 
 #Sentiment pro Character over Seasons
 sentimentCharacterOverSeasons <-sentimentTable %>%
   group_by(Character, Season) %>%
   summarize(Sentiment_Over_Series = mean(Sentiment, na.rm = TRUE), Frequency = n()) %>% 
+  arrange(desc(Season))
+#Vader pro Character over Seasons
+VaderCharacterOverSeasons <-sentimentTable %>%
+  group_by(Character, Season) %>%
+  summarize(Sentiment_Over_Series = mean(Vader, na.rm = TRUE), Frequency = n()) %>% 
   arrange(desc(Season))
 
 #igraph over whole series

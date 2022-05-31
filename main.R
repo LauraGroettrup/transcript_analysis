@@ -7,6 +7,7 @@
 #install.packages("sentiment.ai")
 #install.packages("quanteda")
 #install.packages('data.table')
+#install.packages('vader')
 
 library(data.table)
 library(dplyr)
@@ -28,3 +29,4 @@ library(psych)
 library(car)
 library(ggpubr)
 library(rstatix)
+library(vader)
