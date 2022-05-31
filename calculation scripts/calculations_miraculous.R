@@ -9,6 +9,6 @@
 
 #prerequisites
     #describeBy(dialogTable$Sentiment, dialogTable$From)
-    summary(dialogTable) #overview
+    summary(dialogTable_gender_role) #overview
 
     #Normality assumption

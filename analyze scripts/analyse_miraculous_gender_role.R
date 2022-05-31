@@ -7,10 +7,12 @@
 # - folder "./data/miraculous/lookup/lookup.csv"
 
 source("./main.R")
-character_lookup <- read.csv("./data/miraculous/lookup/lookup.csv", sep="|", header = T)
-colnames(character_lookup) <- c("Character", "Gender", "Role")
+character_lookup <- read.csv("./data/miraculous/lookup/lookup.csv", sep="|", header = F)
+colnames(character_lookup) <- c("Character", "Gender", "Role", "Role_Category")
+character_lookup<-character_lookup %>% distinct(Character, .keep_all = T)
  
 #dataframe of all characters occuring in episodeTable$Betweenness 1 to 5
+    character_betweenness<-c()
     character_betweenness<-append(episodeTable$Betweenness_1,episodeTable$Betweenness_2)
     character_betweenness<-append(character_betweenness,episodeTable$Betweenness_3)
     character_betweenness<-append(character_betweenness,episodeTable$Betweenness_4)
@@ -26,6 +28,7 @@ colnames(character_lookup) <- c("Character", "Gender", "Role")
     
     
 #dataframe of all characters occuring in episodeTable$Eigenvector 1 to 5
+    character_eigenvector<-c()
     character_eigenvector<-append(episodeTable$Eigenvector_1,episodeTable$Eigenvector_2)
     character_eigenvector<-append(character_eigenvector,episodeTable$Eigenvector_3)
     character_eigenvector<-append(character_eigenvector,episodeTable$Eigenvector_4)
@@ -55,7 +58,6 @@ colnames(character_lookup) <- c("Character", "Gender", "Role")
   #genderna<-characters_series %>% filter(is.na(Gender))
   #write characters without gender
     #write.table(genderna,"./data/miraculous/lookup/genderna.csv", row.names = F, append = F, col.names = F, sep = ";")
-    #character_lookup1 <- read.csv("./data/miraculous/lookup/Ohne.csv", sep=";", header = T)
     #write.table(character_lookup1,"./data/miraculous/lookup/lookup.csv", row.names = F, append = F, col.names = T, sep = "|")
     
 #gender frequencys
@@ -72,16 +74,19 @@ colnames(character_lookup) <- c("Character", "Gender", "Role")
   lineTable_gender_role<-lineTable %>%left_join(character_lookup, by='Character')
   
 #join gender and role with dialogTable
-  colnames(character_lookup) <- c("From", "Gender_From", "Role_From") #muss für join lineTable - FROM #problem - zahl zw. dialogtable und dialogtable_gender_role stimmt nicht überein
+  colnames(character_lookup) <- c("From", "Gender_From", "Role_From", "Role_Category_From") #muss für join lineTable - FROM #problem - zahl zw. dialogtable und dialogtable_gender_role stimmt nicht überein
   dialogTable_gender_role<-dialogTable %>%left_join(character_lookup, by='From') 
-  colnames(character_lookup) <- c("To", "Gender_To", "Role_To") #muss für join lineTable - TO
+  colnames(character_lookup) <- c("To", "Gender_To", "Role_To", "Role_Category_To") #muss für join lineTable - TO
   dialogTable_gender_role<-dialogTable_gender_role %>%left_join(character_lookup, by='To') 
-  colnames(character_lookup) <- c("Character", "Gender", "Role") # soll für character_lookup
+  colnames(character_lookup) <- c("Character", "Gender", "Role", "Role_Category") # soll für character_lookup
   
   #better with merge?
   #outerJoin: dialogTable_gender_role<-merge(dialogTable, character_lookup, by = "From") #better?
   #LeftOuterJoin: dialogTable_gender_role<-merge(x = dialogTable, y = character_lookup, by = "From", all.x = TRUE) #better?
-
+  #dialogTable_gender_role<-dialogTable
+  #dialogTable_gender_role<-merge(x = dialogTable, y = character_lookup_new, by = "From", all = F) #better?
+  
+  
   #join gender and role with sentimentTable
   sentimentTable_gender_role<-sentimentTable %>%left_join(character_lookup, by='Character')
   
