@@ -9,7 +9,6 @@
 source("./main.R")
 character_lookup <- read.csv("./data/miraculous/lookup/lookup.csv", sep="|", header = F)
 colnames(character_lookup) <- c("Character", "Gender", "Role", "Role_Category")
-character_lookup<-character_lookup %>% distinct(Character, .keep_all = T)
  
 #dataframe of all characters occuring in episodeTable$Betweenness 1 to 5
     character_betweenness<-c()
@@ -69,6 +68,11 @@ character_lookup<-character_lookup %>% distinct(Character, .keep_all = T)
   characters_series_role <- characters_series %>% #all characters aus 
   group_by(Role) %>%
   summarize(Frequency=n())%>% arrange(desc(Frequency))
+
+#role_category frequencys
+  characters_series_role_category <- characters_series %>% #all characters aus 
+    group_by(Role_Category) %>%
+    summarize(Frequency=n())%>% arrange(desc(Frequency))
   
 #join gender and role with lineTable
   lineTable_gender_role<-lineTable %>%left_join(character_lookup, by='Character')
