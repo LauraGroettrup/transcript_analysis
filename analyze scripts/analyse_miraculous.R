@@ -11,7 +11,8 @@ source("./main.R")
 source("./metadata scripts/metainfo_series_miraculous.R")
 
 process_transcript<-function(filepath){
-  #filepath<-"./data/miraculous/processed/Stormy Weather.txt"
+  #filepath<-"./data/miraculous/processed/Ladybug.txt"
+  
   filetext <- readtext(filepath)
   transcript_lines <- str_split(filetext, "\\n")[[1]]
   characterName <- strsplit(transcript_lines, ":::")
@@ -56,6 +57,20 @@ process_transcript<-function(filepath){
   ep_per_season<-paste(subset[1, 2])
   air_date<-paste(subset[1, 4])
   season<-paste(subset[1, 5])
+  
+  if (ep_title == "Ladybug" && ep_no==25) {
+    ep_no="75"
+    ep_per_season="23"
+    season="3"
+    air_date<-"24 November 2019"
+  } else if (ep_title == "Ladybug & Cat Noir"){
+    ep_no="25"
+    ep_per_season="25"
+    season="1"
+    air_date<-"30 October 2016"
+  }
+  
+  
   #problem-gelöst: wenn season NA ist, führt dies zu Problemen bei Berechnung, s. Sentiment von Marinette über dies Seasons
   #problem-gelöst: was tun, wenn ep_no,ep_per_season, air_date, season "NA" ist => ersetzen mit "99999" sinnvoll?
   #ep_no<-gsub("NA", "99999",ep_no, perl = TRUE)

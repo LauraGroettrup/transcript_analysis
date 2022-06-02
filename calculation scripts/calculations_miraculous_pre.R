@@ -64,7 +64,7 @@ source("./main.R")
         
       #QQ Plot  
         #interpretation: also with QQ Plots a normal distribution of "Sentiment" cannot be assumed
-        ggqqplot(dialogTable_gender_role, "Sentiment", facet.by = "Gender_From") 
+        ggqqplot(dialogTable_gender_role, "Sentiment", facet.by = "Gender_From", main='untransformed Sentiment-data')
     
       #tranformation of Sentiment data to fit normal distribution
         #step1 - adding constant to avoid negative values (add min of Sentiment to all values)
@@ -77,19 +77,19 @@ source("./main.R")
         which(is.na(dialogTable_gender_role$Sentiment_transformed_log)) # are there NA in log-transformed values?
         summary(dialogTable_gender_role$Sentiment_transformed_log)
         hist(dialogTable_gender_role$Sentiment_transformed_log, col='steelblue', main='log-transformed Sentiment-data')
-        ggqqplot(dialogTable_gender_role, "Sentiment_transformed_log", facet.by="Gender_From") 
+        ggqqplot(dialogTable_gender_role, "Sentiment_transformed_log", facet.by="Gender_From", main='log-transformed Sentiment-data')
         #sqrt
         dialogTable_gender_role$Sentiment_transformed_sqrt <- sqrt(dialogTable_gender_role$Sentiment_addedconstant)
         which(is.na(dialogTable_gender_role$Sentiment_transformed_sqrt)) # are there NA in log-transformed values?
         summary(dialogTable_gender_role$Sentiment_transformed_sqrt)
         hist(dialogTable_gender_role$Sentiment_transformed_sqrt, col='steelblue', main='sqrt-transformed Sentiment-data')
-        ggqqplot(dialogTable_gender_role, "Sentiment_transformed_sqrt", facet.by="Gender_From") 
+        ggqqplot(dialogTable_gender_role, "Sentiment_transformed_sqrt", facet.by="Gender_From", main='sqrt-transformed Sentiment-data')
         #cuberoot
         dialogTable_gender_role$Sentiment_transformed_cuberoot <- dialogTable_gender_role$Sentiment_addedconstant^(1/3)
         which(is.na(dialogTable_gender_role$Sentiment_transformed_cuberoot)) # are there NA in log-transformed values?
         summary(dialogTable_gender_role$Sentiment_transformed_cuberoot)
         hist(dialogTable_gender_role$Sentiment_transformed_cuberoot, col='steelblue', main='cuberoot-transformed Sentiment-data')
-        ggqqplot(dialogTable_gender_role, "Sentiment_transformed_cuberoot", facet.by="Gender_From") 
+        ggqqplot(dialogTable_gender_role, "Sentiment_transformed_cuberoot", facet.by="Gender_From", main='cuberoot-transformed Sentiment-data')
 
         dialogTable_gender_role %>%
           group_by(Gender_From, Gender_To) %>%
@@ -104,7 +104,7 @@ source("./main.R")
         
       #QQ Plot  
         #interpretation: also with QQ Plots a normal distribution of "Vader" can hardly be assumed
-        ggqqplot(dialogTable_gender_role, "Vader", facet.by = "Gender_From") 
+        ggqqplot(dialogTable_gender_role, "Vader", facet.by = "Gender_From", main='untransformed Vader-data') 
         
       #tranformation of Vader data to fit normal distribution
         #step1 - adding constant to avoid negative values (add min of Sentiment to all values)
@@ -117,19 +117,19 @@ source("./main.R")
         which(is.na(dialogTable_gender_role$Vader_transformed_log)) # are there NA in log-transformed values?
         summary(dialogTable_gender_role$Vader_transformed_log)
         hist(dialogTable_gender_role$Vader_transformed_log, col='steelblue', main='log-transformed Vader-data')
-        ggqqplot(dialogTable_gender_role, "Vader_transformed_log", facet.by="Gender_From") 
+        ggqqplot(dialogTable_gender_role, "Vader_transformed_log", facet.by="Gender_From", main='log-transformed Vader-data')
         #sqrt
         dialogTable_gender_role$Vader_transformed_sqrt <- sqrt(dialogTable_gender_role$Vader_addedconstant)
         which(is.na(dialogTable_gender_role$Vader_transformed_sqrt)) # are there NA in log-transformed values?
         summary(dialogTable_gender_role$Vader_transformed_sqrt)
         hist(dialogTable_gender_role$Vader_transformed_sqrt, col='steelblue', main='sqrt-transformed Vader-data')
-        ggqqplot(dialogTable_gender_role, "Vader_transformed_sqrt", facet.by="Gender_From") 
+        ggqqplot(dialogTable_gender_role, "Vader_transformed_sqrt", facet.by="Gender_From", main='sqrt-transformed Vader-data') 
         #cuberoot
         dialogTable_gender_role$Vader_transformed_cuberoot <- dialogTable_gender_role$Vader_addedconstant^(1/3)
         which(is.na(dialogTable_gender_role$Vader_transformed_cuberoot)) # are there NA in log-transformed values?
         summary(dialogTable_gender_role$Vader_transformed_cuberoot)
         hist(dialogTable_gender_role$Vader_transformed_cuberoot, col='steelblue', main='cuberoot-transformed Vader-data')
-        ggqqplot(dialogTable_gender_role, "Vader_transformed_cuberoot", facet.by="Gender_From") 
+        ggqqplot(dialogTable_gender_role, "Vader_transformed_cuberoot", facet.by="Gender_From",main='cuberoot-transformed Vader-data') 
         
         dialogTable_gender_role %>%
           group_by(Gender_From, Gender_To) %>%
@@ -161,4 +161,4 @@ source("./main.R")
         get_anova_table(res.aov)
         #sphericity violated
 
-#----END OF PRE-(NEXT: ANOVAS)------------------------
+#----END OF PRE (NEXT: ANOVAS)------------------------

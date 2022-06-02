@@ -72,35 +72,3 @@ source("./main.R")
     #to do
   
 #----END ANOVA3-----------------------------
-
-#ANOVA4: two-way-anova (twa4)
-        #AV: Sentiment.ai-Scores over time (added constant, log transformed)
-        #UV: Gender-From, Gender-To, Role_Category_From, Role_Category_To
-  twa4 <- aov(Sentiment_transformed_log ~ Gender_From * Gender_To+Role_Category_From+Role_Category_To+Role_Category_From*Role_Category_To, data=dialogTable_gender_mf)
-  Anova(twa4, type=3)
-  summary(twa4)
-  
-  twa4_pht1 <- dialogTable_gender_mf %>% #post-hoc-test -Gender_From
-    pairwise_t_test(
-      Sentiment_transformed_log ~ Gender_From, paired = F,
-      p.adjust.method = "bonferroni")
-  twa4_pht1
-  
-  twa4_pht2 <- dialogTable_gender_mf %>% #post-hoc-test - Role_Category_From
-    pairwise_t_test(
-      Sentiment_transformed_log ~ Role_Category_From, paired = F,
-      p.adjust.method = "bonferroni")
-  twa4_pht2
-  
-  twa4_pht3 <- dialogTable_gender_mf %>% #post-hoc-test - Role_Category_To
-    pairwise_t_test(
-      Sentiment_transformed_log ~ Role_Category_To, paired = F,
-      p.adjust.method = "bonferroni")
-  twa4_pht3
-  
-  twa4_pht4<-TukeyHSD(twa4)
-#-------------------------------------------
-
-  
-        
-        
