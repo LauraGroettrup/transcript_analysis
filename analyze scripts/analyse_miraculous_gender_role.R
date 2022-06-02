@@ -96,4 +96,4 @@ colnames(character_lookup) <- c("Character", "Gender", "Role", "Role_Category")
   
   
 print("<End of Script>")
-#------------------------------------------------------------------------
+#--------next: calculation------------------------------------------------------------
