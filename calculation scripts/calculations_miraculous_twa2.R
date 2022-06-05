@@ -8,7 +8,19 @@
 # - calculations_miraculous_pre executed
 
 source("./main.R")
+#-------------------------------------------
+# values: dialogTable_gender_role
+#   Sentiment
+#   Sentiment_transformed_log
+#   Sentiment_transformed_sqrt
+#   Sentiment_transformed_cuberoot
+#   Sentiment_transformed_z
 
+#   Vader
+#   Vader_transformed_log
+#   Vader_transformed_sqrt
+#   Vader_transformed_cuberoot
+#   Vader_transformed_z
 #-------------------------------------------
 
 #ANOVA2: two-way-anova (twa2)
