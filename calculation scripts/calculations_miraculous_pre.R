@@ -1,4 +1,4 @@
-# CALCULATIONs PRE
+# CALCULATIONs PRE I
 #prerequisites
   # - download script executed
   # - cleaning script executed
@@ -23,7 +23,7 @@ source("./main.R")
         #summarize(Frequency=n())%>% arrange(desc(Frequency))  
 
 #Descriptives
-        dialogTable_gender_role$id<-1:nrow(dialogTable_gender_role) #ID hinzufügen
+        dialogTable_gender_role$ID<-1:nrow(dialogTable_gender_role) #ID hinzufügen
         summary(dialogTable_gender_role) #overview
         #Sentiment over seasons
         dialogTable_gender_role %>%
@@ -178,15 +178,15 @@ source("./main.R")
 #Assumption of sphericity: Mauchly’s test - for repeated ANOVAS
     #needed to run ANOVAS with repeated measures; should also be computed when running the repeated measures ANOVA
     #Sentiment & Gender
-        res.aov <- anova_test(data = dialogTable_gender_role, dv = Sentiment, wid = id, between = Gender_From)
+        res.aov <- anova_test(data = dialogTable_gender_role, dv = Sentiment, wid = ID, between = Gender_From)
         get_anova_table(res.aov)
-        res.aov <- anova_test(data = dialogTable_gender_role, dv = Sentiment, wid = id, between = Gender_To)
+        res.aov <- anova_test(data = dialogTable_gender_role, dv = Sentiment, wid = ID, between = Gender_To)
         get_anova_table(res.aov)
         #sphericity violated
     #Vader & Gender
-        res.aov <- anova_test(data = dialogTable_gender_role, dv = Vader, wid = id, between = Gender_From)
+        res.aov <- anova_test(data = dialogTable_gender_role, dv = Vader, wid = ID, between = Gender_From)
         get_anova_table(res.aov)
-        res.aov <- anova_test(data = dialogTable_gender_role, dv = Vader, wid = id, between = Gender_To)
+        res.aov <- anova_test(data = dialogTable_gender_role, dv = Vader, wid = ID, between = Gender_To)
         get_anova_table(res.aov)
         #sphericity violated
 

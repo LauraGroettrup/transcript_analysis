@@ -149,7 +149,7 @@ lineTable[2] <- NULL
 write.table(lineTable,"./data/miraculous/tables/lines.csv", row.names = F, append = T, col.names = F, sep = "|")
 colnames(dialogTable) <- c("From", "To", "Sentiment", "Vader", "Text","Season", "Episode_No_Overall", "Episode_Title")
 colnames(lineTable) <- c("Character", "Sentiment", "Vader", "Text", "Season", "Episode_No_Overall", "Episode_Title")
-colnames(episodeTable) <- c("Episode_Title", "Episode_No_Overall", "Season", "Episode_No_perSeason", "Air_Date", "Edge_Density", "Reciprocity", "Diameter", "Assortativity","Betweenness_1", "Betweenness_2", "Betweenness_3", "Betweenness_4", "Betweenness_5", "Eigenvector_1", "Eigenvector_2", "Eigenvector_3", "Eigenvector_4", "Eigenvector_5")
+colnames(episodeTable) <- c("Episode_Title", "Episode_No_Overall", "Season", "Episode_No_perSeason", "Air_Date", "Edge_Density", "Reciprocity", "Diameter", "Assortativity","Betweenness_1", "Betweenness_2", "Betweenness_3", "Betweenness_4", "Betweenness_5", "Eigenvector_1", "Eigenvector_2", "Eigenvector_3", "Eigenvector_4", "Eigenvector_5", "No_Nodes")
 colnames(sentimentTable) <- c("Character", "Sentiment", "Vader","Season", "Episode_Overall", "Episode_Title")
 
 #sorting

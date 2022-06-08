@@ -1,4 +1,4 @@
-# CALCULATIONs PRE
+# CALCULATIONs PRE II
 #prerequisites
 # - download script executed
 # - cleaning script executed
@@ -13,19 +13,19 @@ source("./main.R")
 #linetable_gender_role
   for(i in 1:nrow(lineTable_gender_role)) { 
     #i=27
-  lineTable_gender_role$id<-1:nrow(lineTable_gender_role)
-  linetext<-subset(lineTable_gender_role, id == i, select = c(Text))
+  lineTable_gender_role$ID<-1:nrow(lineTable_gender_role)
+  linetext<-subset(lineTable_gender_role, ID == i, select = c(Text))
   linelenght<-length(strsplit(as.character(linetext), " ")[[1]])-1
-  lineTable_gender_role$wlength[i] = linelenght
+  lineTable_gender_role$WCount[i] = linelenght
   } 
 
 #dialogTable_gender_role
 for(i in 1:nrow(dialogTable_gender_role)) { 
   #i=27
   #dialogTable_gender_role$id<-1:nrow(dialogTable_gender_role)
-  linetext<-subset(dialogTable_gender_role, id == i, select = c(Text))
+  linetext<-subset(dialogTable_gender_role, ID == i, select = c(Text))
   linelenght<-length(strsplit(as.character(linetext), " ")[[1]])-1
-  dialogTable_gender_role$wlength[i] = linelenght
+  dialogTable_gender_role$WCount[i] = linelenght
 } 
 
 #---aufräumen

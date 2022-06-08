@@ -2,26 +2,30 @@ Report (Martin):
 
 Characteristics:
 
-Number of Episodes - dates
-Number of seasons
+Ok - Number of Episodes - dates
+Ok - Number of seasons
 
-Gender: mfn - number
+Ok - Gender: mfn - number
 
-Roles: m f n 
+Ok - Roles: m f n 
 
-Roles categories: m f n
+Ok - Roles categories: m f n
 
-Gender over season
+Ok - Gender over season
 
-Lines per gender per season (plot)
+Ok - Lines per gender
 
-Words count per gender (means)
+Ok - Lines per gender & Role
 
-question? - Gender_From: female: more "?" in mean (Text), when Gender_To=Male - 2x2 Design
+Ok - Lines per gender per season (plot)
 
-How many reassuring characters: 45 in all 4 seasons
+Ok - Words count per gender per season (means, plot) - OUTLIERS
 
-Number of words per gender (mfn) - difference?
+
+todo: 
+
+Question? - Gender_From: female: more "?" in mean (Text), when Gender_To=Male - 2x2 Design
+
 Questions per gender (mfn) -difference?
 
 Graph nodes by gender
