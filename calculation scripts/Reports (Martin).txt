@@ -1,0 +1,31 @@
+Report (Martin):
+
+Characteristics:
+
+Number of Episodes - dates
+Number of seasons
+
+Gender: mfn - number
+
+Roles: m f n 
+
+Roles categories: m f n
+
+Gender over season
+
+Lines per gender per season (plot)
+
+Words count per gender (means)
+
+question? - Gender_From: female: more "?" in mean (Text), when Gender_To=Male - 2x2 Design
+
+How many reassuring characters: 45 in all 4 seasons
+
+Number of words per gender (mfn) - difference?
+Questions per gender (mfn) -difference?
+
+Graph nodes by gender
+
+—
+
+ANOVAs or KWT

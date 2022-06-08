@@ -96,7 +96,14 @@ source("./main.R")
         summary(dialogTable_gender_role$Sentiment_transformed_z)
         hist(dialogTable_gender_role$Sentiment_transformed_z, col='steelblue', main='cuberoot-transformed Sentiment-data')
         ggqqplot(dialogTable_gender_role, "Sentiment_transformed_z", facet.by="Gender_From", main='cuberoot-transformed Sentiment-data')
-
+        #box-cox (ad,cvm,pt, lt,jb not normally distributed; sf,sw, ac, mle not possible due to sample size )
+        Sentiment_transformed_boxcox=boxcoxnc(dialogTable_gender_role$Sentiment, method = "ad", lambda = seq(-3,3,0.01), lambda2 = 0.835, plot = TRUE, alpha = 0.05, verbose = TRUE)
+        Sentiment_transformed_boxcox$lambda.hat
+        Sentiment_transformed_boxcox$p.value
+        Sentiment_transformed_boxcox$tf.data 
+        confInt(Sentiment_transformed_boxcox)
+        #box-cox transformation returns non normally distributed values
+        
         dialogTable_gender_role %>%
           group_by(Gender_From, Gender_To) %>%
           shapiro_test(Sentiment_transformed_log)
@@ -142,6 +149,15 @@ source("./main.R")
         summary(dialogTable_gender_role$Vader_transformed_z)
         hist(dialogTable_gender_role$Vader_transformed_z, col='steelblue', main='cuberoot-transformed Vader-data')
         ggqqplot(dialogTable_gender_role, "Vader_transformed_z", facet.by="Gender_From",main='cuberoot-transformed Vader-data') 
+        #box-cox - boxcoxnc {AID}
+        #(ad,cvm,pt, lt,jb not normally distributed; sf,sw, ac, mle not possible due to sample size )
+        Vader_transformed_boxcox=boxcoxnc(dialogTable_gender_role$Vader, method = "ac", lambda = seq(-3,3,0.01), lambda2 = 0.962, plot = TRUE, alpha = 0.05, verbose = TRUE)
+        Vader_transformed_boxcox$lambda.hat
+        Vader_transformed_boxcox$p.value
+        Vader_transformed_boxcox$tf.data 
+        confInt(Vader_transformed_boxcox)
+        #box-cox transformation returns non normally distributed values
+        
         
         dialogTable_gender_role %>%
           group_by(Gender_From, Gender_To) %>%

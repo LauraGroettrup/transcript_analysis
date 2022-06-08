@@ -14,7 +14,6 @@ plot_gender_to <- ggboxplot(dialogTable_gender_role, x = "Gender_To", y = "Senti
 plot_gender_to
 
 
-
 #plots
 #barplot (in colours)
 #sentiment
@@ -43,3 +42,25 @@ ggplot(output, aes(x=Sentiment,y=Count))+
 
 plot(dialogTable_gender_role$Sentiment,pch=16)
 ggplot(dialogTable_gender_role,aes(x=Gender_To, y=Sentiment))+geom_point()
+
+
+#questions?
+
+linetext<-c("Hello")
+line_is_question<-str_extract_all(linetext, "(?<=^|\\?|\\.|!| )\\w[a-zA-Z ]+\\?")
+line_is_question<-stringr::str_match_all(linetext, "(?<=\\s|^)([\\w\\s\\d\\(\\)\\[\\];:,]+\\?)")[[1]][,2]
+
+
+contains_question_mark(linetext, convert_NA_to_FALSE = TRUE)
+
+
+if linetext.endswith("?"):
+  print (linetext`, "is a question")
+
+import re
+p = re.compile( r"\w+\?\s*" )
+if p.search( question_text ):
+  print `question_text`, "contains a question"
+
+stringr::str_count(linetext, "\\?")
+
