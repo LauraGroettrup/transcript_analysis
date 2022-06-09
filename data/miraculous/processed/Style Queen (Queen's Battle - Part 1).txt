@@ -5,7 +5,7 @@ Tikki::: You're a great designer, Marinette. Besides, if your hat was so ugly, w
 Marinette::: But what if people see that it's a synthetic pigeon feather and not a real one? They're gonna think it's lame, aren't they?
 Tikki:::You did the right thing of replacing it! With that allergy of his, Adrien would be sneezing all the way down the catwalk!
 Marinette::: You're right! Besides, I don't have time to make changes anyway. The show begins in…Oh, no! I'm gonna be late again! Quick, Tikki!
-Nadja::: This is it! Here she comes! The international queen of fashion, director of "Style Queen" magazine, Audrey Bourgeois! 
+Nadja::: This is it! Here she comes! The international queen of fashion, director of Style Queen magazine, Audrey Bourgeois! 
 Audrey::: Anthony— Uh… André, be a dear and fire the chauffeur. I can't believe Gabriel allows his staff to drive like that! 
 Chloé::: And neither do I!
 André::: Yes, of course, Audrey, dear.
@@ -15,7 +15,7 @@ Marinette::: Only the harshest fashion critic in the entire world. I didn't know
 Audrey:::What is this carpet? Is it fabric? Why isn't the red carpet made out of marble like I said!You're fired!Ridiculous, utterly ridiculous.
 Marinette:::She's gonna hate my hat for sure!
 Tikki::: I'm sure she won't! Come on, Marinette! Adrien is waiting for you. 
-Nadja::: Audrey, like the slogan of your magazine says "If it's in good taste; it's in "Style Queen"!" So, what's in good taste this year?
+Nadja::: Audrey, like the slogan of your magazine says If it's in good taste; it's in Style Queen! So, what's in good taste this year?
 Audrey::: Judging by the way you're dressed, you obviously don't know my dear.For your information, the trend this year is glitter.
 Marinette:::Glitter?! There's no glitter on my hat! This is a fashion disaster!
 Nadja::: As the editor of Style Queen, you spend a lot of time in New York. It must be nice to be with your family for a change here in Paris.
@@ -173,7 +173,7 @@ Ladybug:::, Well I have a scoop for you.Alya Césaire, here is the Miraculous of
 Alya::: Wow!
 Style Queen:::Ladybug! You're out of fashion! Give up! 
 Alya::: Watch out! 
-Style Queen:::"Where's Cat Noir?" Oh, lemme guess. He's hiding because he's ashamed of his outfit.
+Style Queen:::Where's Cat Noir? Oh, lemme guess. He's hiding because he's ashamed of his outfit.
 Ladybug::: Lucky Charm!A tube of glue!
 Style Queen::: Glue this, bug! 
 Style Queen::: You're always running away, Ladybug!

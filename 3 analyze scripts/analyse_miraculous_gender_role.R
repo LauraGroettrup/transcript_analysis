@@ -9,7 +9,7 @@
 source("./main.R")
 character_lookup <- read.csv("./data/miraculous/lookup/lookup.csv", sep="|", header = F)
 colnames(character_lookup) <- c("Character", "Gender", "Role", "Role_Category")
- 
+
 #dataframe of all characters occuring in episodeTable$Betweenness 1 to 5
     character_betweenness<-c()
     character_betweenness<-append(episodeTable$Betweenness_1,episodeTable$Betweenness_2)

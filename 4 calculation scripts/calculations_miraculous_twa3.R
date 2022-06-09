@@ -1,4 +1,4 @@
-# CALCULATIONs III
+# ANOVA III
 
 #prerequisites
 # - download script executed
@@ -11,76 +11,40 @@ source("./main.R")
 #-------------------------------------------
 # values: dialogTable_gender_role
 #   Sentiment
-#   Sentiment_transformed_log
-#   Sentiment_transformed_sqrt
-#   Sentiment_transformed_cuberoot
 #   Sentiment_transformed_z
-
-#   Vader
-#   Vader_transformed_log
-#   Vader_transformed_sqrt
-#   Vader_transformed_cuberoot
-#   Vader_transformed_z
 #-------------------------------------------
 
-#ANOVA3: two-way-anova (twa3)
-#Sentiment
-        #AV: Sentiment.ai-Scores over time (added constant, log transformed)
-        #UV: Role_Category_From, Role_Category_To
-  
-  twa3s <- aov(Sentiment_transformed_log ~ Role_Category_From * Role_Category_To, data=dialogTable_gender_role)
-  Anova(twa3s, type=3)
-  summary(twa3s)
-  
-  twa3s_pht1 <- dialogTable_gender_role %>% #post-hoc-test - Role_Category_To
-    pairwise_t_test(
-      Sentiment_transformed_log ~ Role_Category_To, paired = F,
-      p.adjust.method = "bonferroni")
-  twa3s_pht1
-  
-  dialogTable_gender_role %>% #crosstable twa3_pht1
-    group_by(Role_Category_To) %>%
-    get_summary_stats(Sentiment_transformed_log, type = "mean_sd")
-  #interpretation twa3s_pht1: s. overview - results
-  
-  twa3s_pht2<-TukeyHSD(twa3s) # interaction
-  twa3s_pht2
-  
-  #plots
-    #to do
-  
-#Vader
-  #AV: Vader-Scores (untransformed)
-  #UV: Role_Category_From, Role_Category_To
-  
-  twa3v <- aov(Vader ~ Role_Category_From * Role_Category_To, data=dialogTable_gender_role)
-  Anova(twa3v, type=3)
-  summary(twa3v)
-  
-  twa3v_pht1 <- dialogTable_gender_role %>% #post-hoc-test - Role_Category_To
-    pairwise_t_test(
-      Vader ~ Role_Category_From, paired = F,
-      p.adjust.method = "bonferroni")
-  twa3v_pht1
-  
-  dialogTable_gender_role %>% #crosstable twa3_pht1
-    group_by(Role_Category_From) %>%
-    get_summary_stats(Vader, type = "mean_sd")
-  #interpretation twa3s_pht1: s. overview - results
-  
-  
-  twa3v_pht2 <- dialogTable_gender_role %>% #post-hoc-test - Role_Category_To
-    pairwise_t_test(
-      Vader ~ Role_Category_To, paired = F,
-      p.adjust.method = "bonferroni")
-  twa3v_pht2
-  
-  dialogTable_gender_role %>% #crosstable twa3_pht1
-    group_by(Role_Category_To) %>%
-    get_summary_stats(Vader, type = "mean_sd")
-  #interpretation twa3s_pht2: s. overview - results
-  
-  #plots
-    #to do
-  
-#----END ANOVA3-----------------------------
+#ANOVA2: two-way-anova (twa1)
+#Sentiment 
+#AV: Sentiment.ai-Scores (added constant, log transformed)
+#UV: Role-Category-From, Role-Category-To
+
+twa3 <- aov(Sentiment_transformed_z ~ Role_category_From * Role_category_To, data=dialogTable_gender_role)
+Anova(twa3, type=3)
+summary(twa3)
+
+#if necessary
+twa3_pht1 <- dialogTable_gender_role %>% #post-hoc-test
+  pairwise_t_test(
+    Sentiment_transformed_z ~ Role_category_, paired = F, #ändern
+    p.adjust.method = "bonferroni")
+twa3_pht1
+
+twa3_pht2<-TukeyHSD(twa3)
+twa3_pht2
+
+#table nicht mit transformierten Daten
+dialogTable_gender_role %>% #crosstable twa1_pht1
+  group_by(Role_category_From) %>%   #ändern
+  get_summary_stats(Sentiment, type = "mean_sd")
+
+#plots
+#to do
+
+#interpretation twa1: diff of Sentiment_transformed_log - scores between m and f in Gender_From; no other effect (Gender_to, Interaction): FEMALES SHOW sign. LOWER SENTIMENT THAN MALES
+
+
+#plots
+#to do
+
+#-END ANOVA3--------------------------------------

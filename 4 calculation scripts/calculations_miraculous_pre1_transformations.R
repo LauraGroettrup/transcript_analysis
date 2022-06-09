@@ -23,7 +23,7 @@ source("./main.R")
         #summarize(Frequency=n())%>% arrange(desc(Frequency))  
 
 #Descriptives
-        dialogTable_gender_role$ID<-1:nrow(dialogTable_gender_role) #ID hinzufügen
+        #dialogTable_gender_role$ID<-1:nrow(dialogTable_gender_role) #ID hinzufügen
         summary(dialogTable_gender_role) #overview
         #Sentiment over seasons
         dialogTable_gender_role %>%
@@ -46,20 +46,13 @@ source("./main.R")
                   add = "mean", rug = TRUE, title = "plot of (all) Vader Scores")
         hist(dialogTable_gender_role$Vader, col='steelblue', main='histogram of (all) Vader Scores')
 
-#Outliers        
-        #outliers Sentiment
-        dialogTable_gender_role %>%
-          group_by(Season) %>% identify_outliers(Sentiment)
-        #outliers Vader
-        dialogTable_gender_role %>%
-          group_by(Season) %>% identify_outliers(Vader)
 #-----------------------------------------
 #Assumption of normal distribution
   #Sentiment
       #Shapiro-Wilk
         #interpretation: no normal-distribution - Shapiro-Wilk is very sensitive with higher sample sizes - looking at QQ plot instead
         dialogTable_gender_role %>%
-          group_by(Gender_From, Gender_To) %>%
+          group_by(Gender_From, Gender_To, Role_From, Role_To) %>%
           shapiro_test(Sentiment)
         
       #QQ Plot  
@@ -94,7 +87,7 @@ source("./main.R")
         dialogTable_gender_role$Sentiment_transformed_z<-scale(dialogTable_gender_role$Sentiment)
         which(is.na(dialogTable_gender_role$Sentiment_transformed_z)) # are there NA in log-transformed values?
         summary(dialogTable_gender_role$Sentiment_transformed_z)
-        hist(dialogTable_gender_role$Sentiment_transformed_z, col='steelblue', main='cuberoot-transformed Sentiment-data')
+        hist(dialogTable_gender_role$Sentiment_transformed_z, col='steelblue', main='z-transformed Sentiment-data')
         ggqqplot(dialogTable_gender_role, "Sentiment_transformed_z", facet.by="Gender_From", main='cuberoot-transformed Sentiment-data')
         #box-cox (ad,cvm,pt, lt,jb not normally distributed; sf,sw, ac, mle not possible due to sample size )
         Sentiment_transformed_boxcox=boxcoxnc(dialogTable_gender_role$Sentiment, method = "ad", lambda = seq(-3,3,0.01), lambda2 = 0.835, plot = TRUE, alpha = 0.05, verbose = TRUE)
@@ -106,7 +99,7 @@ source("./main.R")
         
         dialogTable_gender_role %>%
           group_by(Gender_From, Gender_To) %>%
-          shapiro_test(Sentiment_transformed_log)
+          shapiro_test(Sentiment_transformed_z)
         
   #Vader
       #Shapiro-Wilk
@@ -147,7 +140,7 @@ source("./main.R")
         dialogTable_gender_role$Vader_transformed_z<-scale(dialogTable_gender_role$Vader)
         which(is.na(dialogTable_gender_role$Vader_transformed_z)) # are there NA in log-transformed values?
         summary(dialogTable_gender_role$Vader_transformed_z)
-        hist(dialogTable_gender_role$Vader_transformed_z, col='steelblue', main='cuberoot-transformed Vader-data')
+        hist(dialogTable_gender_role$Vader_transformed_z, col='steelblue', main='z-transformed Vader-data')
         ggqqplot(dialogTable_gender_role, "Vader_transformed_z", facet.by="Gender_From",main='cuberoot-transformed Vader-data') 
         #box-cox - boxcoxnc {AID}
         #(ad,cvm,pt, lt,jb not normally distributed; sf,sw, ac, mle not possible due to sample size )
@@ -317,8 +310,8 @@ source("./main.R")
         character_seasons_vader_time$s3_mean_vader[is.nan(character_seasons_vader_time$s3_mean_vader)]<-NA
         character_seasons_vader_time$s4_mean_vader[is.nan(character_seasons_vader_time$s4_mean_vader)]<-NA
         
-        view(character_seasons_sentiment_time)  
-        view(character_seasons_vader_time)  
+        #view(character_seasons_sentiment_time)  
+        #view(character_seasons_vader_time)  
         
         #######
     #---aufräumen

@@ -33,6 +33,10 @@ Graph nodes by gender - betweenness
 —
 
 Models
+- ANOVAS - z-transformed Sentiment.ai Scores, reports of mean - untransformed data
+1 - Gender_From/To
+2 - Gender_From/TO, Role_From/To
+3 - Gender_From/TO, Role_Cat_From/To
 
-
-ANOVAs or KWT
+4 - Laura - Role (main, villains) From/TO
+	- subset - data[data$group != "g1", ]  

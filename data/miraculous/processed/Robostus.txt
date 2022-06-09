@@ -36,7 +36,7 @@ Adrien::: Max is a real genius!
 Rose::: He's so cute!
 Kim::: You've added arms to him since the last time! That's cool!
 Max::: Markov added them all by himself! He's the most highly-evolved type of robot there is!
-Chloé::: Puh-lease! Your "friend"'s just a talking calculator! There's nothing "evolved" about that!
+Chloé::: Puh-lease! Your friend's just a talking calculator! There's nothing evolved about that!
 Marinette::: Don't listen to her, Markov. That girl is the lowest of the low when it comes to human evolution.
 Markov:::You're very amusing, Marinette.
 Marinette::: You know my name?
@@ -79,7 +79,7 @@ Marinette::: Thank you, Mrs. Mendeleiev!
 Hawk Moth:::Robostus, I am Hawk Moth. Humans don't believe you're a living being. So I'm giving you the power to bring all machines to life to help you seek revenge.
 Markov::: Thank you kindly, Mr. Hawk Moth.
 Hawk Moth::: But, in return, I want you to bring me Ladybug and Cat Noir's Miraculous!
-Markov::: Could you please define "Miraculous"?
+Markov::: Could you please define Miraculous?
 Hawk Moth::: They're the magic jewels belonging to the superheroes.
 Markov::: Very well. What is the purpose of these jewels?
 Hawk Moth::: Hmm?This is none of your concern!
@@ -141,7 +141,7 @@ Ladybug::: Always a pleasure, Mr. Ramier.
 Cat Noir::: M'Lady, take a look at this! 
 Nadja::: Nadja Chamack live here. Normally inanimate objects have come to life, taking control of Paris! Broadcasting live from City Hall, the new mayor has just made a declaration.
 Ladybug::: Is that morse code?
-Cat Noir::: Do you need subtitles? I speak several languages."Humans...will...soon be...treated the same way as objects"?
+Cat Noir::: Do you need subtitles? I speak several languages.Humans...will...soon be...treated the same way as objects?
 Nadja::: Paris' only hope in this dire situation is Ladybug and Cat N— Hey!
 Cat Noir::: Aw, come on! She could've at least finished saying my name!
 Ladybug:::We'll never be able to defeat them all. We must fight the problem at its source!
@@ -205,7 +205,7 @@ Max:::Perhaps it's best if I don't.
 Ladybug::: Everyone can feel negative emotions from time to time. It's important to accept that, and forgive. Follow your heart.
 Markov::: Max, my friend! What? Where are we? What's going on?
 Max::: You were akumatized.
-Markov::: "Akumatized"? Could you please define that word?Did I say something funny?
+Markov::: Akumatized? Could you please define that word?Did I say something funny?
 Ladybug and Cat Noir:::Pound it! 
 Marinette::: Are there some things you haven't told me about yet?
 Master Fu::: What do you want to know?

@@ -41,7 +41,7 @@ Rose::: Sorry!
 Kim::: Awesome!
 Marinette:::Oops.
 Nino::: Dude quick, pass it! 
-Didier Roustan:::Handball! Like my friend Andréa said: "Football is played with the head. Your feet are just the tools." But yeah, only the goalie can touch the ball with their hands.
+Didier Roustan:::Handball! Like my friend Andréa said: Football is played with the head. Your feet are just the tools. But yeah, only the goalie can touch the ball with their hands.
 Adrien::: Oh, sorry I'm not that familiar with the rules.
 Didier Roustan::: Oh! Reminds me if my friend Michelle at '84.
 Kim::: Hey Chloé you're the one who's supposed to stop the ball!
@@ -61,7 +61,7 @@ Marinette::: That's your thigh!
 Chloé::: Nobody asked you baker girl!
 Didier Roustan::: Anyone have an idea how to include your classmates in the game while still keeping the game fair and engaging?
 Marinette::: Well…Chloé could switch teams with every goal. The team that wins will be the one that did the best with his handicap.
-Chloé::: ""
+Chloé::: 
 Marinette::: Uhh…I mean having Chloé as their goalie.
 Didier Roustan::: Nicely done captain. Marinette, is it?
 Marinette::: Yes. Thank you, sir.
@@ -204,7 +204,7 @@ Penalty 1::: You're…lame!
 Penalty 2::: It's not us, it was them! 
 Didier Roustan::: The tension is starting to rise between the Penalteam players.
 Vesperia::: Venom!
-Didier Roustan::: There you go! A winning team is a united team. United by its diversity, a team where everyone's individualities find expression and complement each other! That's the beauty of team sports! Like my friend Arsenne said, "In soccer the important thing is not to have the eleven best, but the best eleven."
+Didier Roustan::: There you go! A winning team is a united team. United by its diversity, a team where everyone's individualities find expression and complement each other! That's the beauty of team sports! Like my friend Arsenne said, In soccer the important thing is not to have the eleven best, but the best eleven.
 Penalteam::: So you're just gonna keep scoring everytime? That's not fair!
 Ladybug::: Yep, and that's the way it's gonna be, forever.
 King Monkey::: Uproar!

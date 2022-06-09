@@ -11,6 +11,11 @@
 
 source("./main.R")
 #-----------------------------------------
+#todo
+#drop: gender:genderless
+#todo - relative lines/gender
+
+
 
 #Characteristics: Episodes / Seasons
     desc_no_episodes<-episodeTable %>%
@@ -28,6 +33,12 @@ source("./main.R")
         summarize(Frequency=n())%>% arrange(desc(Frequency))
       desc_gender_by_season <-desc_gender_by_season[order(desc_gender_by_season$Season, desc_gender_by_season$Gender),]
       view(desc_gender_by_season)
+      
+      interaction.plot(x.factor = desc_gender_by_season$Season, trace.factor = desc_gender_by_season$Gender, 
+                       response = desc_gender_by_season$Frequency, 
+                       type = "b", legend = TRUE, 
+                       xlab = "Season", ylab="Frequency", main="Frequency of gender & season",
+                       pch=c(1,19), col = c("#00AFBB", "#E7B800"))
     
     #In allen Season vorkommenden Charactern #45 Charaktere
       desc_reoccurring_gender_by_series<-character_seasons_sentiment_time_complete %>% 
@@ -83,16 +94,17 @@ source("./main.R")
                      xlab = "Season", ylab="Line Frequency", main="lines per gender & season",
                      pch=c(1,19), col = c("#00AFBB", "#E7B800"))
     
-    #äteren pro gender racanzahl corrigiert nach cha
+    #todo - relative lines/gender
+    #äteren pro gender racanzahl corrigiert nach character (relative) - korrigieren, dass female mehr characters haben als male (genderless raus)
 
-#WCount Outliers
+#WCount Outliers - not necessary - all relevant
             describeBy(lineTable_gender_role$WCount, lineTable_gender_role$Gender)
             
             lineTable_gender_role %>%
               identify_outliers("WCount")
             
         #outliers by groups
-            lineTable_gender_role %>% #frage
+            lineTable_gender_role %>% 
               group_by(Gender) %>%
               identify_outliers("WCount")
             

@@ -19,9 +19,10 @@ clean_transcript <- function(filepath){
   for (line in transcript_lines){
     #line <- gsub("\\[\\[[^\\|^\\]]+\\|", "",line, perl = TRUE) # make [[x|y]] to y]]
     #line <- gsub("\\[[^\\]]+\\]", "", line, perl= TRUE) # delete evertin in [Sinle brackets]
-    gsub(paste("''(places her diary in its designated box as seen in ", '[[Darkblade]]")', "'", '"'), "", line)
-    line <- gsub("(places her diary in its designated box as seen in ", "", line)
-    
+    #gsub(paste("''(places her diary in its designated box as seen in ", '[[Darkblade]]")', "'", '"'), "", line)
+    #line <- gsub("\\(places her diary in its designated box as seen in ", "", line)
+    line <- gsub('\\(places her diary in its designated box as seen in', "", line)
+    line <- gsub('"', "", line)
     line <- gsub("'''", "", line)
     line <- gsub("''", "", line)
     line <- gsub("\\[[^\\|]+\\|", "",line, perl = TRUE)
@@ -58,6 +59,7 @@ clean_transcript <- function(filepath){
     line <- sub("Santa","Santa Claus", line)
     line <- sub("The rest of the kwamis","The rest of the Kwamis", line)
     line <- sub("Hawkmoth","Hawk Moth", line)
+    line <- sub("Hawk moth","Hawk Moth", line)
     line <- sub("All three","All Three", line)
     line <- sub("boy","Boy", line)
     line <- sub("bus driver","Bus driver", line)
@@ -70,6 +72,11 @@ clean_transcript <- function(filepath){
     line <- sub("The Collector","Collector", line)
     line <- sub("Jagged Stone","Jagged", line)
     line <- sub("Gabriel Agreste","Gabriel", line)
+    #
+    line <- sub("Chloé-Bug","Chloé-Bee", line)
+    line <- sub("Marinete","Marinette", line)
+    line <- sub("Sentimonster Ladybug","Sentimonster Ladybug", line)
+    
     #Delte all white spaces
     line <- gsub(".*:::", paste(str_trim(sub(":::.*", "",line)), ":::", sep = ""), line)
     if(str_starts(line, "[^:]+:::.+")){

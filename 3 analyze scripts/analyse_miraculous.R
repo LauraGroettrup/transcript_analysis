@@ -5,10 +5,10 @@
 # - cleaning script executed
   # - processed transcript-files (.txt) in folder: "./data/miraculous/processed"
 # - empty folders "./data/miraculous/plots", "./data/miraculous/tables" must be present
-#sentimentAI Initiated: source("./analyze scripts/sentimentAI - initiate.R")
+#sentimentAI Initiated: source("./3 analyze scripts/sentimentAI - initiate.R")
 
 source("./main.R")
-source("./metadata scripts/metainfo_series_miraculous.R")
+source("./3 metadata scripts/metainfo_series_miraculous.R")
 
 process_transcript<-function(filepath){
   #filepath<-"./data/miraculous/processed/Ladybug.txt"
@@ -140,7 +140,7 @@ for (file in files){
   i <- i+1
   character_allperep[[i]] <- unique(characters)
 }
-subset(table(unlist(character_allperep)), table(unlist(character_allperep))>20)
+#subset(table(unlist(character_allperep)), table(unlist(character_allperep))>20)
 dialogTable <- read.csv("./data/miraculous/tables/dialogs.csv", sep="|", header = F)
 episodeTable <- read.csv("./data/miraculous/tables/episodes.csv", sep="|", header = F)
 sentimentTable <- read.csv("./data/miraculous/tables/sentiment.csv", sep="|", header = F)

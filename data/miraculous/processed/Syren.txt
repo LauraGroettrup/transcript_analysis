@@ -4,8 +4,8 @@ Kim::: Right, sir. They are the best!I wish I could be a superhero. The powers. 
 Ondine:::Yeah, sure.
 Kim::: How can I become one? You think there's some kind of superhero school, or something? Or maybe more like some super secret training facility?
 Ondine::: You wanna know my secret?
-Kim::: Yeah, totally! I love this game."I have a serious crush on this Boy, but he has no idea."That boy's clueless.Okay, now it's my turn.
-Ondine:::"I can stick my big toe inside my ear"...?
+Kim::: Yeah, totally! I love this game.I have a serious crush on this Boy, but he has no idea.That boy's clueless.Okay, now it's my turn.
+Ondine:::I can stick my big toe inside my ear...?
 Ondine:::Let's stop beating about the bush. 
 Kim::: Ah! The movie! I totally forgot! 
 Ondine::: But we haven't finished yet!
@@ -119,7 +119,7 @@ Marinette::: Come on, tell me a really, really funny joke!
 Master Fu::: Do you think this is really the time to have fun?
 Marinette::: Okay, why do you go to bed at night?
 Master Fu:::I don't know, uh...
-Marinette::: Because the bed won't come to you!What goes up, but doesn't move? Stairs!What does a snail say when it's riding on a turtle's back?"Wooohooo!!"
+Marinette::: Because the bed won't come to you!What goes up, but doesn't move? Stairs!What does a snail say when it's riding on a turtle's back?Wooohooo!!
 Master Fu::: I think you have just found the magic ingredient, Marinette!
 Tikki::: Mmm! Yummy!
 Marinette::: Tikki, power up! 
@@ -186,12 +186,12 @@ Marinette:::One 'magic-aroon', one transformation.
 Tikki::: The blue one looks yummy!
 Marinette::: You'll see.I'm told it's icy. 
 Kim::: Wanna play a game of secrets? 
-Ondine:::"Wanna go to the movies with me?"
+Ondine:::Wanna go to the movies with me?
 Gabriel:::Who is it?!
 Master Fu:::Over here!Lower.Hello, I'm Mr. Chan. Adrien's Chinese tutor could not come today. I'll be replacing him.
 Gabriel:::Hmmm.
-Translator app::: "What time is it?" Xiànzài jí diǎn le? 现在几点了?
-Adrien::: "Xiànzài jí diǎn le?"
+Translator app::: What time is it? Xiànzài jí diǎn le? 现在几点了?
+Adrien::: Xiànzài jí diǎn le?
 Master Fu::: Shí jiān dào le. 时间到了 It's the right time.
 Nathalie::: Adrien, here's Mr. Chan. He'll be your substitute teacher for today. 
 Master Fu::: Hello, Adrien. I think you and I should have a little talk.

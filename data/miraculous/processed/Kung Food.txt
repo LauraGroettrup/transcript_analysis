@@ -23,9 +23,9 @@ Wang Cheng::: Oh, my English very bad. Not like your Chinese.
 Adrien::: I thought you couldn't speak English.
 Marinette::: Uh, me too.
 Wang Cheng::: Oh, no, not good. My English not good.
-Alec::: Since our "World's Greatest Chef" contest kicked off, the best culinary masters from around the globe have been blowing our minds with their gastronomic creations.
+Alec::: Since our World's Greatest Chef contest kicked off, the best culinary masters from around the globe have been blowing our minds with their gastronomic creations.
 André::: Cheng Shifu, I am delighted and honored to have you on our final show, where you will have the chance to defeat all of the chefs who have competed thus far.
-Alec::: Only one will be awarded the title of "World's Greatest Chef." The winner's dish will become the new Mayor's Special on the Grand Paris's menu!Tell us Cheng Shifu, what dish will you be honoring our panel with today? 
+Alec::: Only one will be awarded the title of World's Greatest Chef. The winner's dish will become the new Mayor's Special on the Grand Paris's menu!Tell us Cheng Shifu, what dish will you be honoring our panel with today? 
 Adrien:::你将交给上的菜 
 Wang Cheng::: My dish is: Celestial soup.
 Alec::: Wow! I've heard so much about your legendary Celestial Soup, but today we'll actually get to taste it! 
@@ -34,10 +34,10 @@ Wang Cheng::: No thank you Adrien. Cooking needs no words.
 Marinette::: Thanks, Adrien. I'm totally sorry for bothering you for nothing. I really thought he couldn't speak English.
 Adrien::: No problem Marinette. It was awesome to be able to practice my Chinese, especially with a Shifu.
 Marinette::: A Shifu?
-Adrien::: That means "Master" in Chinese. Your Mom's Uncle is a great master!
+Adrien::: That means Master in Chinese. Your Mom's Uncle is a great master!
 Chloé:::Oh look who it is! My favorite person, Marinette Dupain-Cheng. I mean, seriously? Does your great-uncle really expect to win the contest with a SOUP!? It's not even a main dish! Please! Doesn't he know how to make sushi like everyone else?
 Adrien::: Japanese people make sushi, Chloé. Cheng Shifu is Chinese!
-Marinette::: Besides, he's not like "everyone else". My Great Uncle is the best chef in the world. His soup is legendary!
+Marinette::: Besides, he's not like everyone else. My Great Uncle is the best chef in the world. His soup is legendary!
 Chloé::: Well, I despise soup.
 Marinette::: So what?
 Chloé::: Didn't you know? I'm on the jury. Your uncle will not be getting my vote, for sure.
@@ -62,11 +62,11 @@ Chloé::: Seeing as it's pretty unappetizing, maybe I'll pass on the tasting, bu
 Jagged::: Ech! It's like kissing a member from the Zombeats! Negative zero.
 Marlena::: I'm sorry, but it's inedible. I give it 1/10.
 Wang Cheng::: Uh... I...Uch! I don't understand, I never put these ingredients in. It's a mistake. Someone sabotaged soup!
-Alec::: I'm sorry, Cheng Shifu, but I'm giving you a zero, too, which brings your score to 0.8/10the lowest so far. Celestial Soup will therefore not be in the hotel's menu this year, and you will not be named "World's Greatest Chef"!
+Alec::: I'm sorry, Cheng Shifu, but I'm giving you a zero, too, which brings your score to 0.8/10the lowest so far. Celestial Soup will therefore not be in the hotel's menu this year, and you will not be named World's Greatest Chef!
 Marinette::: This isn't right, and I'm certain Chloé's got something to do with it.
 Adrien::: I'd like to say you're wrong, but I know her only too well.
 Marinette::: Uncle Cheng? I'm sure it's not your fault. In fact, I know it's not. I'm pretty sure Chloé's behind this. It was actually because of me. I provoked her, and—
-Wang Cheng::: Shame is on Celestial Soup. I shall never be "World's Greatest Chef"!
+Wang Cheng::: Shame is on Celestial Soup. I shall never be World's Greatest Chef!
 Marinette::: No! Uncle Cheng!
 Adrien::: It's horrible to lose face in China. We'll wait for him downstairs.
 Marinette::: Mhm. 
@@ -93,7 +93,7 @@ Adrien::: Caramel?Mmm. It might taste good but it's totally indestructible. Look
 Marinette::: My Great Uncle is still upstairs!
 Adrien::: Don't worry, I'll find him.
 Marinette::: Thanks. I'll... look for a way out of here...
-Kung Food:::You want to taste Kung Food's soup. Everybody become my servants, and Kung Food become "World's Greatest Chef"! Hahahaha!
+Kung Food:::You want to taste Kung Food's soup. Everybody become my servants, and Kung Food become World's Greatest Chef! Hahahaha!
 Marinette::: Uncle? 
 Marinette::: I never should have riled up Chloé! I've gotta save my Uncle! 
 Tikki::: You'll do it Marinette! I'm sure you will!
@@ -121,7 +121,7 @@ Jagged::: Seafood appetizers.
 Ladybug::: Jagged!
 Cat Noir::: Seafood? This scampi happening. Let's see if you can carry a tuna!
 Ladybug::: Look out! 
-Cat Noir::: That's not very "rock and roll" of you, Jagged.
+Cat Noir::: That's not very rock and roll of you, Jagged.
 Jagged::: Rock is one thing, soup is another. When I'm done with you, you'll be nothing but minced meat!
 Cat Noir:::Good job. 
 Ladybug::: There's no time to lose! Chloé might just be the main dish! And we better not wait to find out!
@@ -195,4 +195,4 @@ Jagged::: Rock n' Roll! I can't wait to get home and write a song about soup!
 Wang Cheng::: Thank you, but no longer Celestial Soup. Now called: Marinette Soup.
 Marinette::: Huh? 谢谢 !
 Wang Cheng::: You're welcome.
-Alec:::Come over here and stand alongside your uncle, the "World's Greatest Chef"!
+Alec:::Come over here and stand alongside your uncle, the World's Greatest Chef!
