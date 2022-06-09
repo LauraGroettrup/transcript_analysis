@@ -50,12 +50,16 @@ source("./main.R")
   twa2s_pht2
   
   dialogTable_gender_role %>% #crosstable twa2_pht1
-    group_by(Role_To) %>%
-    get_summary_stats(Sentiment_transformed_log, type = "mean_sd")
+    group_by(Role_From) %>%
+    get_summary_stats(Sentiment, type = "median")
   #interpretation twa2_pht2: s. overview - results
+  
+  #insert graph
+  
   
   twa2s_pht3<-TukeyHSD(twa2s) # interaction
   twa2s_pht3
+  str(twa2s_pht3)
   #interpretation twa2_pht3: s. overview - results
   
   #plots

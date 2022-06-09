@@ -28,8 +28,11 @@ Question? - Gender_From: female: more "?" in mean (Text), when Gender_To=Male - 
 
 Questions per gender (mfn) -difference?
 
-Graph nodes by gender
+Graph nodes by gender - betweenness
 
 —
+
+Models
+
 
 ANOVAs or KWT

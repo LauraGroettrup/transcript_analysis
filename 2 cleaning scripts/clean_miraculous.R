@@ -19,6 +19,9 @@ clean_transcript <- function(filepath){
   for (line in transcript_lines){
     #line <- gsub("\\[\\[[^\\|^\\]]+\\|", "",line, perl = TRUE) # make [[x|y]] to y]]
     #line <- gsub("\\[[^\\]]+\\]", "", line, perl= TRUE) # delete evertin in [Sinle brackets]
+    gsub(paste("''(places her diary in its designated box as seen in ", '[[Darkblade]]")', "'", '"'), "", line)
+    line <- gsub("(places her diary in its designated box as seen in ", "", line)
+    
     line <- gsub("'''", "", line)
     line <- gsub("''", "", line)
     line <- gsub("\\[[^\\|]+\\|", "",line, perl = TRUE)

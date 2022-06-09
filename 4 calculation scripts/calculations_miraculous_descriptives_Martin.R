@@ -83,6 +83,7 @@ source("./main.R")
                      xlab = "Season", ylab="Line Frequency", main="lines per gender & season",
                      pch=c(1,19), col = c("#00AFBB", "#E7B800"))
     
+    #äteren pro gender racanzahl corrigiert nach cha
 
 #WCount Outliers
             describeBy(lineTable_gender_role$WCount, lineTable_gender_role$Gender)
