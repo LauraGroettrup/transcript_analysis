@@ -148,8 +148,16 @@ source("./main.R")
                      xlab = "Season", ylab="Line Frequency", main="lines per gender & season",
                      pch=c(1,19), col = c("#00AFBB", "#E7B800"))
     
+#questions description 
     
     
+    
+    #ändern auf dialogtable; from/to gender
+    desc_questions_by_gender<-lineTable_gender_role %>% 
+      group_by(Gender) %>%
+      summarize(Mean = mean(WCount, na.rm=TRUE))
+    desc_wcount_by_gender<-desc_wcount_by_gender[order(desc_wcount_by_gender$Gender),]
+    view(desc_wcount_by_gender)
     
 #describeBy(episodeTable$Episode_No_Overall, episodeTable$Season)
 #-------Descriptives Martin--------------------------------------
