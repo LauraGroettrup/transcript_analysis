@@ -23,7 +23,7 @@ source("./main.R")
 #   Vader_transformed_z
 #-------------------------------------------
 
-#Kruskal-Wallis-Test1 (kwt2)
+#Kruskal-Wallis-Test2 (kwt2)
 #Sentiment 
         #AV: Sentiment.ai-Scores (untransformed)
         #UV: Gender-To

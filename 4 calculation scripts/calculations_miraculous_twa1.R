@@ -32,6 +32,7 @@ source("./main.R")
   Anova(twa1s, type=3)
   summary(twa1s)
   
+  
   twa1s_pht1 <- dialogTable_gender_role %>% #post-hoc-test
     pairwise_t_test(
       Sentiment_transformed_log ~ Gender_From, paired = F,

@@ -17,27 +17,30 @@ plot_gender_to
 #plots
 #barplot (in colours)
 #sentiment
-neutral <- length(which(dialogTable_gender_role$Sentiment == 0))
-positive <- length(which(dialogTable_gender_role$Sentiment > 0))
-negative <- length(which(dialogTable_gender_role$Sentiment< 0))
-Sentiment <- c("Positive","Neutral","Negative")
-Count <- c(positive,neutral,negative)
-output <- data.frame(Sentiment,Count)
+neutral <- length(which(dialogTable_gender_role$Sentiment >= -0.1 & dialogTable_gender_role$Sentiment <= 0.1))
+positive <- length(which(dialogTable_gender_role$Sentiment > 0.1))
+negative <- length(which(dialogTable_gender_role$Sentiment< -0.1))
+#neutral <- length(which(dialogTable_gender_role$Sentiment == 0))
+#positive <- length(which(dialogTable_gender_role$Sentiment > 0))
+#negative <- length(which(dialogTable_gender_role$Sentiment< -0))
+Sentiment <- c("Negative","Neutral","Positive")
+Lines <- c(negative,neutral,positive)
+output <- data.frame(Sentiment,Lines)
 output$Sentiment<-factor(output$Sentiment,levels=Sentiment)
-ggplot(output, aes(x=Sentiment,y=Count))+
+ggplot(output, aes(x=Sentiment,y=Lines))+
   geom_bar(stat = "identity", aes(fill = Sentiment))+
   ggtitle("Barplot of all Sentiment-scores over all seasons")
 #vader
 neutral <- length(which(dialogTable_gender_role$Vader == 0))
 positive <- length(which(dialogTable_gender_role$Vader > 0))
 negative <- length(which(dialogTable_gender_role$Vader< 0))
-Sentiment <- c("Positive","Neutral","Negative")
-Count <- c(positive,neutral,negative)
-output <- data.frame(Sentiment,Count)
-output$Sentiment<-factor(output$Sentiment,levels=Sentiment)
-ggplot(output, aes(x=Sentiment,y=Count))+
-  geom_bar(stat = "identity", aes(fill = Sentiment))+
-  ggtitle("Barplot of all Sentiment-scores over all seasons")
+Vader <- c("Negative","Neutral","Positive")
+Lines <- c(negative,neutral,positive)
+output <- data.frame(Vader,Lines)
+output$Sentiment<-factor(output$Vader,levels=Vader)
+ggplot(output, aes(x=Vader,y=Lines))+
+  geom_bar(stat = "identity", aes(fill = Vader))+
+  ggtitle("Barplot of all Vader-scores over all seasons")
 
 
 plot(dialogTable_gender_role$Sentiment,pch=16)
