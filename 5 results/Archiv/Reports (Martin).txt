@@ -19,7 +19,9 @@ Ok - Lines per gender & Role
 
 Ok - Lines per gender per season (plot)
 
-Ok - Words count per gender per season (means, plot) - OUTLIERS
+Ok - Lines per gender & season - relative to number of female/male characters (plot) - YES
+
+Ok - Words count per gender per season (means, plot) - OUTLIERS - no outlier deletion
 
 
 todo: 

@@ -9,18 +9,6 @@
 
 source("./main.R")
 #-----------------------------------------
-#if necessary
-#CALCULATIONS WITH GENDER "MALE" AND "FEMALE" - "GENDERLESS" DELETED for ANOVAS (dialogs in "From" and "To" with kwawis and multiple people)
-
-  #subset with gender: "male" & "female" only, "genderless" deleted: result -> dialogTable_gender_mf
-      #dialogTable_gender_role$id<-1:nrow(dialogTable_gender_role) #ID hinzufügen
-      #dialogTable_gender_mf <- dialogTable_gender_role[ which(dialogTable_gender_role$Gender_From=='male'| dialogTable_gender_role$Gender_From=='female'), ]
-      #dialogTable_gender_mf <- dialogTable_gender_mf[ which(dialogTable_gender_mf$Gender_To=='male'| dialogTable_gender_mf$Gender_To=='female'), ]
-        
-    #find out if subset worked - just male&female groups
-      #dialogTable_gender_role %>%
-        #group_by(Gender_From, Gender_To) %>%
-        #summarize(Frequency=n())%>% arrange(desc(Frequency))  
 
 #Descriptives
         #dialogTable_gender_role$ID<-1:nrow(dialogTable_gender_role) #ID hinzufügen
