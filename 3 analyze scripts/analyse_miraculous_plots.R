@@ -181,6 +181,39 @@ for (file in files){
 }
 subset(table(unlist(allCharacters)), table(unlist(allCharacters))>20)
 
+
+### Soziogramme over the whole serie
+
+## Gender
+gender_sentiment_df <- aggregate(dialogTable_gender_role$Sentiment, list(dialogTable_gender_role$Gender_To, dialogTable_gender_role$Gender_From), mean)
+names(gender_sentiment_df)[3] <- "weight"
+gender_sentiment_df$weight <- round(gender_sentiment_df$weight,digit=3)
+gender_sociogram_igraph<-graph_from_data_frame(gender_sentiment_df)
+igraph.options(plot.layout=layout.circle, vertex.size=50,  edge.label.y = 0.8, edge.label.cex = 1)
+plot(gender_sociogram_igraph, edge.label = E(gender_sociogram_igraph)$weight, main=paste("Sentiment between Genders"))
+
+
+## Role
+role_sentiment_df <- aggregate(dialogTable_gender_role$Sentiment, list(dialogTable_gender_role$Role_To, dialogTable_gender_role$Role_From), mean)
+names(role_sentiment_df)[3] <- "weight"
+role_sentiment_df$weight <- round(role_sentiment_df$weight,digit=3)
+role_sociogram_igraph<-graph_from_data_frame(role_sentiment_df)
+igraph.options(plot.layout=layout.circle, vertex.size=25,  edge.label.y = 0.8, edge.label.cex = 1)
+plot(role_sociogram_igraph, edge.label = E(role_sociogram_igraph)$weight, main=paste("Sentiment between Roles"))
+
+
+## Characters
+importantCharacterList <- character_betweenness %>% slice(1:5)
+importantCharacterList <- importantCharacterList$Character
+# Delete all pair where Top 10 do not speak to each other
+sozioTable <- dialogTable[which(dialogTable$From %in% importantCharacterList & dialogTable$To %in% importantCharacterList),]
+character_sentiment_df <- aggregate(sozioTable$Sentiment, list(sozioTable$From, sozioTable$To), mean)
+names(character_sentiment_df)[3] <- "weight"
+character_sentiment_df$weight <- round(character_sentiment_df$weight,digit=3)
+character_sociogram_igraph<-graph_from_data_frame(character_sentiment_df)
+igraph.options(plot.layout=layout.circle, vertex.size=25,  edge.label.y = 0.9)
+plot(character_sociogram_igraph, edge.label = E(character_sociogram_igraph)$weight, main=paste("Sentiment between Roles"),edge.label.y = 0)
+
 #------------------------------------------------------------------------
 #aufräumen
 rm(i, file)
