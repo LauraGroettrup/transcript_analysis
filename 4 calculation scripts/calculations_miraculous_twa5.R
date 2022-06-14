@@ -14,7 +14,7 @@ source("./main.R")
 #   Sentiment_transformed_z
 #-------------------------------------------
 
-#ANOVA5: two-way-anova (twa1)
+#ANOVA5: two-way-anova (twa5)
 #Sentiment 
 #AV: Sentiment.ai-Scores (added constant, log transformed)
 #UV: Gender-From, Gender-To, Role-Category-From, Role-Category-To

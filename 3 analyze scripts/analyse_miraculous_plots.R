@@ -214,6 +214,18 @@ character_sociogram_igraph<-graph_from_data_frame(character_sentiment_df)
 igraph.options(plot.layout=layout.circle, vertex.size=25,  edge.label.y = 0.9)
 plot(character_sociogram_igraph, edge.label = E(character_sociogram_igraph)$weight, main=paste("Sentiment between Roles"),edge.label.y = 0)
 
+## Characters - Martin - Beweenness top 20, gender - to do?! - nur m und f
+importantCharacterList <- character_betweenness %>% slice(1:20)
+importantCharacterList <- importantCharacterList$Character
+# Delete all pair where Top 10 do not speak to each other
+sozioTable <- dialogTable[which(dialogTable$From %in% importantCharacterList & dialogTable$To %in% importantCharacterList),]
+character_sentiment_df <- aggregate(sozioTable$Sentiment, list(sozioTable$From, sozioTable$To), mean)
+names(character_sentiment_df)[3] <- "weight"
+character_sentiment_df$weight <- round(character_sentiment_df$weight,digit=3)
+character_sociogram_igraph<-graph_from_data_frame(character_sentiment_df)
+igraph.options(plot.layout=layout.circle, vertex.size=25,  edge.label.y = 0.9)
+plot(character_sociogram_igraph, edge.label = E(character_sociogram_igraph)$weight, main=paste("Sentiment between Roles"),edge.label.y = 0)
+
 #------------------------------------------------------------------------
 #aufräumen
 rm(i, file)

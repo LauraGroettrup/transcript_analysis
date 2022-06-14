@@ -38,6 +38,10 @@ twa2_pht2
 
 twa2_pht3<-TukeyHSD(twa2)
 twa2_pht3
+plot(twa2_pht3)
+twa2_pht3<-as.data.frame(tidy(twa2_pht3)) %>% 
+  filter(adj.p.value < .05)
+view(twa2_pht3)
 
 #table nicht mit transformierten Daten
 dialogTable_gender_mf %>% #crosstable twa1_pht1
