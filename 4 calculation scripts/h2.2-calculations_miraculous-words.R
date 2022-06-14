@@ -15,13 +15,29 @@ source("./main.R")
 #---------------------------------------------------------------------------------------------
 #WCount per gender
       #http://www.sthda.com/english/wiki/ggplot2-histogram-plot-quick-start-guide-r-software-and-data-visualization
+    #plot
       hist(lineTable_gender_mf$WCount, col='steelblue', main='histogram of (all) Sentiment.Ai Scores')
-      plot_WCoung_g<-ggplot(lineTable_gender_mf, aes(x=WCount, fill=Gender, color=Gender)) + geom_histogram(binwidth=7, alpha=0.5, position="dogle")+theme(legend.position="right")      
-      plot_WCoung_g<-plot_WCoung_g+scale_color_brewer(palette="Dark2")
-      plot_WCoung_g<-plot_WCoung_g+geom_vline(data=mu, aes(xintercept=grp.mean, color=Gender),
-                 linetype="dashed")
-      plot_WCoung_g
       
+      #mean
+      #mu <- ddply(lineTable_gender_mf, "Gender", summarise, grp.mean=mean(WCount))
+      #head(mu)
+      plot_WCount_g<-ggplot(lineTable_gender_mf, aes(x=WCount, fill=Gender, color=Gender)) + 
+                      geom_histogram(binwidth=15, alpha=0.5, position="dodge")+
+                      theme(legend.position="right")+
+                      labs(title="Histogram plot of word count per gender over lines",x="Word Count", y = "No. of lines")+
+                      theme_classic()
+      #plot_WCount_g<-plot_WCount_g+ geom_vline(aes(xintercept=mean(WCount)), color="blue", linetype="dashed", size=0,5) #mean
+      #plot_WCount_g<-plot_WCount_g+scale_color_brewer(palette="Dark2")
+      #mean - plot_WCount_g<-plot_WCount_g+geom_histogram(fill="white", position="dodge")+geom_vline(data=mu, aes(xintercept=grp.mean, color=Gender),linetype="dashed")+theme(legend.position="top")
+      plot_WCoung_d
+      
+      #density
+      ggplot(lineTable_gender_mf, aes(x=WCount,fill=Gender, color=Gender)) + 
+        geom_histogram(aes(y=..density..), colour="black", fill="white")+
+        geom_density(alpha=.2, fill="#FF6666")
+     #plot End
+      
+      #mean
       desc_wcount_by_gender<-lineTable_gender_mf %>% 
         group_by(Gender) %>%
         summarize(Mean = mean(WCount, na.rm=TRUE))
@@ -46,6 +62,80 @@ source("./main.R")
                        type = "b", legend = TRUE, ylim = range(1:13, na.rm = TRUE),
                        xlab = "Season", ylab="Line Frequency", main="lines per gender & season",
                        pch=c(1,19), col = c("#00AFBB", "#E7B800"))
+
+#WCount per gender_From/To
+      
+#from gender
+
+  describeBy(dialogTable_gender_mf$WCount, dialogTable_gender_mf$Gender_From)      
+
+      desc_words_by_gender_from<-dialogTable_gender_mf %>% 
+        group_by(Gender_From, WCount) %>%
+        summarize(Frequency=n())%>% arrange(desc(Frequency))
+      desc_words_by_gender_from<-desc_words_by_gender_from[order(desc_words_by_gender_from$Gender_From),]
+      view(desc_words_by_gender_from) 
+
+      plot_WCount_gfrom<-ggplot(dialogTable_gender_mf, aes(x=WCount, fill=Gender_From, color=Gender_From)) + 
+        geom_histogram(binwidth=15, alpha=0.5, position="dodge")+
+        #scale_fill_manual("Gender_From",values=c("#E69F00","#56B4E9"))+
+        #scale_color_manual("Gender_From",values=c("#E69F00","#56B4E9"))+
+        theme(legend.position="right")+
+        labs(title="Histogram plot of word count per gender_from over lines",x="Word Count", y = "No. of lines")+
+        theme_classic()
+      plot_WCount_gfrom
+
+#to gender
+      
+      describeBy(dialogTable_gender_mf$WCount, dialogTable_gender_mf$Gender_To)
+      
+      desc_words_by_gender_to<-dialogTable_gender_mf %>% 
+        group_by(Gender_To, WCount) %>%
+        summarize(Frequency=n())%>% arrange(desc(Frequency))
+      desc_words_by_gender_to<-desc_words_by_gender_from[order(desc_words_by_gender_from$Gender_To),]
+      view(desc_words_by_gender_to) 
+      
+      plot_WCount_gto<-ggplot(dialogTable_gender_mf, aes(x=WCount, fill=Gender_To, color=Gender_To)) + 
+        geom_histogram(binwidth=15, alpha=0.5, position="dodge")+
+        scale_fill_manual("Gender_To",values=c("#E69F00","#56B4E9"))+
+        scale_color_manual("Gender_To",values=c("#E69F00","#56B4E9"))+
+        theme(legend.position="right")+
+        labs(title="Histogram plot of word count per gender_to over lines",x="Word Count", y = "No. of lines")+
+        theme_classic()
+      plot_WCount_gto
+
+#to both
+      
+      describeBy(dialogTable_gender_mf$WCount, list(dialogTable_gender_mf$Gender_From,dialogTable_gender_mf$Gender_To))
+      
+      desc_words_by_gender_both<-dialogTable_gender_mf %>% 
+        group_by(Gender_From, Gender_To, WCount) %>%
+        summarize(Frequency=n())%>% arrange(desc(Frequency))
+      desc_words_by_gender_both<-desc_words_by_gender_both[order(desc_words_by_gender_both$Gender_From),]
+      view(desc_words_by_gender_both) 
+      
+      #geht nicht
+      ggplot(dialogTable_gender_mf, aes(x=WCount, fill=Gender_From, color=Gender_From)) + 
+        geom_histogram(binwidth=15, alpha=0.5, position="dodge")+
+        theme(legend.position="right")+
+        labs(title="Histogram plot of word count per gender_from over lines",x="Word Count", y = "No. of lines")+
+        theme_classic()      
+      
+      plot_WCount_gboth<-ggarrange(plot_WCount_gfrom, plot_WCount_gto + rremove("x.text"),common.legend=F, legend ="right",
+                labels = c("A", "B"),
+                ncol = 1, nrow = 2)
+      plot_WCount_gboth
+      
+      plot_WCount_gboth <- plot_WCount_gboth + guides(fill=guide_legend(title="New Legend Title"))
+      annotate_figure(plot_WCount_gboth,
+                      top = text_grob("Visualizing mpg", color = "red", face = "bold", size = 14),
+                      bottom = text_grob("Data source: \n mtcars data set", color = "blue",
+                                         hjust = 1, x = 1, face = "italic", size = 10),
+                      #left = text_grob("Figure arranged using ggpubr", color = "green", rot = 90),
+                      #right = "I'm done, thanks :-)!",
+                      fig.lab = "Figure 1", fig.lab.face = "bold"
+      )
+      
+
 
 #---------------------------------------------------------------------------------------------    
       # #WCount Outliers - not necessary - all relevant
