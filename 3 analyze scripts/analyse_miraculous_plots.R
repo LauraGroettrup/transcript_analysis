@@ -207,7 +207,9 @@ names(gender_top_sentiment_df)[3] <- "weight"
 gender_top_sentiment_df$weight <- round(gender_top_sentiment_df$weight,digit=3)
 gender_top_sentiment_igraph<-graph_from_data_frame(gender_top_sentiment_df)
 igraph.options(plot.layout=layout.circle, vertex.size=25,edge.curved=TRUE, edge.label.y =0.5, edge.label.x =-0.5)
-plot(simplify(gender_top_sentiment_igraph), edge.label = E(gender_top_sentiment_igraph)$weight, main=paste("Sentiment between Top 10 and Genders"))
+par(bg = "#f7f7f7")
+plot(simplify(gender_top_sentiment_igraph), edge.label = E(gender_top_sentiment_igraph)$weight, main=paste("Sentiment scores of most central characters and genders"))
+par(bg = "white")
 # Female Main to Gender
 importantCharacterList <- character_betweenness[which(character_betweenness$Gender == "female"), ] %>% slice(1:10)
 importantCharacterList <- importantCharacterList$Character
@@ -223,7 +225,7 @@ names(gender_top_sentiment_df)[3] <- "weight"
 gender_top_sentiment_df$weight <- round(gender_top_sentiment_df$weight,digit=3)
 gender_top_sentiment_igraph<-graph_from_data_frame(gender_top_sentiment_df)
 igraph.options(plot.layout=layout.circle, vertex.size=25,edge.curved=TRUE, edge.label.y =0.5, edge.label.x =-0.5)
-plot(simplify(gender_top_sentiment_igraph), edge.label = E(gender_top_sentiment_igraph)$weight, main=paste("Sentiment between female Top 10 and Genders"))
+plot(simplify(gender_top_sentiment_igraph), edge.label = E(gender_top_sentiment_igraph)$weight, main=paste("Sentiment scores of the 10 most central female characters and genders"))
 # Male Main To Gender
 importantCharacterList <- character_betweenness[which(character_betweenness$Gender == "male"), ] %>% slice(1:10)
 importantCharacterList <- importantCharacterList$Character
@@ -239,7 +241,7 @@ names(gender_top_sentiment_df)[3] <- "weight"
 gender_top_sentiment_df$weight <- round(gender_top_sentiment_df$weight,digit=3)
 gender_top_sentiment_igraph<-graph_from_data_frame(gender_top_sentiment_df)
 igraph.options(plot.layout=layout.circle, vertex.size=25,edge.curved=TRUE, edge.label.y =0.5, edge.label.x =-0.5)
-plot(simplify(gender_top_sentiment_igraph), edge.label = E(gender_top_sentiment_igraph)$weight, main=paste("Sentiment between male Top 10 and Genders"))
+plot(simplify(gender_top_sentiment_igraph), edge.label = E(gender_top_sentiment_igraph)$weight, main=paste("Sentiment scores of the 10 most central male characters and genders"))
 
 
 ## Role
