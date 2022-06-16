@@ -38,12 +38,38 @@ source("./main.R")
   #effect size:
     eta_squared(car::Anova(twa1, type = 3))
     #very small effect sizes
+    twa1_pht2<-TukeyHSD(twa1)
+    multcompLetters4(twa1,twa1_pht2)
     
   #plots
     
     #https://statdoe.com/scatterplot-for-two-factors-in-r/
-     hier weiter 
-      ggplot(dialogTable_gender_mf, aes(Gender_From, Gender_To, color = Sentiment)) + 
-      geom_point()
+    #http://www.sthda.com/english/wiki/ggplot2-violin-plot-quick-start-guide-r-software-and-data-visualization
+      
+    data_summary <- function(x) {
+      m <- mean(x)
+      ymin <- m-sd(x)
+      ymax <- m+sd(x)
+      return(c(y=m,ymin=ymin,ymax=ymax))}
+    
+     twa1_pht1_plot<-ggplot(dialogTable_gender_mf, aes(x = Gender_From, y = Sentiment, fill=Gender_From)) + 
+       geom_violin(trim=FALSE) +
+        theme(text=element_text(size=25))+
+        theme(
+          legend.position="none",
+          plot.title = element_text(size=11)
+        )+
+       scale_color_brewer(palette="Dark2")+
+       theme(legend.position="bottom")+
+       stat_summary(fun.data=data_summary)+
+       geom_boxplot(width=0.1)+
+       #ggtitle("**Basic boxplot**") +
+       xlab("")
+     
+     twa1_pht1_plot<-twa1_pht1_plot+ stat_summary(fun.data=data_summary) + 
+                      geom_boxplot(width=0.1)+ylim(-1.2,1.2) +
+       theme(text=element_text(size=25))
+     twa1_pht1_plot
+       
 #-END ANOVA1--------------------------------------
   

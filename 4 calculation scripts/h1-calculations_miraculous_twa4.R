@@ -30,12 +30,14 @@ twa4_pht1 <- dialogTable_gender_mf %>% #post-hoc-test
     p.adjust.method = "bonferroni")
 twa4_pht1
 
+#Role From
 twa4_pht2 <- dialogTable_gender_mf %>% #post-hoc-test
   pairwise_t_test(
     Sentiment_transformed_z ~ Role_From, paired = F, #ändern
     p.adjust.method = "bonferroni")
 twa4_pht2
 
+#Role To
 twa4_pht3 <- dialogTable_gender_mf %>% #post-hoc-test
   pairwise_t_test(
     Sentiment_transformed_z ~ Role_To, paired = F, #ändern
@@ -74,7 +76,66 @@ dialogTable_gender_mf %>% #crosstable
   get_summary_stats(Sentiment, type = "mean_sd")
 
 #plots
-#to do
+data_summary <- function(x) {
+  m <- mean(x)
+  ymin <- m-sd(x)
+  ymax <- m+sd(x)
+  return(c(y=m,ymin=ymin,ymax=ymax))}
 
+#twa4_pht1_plot
+          twa4_pht1_plot<-ggplot(dialogTable_gender_mf, aes(x = Gender_From, y = Sentiment, fill=Gender_From)) + 
+            geom_violin(trim=FALSE) +
+            theme(text=element_text(size=25))+
+            theme(
+              legend.position="none",
+              plot.title = element_text(size=11)
+            )+
+            scale_color_brewer(palette="Dark2")+
+            theme(legend.position="bottom")+
+            stat_summary(fun.data=data_summary)+
+            geom_boxplot(width=0.1)+
+            #ggtitle("**Basic boxplot**") +
+            xlab("")
+          
+          twa4_pht1_plot<-twa4_pht1_plot+ stat_summary(fun.data=data_summary) + 
+            geom_boxplot(width=0.1) +theme(text=element_text(size=25))
+          twa4_pht1_plot
+        
+#twa4_pht2_plot
+          twa4_pht2_plot<-ggplot(dialogTable_gender_mf, aes(x = Role_From, y = Sentiment, fill=Role_From)) + 
+            geom_violin(trim=FALSE) +
+            theme(text=element_text(size=25))+
+            theme(
+              legend.position="none",
+              plot.title = element_text(size=11)
+            )+
+            theme(legend.position="bottom")+
+            stat_summary(fun.data=data_summary)+
+            geom_boxplot(width=0.1)+
+            #ggtitle("**Basic boxplot**") +
+            xlab("")
+          
+          twa4_pht2_plot<-twa4_pht2_plot+ stat_summary(fun.data=data_summary) + 
+            geom_boxplot(width=0.1)+theme(text=element_text(size=12))+ylim(-1.2,1.2)+scale_color_brewer(palette="Set3")
+          twa4_pht2_plot
+
+          
+#twa4_pht3_plot
+          twa4_pht3_plot<-ggplot(dialogTable_gender_mf, aes(x = Role_To, y = Sentiment, fill=Role_To)) + 
+            geom_violin(trim=FALSE) +
+            theme(text=element_text(size=25))+
+            theme(
+              legend.position="none",
+              plot.title = element_text(size=11)
+            )+
+            theme(legend.position="bottom")+
+            stat_summary(fun.data=data_summary)+
+            geom_boxplot(width=0.1)+
+            #ggtitle("**Basic boxplot**") +
+            xlab("")
+          
+          twa4_pht3_plot<-twa4_pht3_plot+ stat_summary(fun.data=data_summary) + 
+            geom_boxplot(width=0.1)+theme(text=element_text(size=12))+ylim(-1.2,1.2)+scale_color_brewer(palette="Set3")
+          twa4_pht3_plot
 
 #-END ANOVA4--------------------------------------
