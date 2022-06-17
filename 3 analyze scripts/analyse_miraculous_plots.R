@@ -202,11 +202,12 @@ genderSozioTable$From <- replace(genderSozioTable$From, genderSozioTable$From !=
 genderSozioTable$From <- replace(genderSozioTable$From, genderSozioTable$From != "Main" & genderSozioTable$Gender_From == "male", "male")
 genderSozioTable$To <- replace(genderSozioTable$To, genderSozioTable$To != "Main" & genderSozioTable$Gender_To == "female", "female")
 genderSozioTable$To <- replace(genderSozioTable$To, genderSozioTable$To != "Main" & genderSozioTable$Gender_To == "male", "male")
-gender_top_sentiment_df <- genderSozioTable %>% #crosstable
+gender_top_sentiment_df <- aggregate(genderSozioTable$Sentiment, list(genderSozioTable$To, genderSozioTable$From), mean)
+genderSozioTable %>% #crosstable
   group_by(From, To) %>% 
   get_summary_stats(Sentiment, type = "mean_sd")
-gender_top_sentiment_df <- gender_top_sentiment_df[c("From", "To", "mean")]
 names(gender_top_sentiment_df)[3] <- "weight"
+gender_top_sentiment_df$weight <- round(gender_top_sentiment_df$weight,digit=3)
 gender_top_sentiment_igraph<-graph_from_data_frame(gender_top_sentiment_df)
 igraph.options(plot.layout=layout.circle, vertex.size=25,edge.curved=T, edge.label.y =0, edge.label.x =1.5)
 par(bg = "#f7f7f7")
@@ -222,12 +223,15 @@ genderSozioTable$From <- replace(genderSozioTable$From, genderSozioTable$From !=
 genderSozioTable$From <- replace(genderSozioTable$From, genderSozioTable$From != "Main" & genderSozioTable$Gender_From == "male", "male")
 genderSozioTable$To <- replace(genderSozioTable$To, genderSozioTable$To != "Main" & genderSozioTable$Gender_To == "female", "female")
 genderSozioTable$To <- replace(genderSozioTable$To, genderSozioTable$To != "Main" & genderSozioTable$Gender_To == "male", "male")
+genderSozioTable %>% #crosstable
+  group_by(From, To) %>% 
+  get_summary_stats(Sentiment, type = "mean_sd")
 gender_top_sentiment_df <- aggregate(genderSozioTable$Sentiment, list(genderSozioTable$To, genderSozioTable$From), mean)
 names(gender_top_sentiment_df)[3] <- "weight"
 gender_top_sentiment_df$weight <- round(gender_top_sentiment_df$weight,digit=3)
 gender_top_sentiment_igraph<-graph_from_data_frame(gender_top_sentiment_df)
-igraph.options(plot.layout=layout.circle, vertex.size=25,edge.curved=TRUE, edge.label.y =0.5, edge.label.x =-0.5)
-plot(simplify(gender_top_sentiment_igraph), edge.label = E(gender_top_sentiment_igraph)$weight, main=paste("Sentiment scores of the 10 most central female characters and genders"))
+igraph.options(plot.layout=layout.circle, vertex.size=25,edge.curved=TRUE, edge.label.y =0, edge.label.x =1.5)
+plot(gender_top_sentiment_igraph, edge.label = E(gender_top_sentiment_igraph)$weight, main=paste("Sentiment scores of the 10 most central female characters and genders"))
 # Male Main To Gender
 importantCharacterList <- character_betweenness[which(character_betweenness$Gender == "male"), ] %>% slice(1:10)
 importantCharacterList <- importantCharacterList$Character
@@ -238,12 +242,15 @@ genderSozioTable$From <- replace(genderSozioTable$From, genderSozioTable$From !=
 genderSozioTable$From <- replace(genderSozioTable$From, genderSozioTable$From != "Main" & genderSozioTable$Gender_From == "male", "male")
 genderSozioTable$To <- replace(genderSozioTable$To, genderSozioTable$To != "Main" & genderSozioTable$Gender_To == "female", "female")
 genderSozioTable$To <- replace(genderSozioTable$To, genderSozioTable$To != "Main" & genderSozioTable$Gender_To == "male", "male")
+genderSozioTable %>% #crosstable
+  group_by(From, To) %>% 
+  get_summary_stats(Sentiment, type = "mean_sd")
 gender_top_sentiment_df <- aggregate(genderSozioTable$Sentiment, list(genderSozioTable$To, genderSozioTable$From), mean)
 names(gender_top_sentiment_df)[3] <- "weight"
 gender_top_sentiment_df$weight <- round(gender_top_sentiment_df$weight,digit=3)
 gender_top_sentiment_igraph<-graph_from_data_frame(gender_top_sentiment_df)
-igraph.options(plot.layout=layout.circle, vertex.size=25,edge.curved=TRUE, edge.label.y =0.5, edge.label.x =-0.5)
-plot(simplify(gender_top_sentiment_igraph), edge.label = E(gender_top_sentiment_igraph)$weight, main=paste("Sentiment scores of the 10 most central male characters and genders"))
+igraph.options(plot.layout=layout.circle, vertex.size=25,edge.curved=TRUE, edge.label.y =0, edge.label.x =1.5)
+plot(gender_top_sentiment_igraph, edge.label = E(gender_top_sentiment_igraph)$weight, main=paste("Sentiment scores of the 10 most central male characters and genders"))
 
 
 ## Role
@@ -251,7 +258,7 @@ role_sentiment_df <- aggregate(dialogTable_gender_role$Sentiment, list(dialogTab
 names(role_sentiment_df)[3] <- "weight"
 role_sentiment_df$weight <- round(role_sentiment_df$weight,digit=3)
 role_sociogram_igraph<-graph_from_data_frame(role_sentiment_df)
-igraph.options(plot.layout=layout.circle, vertex.size=25, edge.label.cex = 1)
+igraph.options(plot.layout=layout.auto, vertex.size=25, edge.label.cex = 1, edge.curved=FALSE)
 plot(role_sociogram_igraph, edge.label = E(role_sociogram_igraph)$weight, main=paste("Sentiment between Roles"))
 
 
