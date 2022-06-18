@@ -1,131 +1,521 @@
-"Character"|"Frequency"
-"Marinette"|79
-"Ladybug"|68
-"Cat Noir"|58
-"Adrien"|39
-"Alya"|26
-"Chloé"|20
-"Tikki"|17
-"Plagg"|10
-"Nino"|8
-"Kagami"|7
-"Luka"|6
-"Gabriel"|5
-"Hawk Moth"|5
-"Lila"|5
-"Jagged"|4
-"Manon"|4
-"Nathalie"|4
-"Shadow Moth"|4
-"Tom"|4
-"Audrey"|3
-"Bob"|3
-"Juleka"|3
-"Master Fu"|3
-"Max"|3
-"Rolland"|3
-"Rose"|3
-"Sabine"|3
-"Alix"|2
-"Anarka"|2
-"André"|2
-"Bunnyx"|2
-"Félix"|2
-"Gina"|2
-"Ivan"|2
-"Markov"|2
-"Miss Bustier"|2
-"Mylène"|2
-"Nadja"|2
-"Queen Bee"|2
-"Rena Rouge"|2
-"Robostus"|2
-"Sabrina"|2
-"Santa Claus"|2
-"Su-Han"|2
-"Vincent"|2
-"Viperion"|2
-"Zoé"|2
-"Alec"|1
-"Amelie"|1
-"Anansi"|1
-"Animan"|1
-"Antibug"|1
-"Aspik"|1
-"Backwarder"|1
-"Befana"|1
-"Bubbler"|1
-"Captain Hardrock"|1
-"Carapace"|1
-"Cat Blanc"|1
-"Cat Walker"|1
-"Chris"|1
-"Clara"|1
-"Collector"|1
-"Copycat"|1
-"Dark Owl"|1
-"Didier Roustan"|1
-"Doorman"|1
-"Dragon Bug"|1
-"Evillustrator"|1
-"Flairmidable"|1
-"Game Voice"|1
-"Gamer"|1
-"Gamer 2.0"|1
-"Glaciator"|1
-"Guitar Villain"|1
-"Harry"|1
-"Jean"|1
-"Kung Food"|1
-"Lady Noire"|1
-"Lady Wifi"|1
-"Malediktator"|1
-"Marc"|1
-"Mayor Bourgeois"|1
-"Mayura"|1
-"Miracle Queen"|1
-"Miraculer"|1
-"Mister Bug"|1
-"Mr. Bourgeois"|1
-"Mr. Damocles"|1
-"Mr. Pigeon"|1
-"Multimouse"|1
-"Nathaniel"|1
-"Nightmare Adrien"|1
-"Oni-Chan"|1
-"Penalteam"|1
-"Penny"|1
-"Philippe"|1
-"Pixelator"|1
-"Prime Queen"|1
-"Princess Fragrance"|1
-"Queen Wasp"|1
-"Reflekta"|1
-"Riposte"|1
-"Risk"|1
-"Roger"|1
-"Rogercop"|1
-"SandBoy"|1
-"Santa Claus Claws"|1
-"Scarabella"|1
-"Scarlet Moth"|1
-"Sentimonster Ladybug"|1
-"Silencer"|1
-"Simon Says"|1
-"Sole Crusher"|1
-"Startrain"|1
-"Style Queen"|1
-"The Pharaoh"|1
-"Théo"|1
-"Thomas"|1
-"Ticket Inspector"|1
-"Timebreaker"|1
-"Timetagger"|1
-"Tomoe"|1
-"Vanisher"|1
-"Volpina"|1
-"Wang Cheng"|1
-"Wang Fu"|1
-"Wayhem"|1
-"Wayzz"|1
-"XY"|1
+"character_eigenvector"
+"Marinette"
+"Marinette"
+"Alya"
+"Ladybug"
+"Marinette"
+"Ladybug"
+"Marinette"
+"Cat Noir"
+"Ladybug"
+"Marinette"
+"Marinette"
+"Marinette"
+"Ladybug"
+"Marinette"
+"Cat Noir"
+"Ladybug"
+"Ladybug"
+"Marinette"
+"Ladybug"
+"Marinette"
+"Pixelator"
+"Marinette"
+"Ladybug"
+"Ladybug"
+"Ladybug"
+"Marinette"
+"Adrien"
+"Ladybug"
+"Chloé"
+"Ladybug"
+"Marinette"
+"Adrien"
+"Robostus"
+"Marinette"
+"Cat Noir"
+"Cat Noir"
+"Alya"
+"Adrien"
+"Marinette"
+"Ladybug"
+"Marinette"
+"Clara"
+"Marinette"
+"Ladybug"
+"Tikki"
+"Marinette"
+"Adrien"
+"Style Queen"
+"Ladybug"
+"Chloé"
+"Marinette"
+"Ladybug"
+"Ladybug"
+"Cat Noir"
+"Marinette"
+"Marinette"
+"Marinette"
+"Bob"
+"Adrien"
+"Adrien"
+"Lady Noire"
+"Lila"
+"Ladybug"
+"Adrien"
+"Ladybug"
+"Cat Noir"
+"Tikki"
+"Ladybug"
+"Marinette"
+"Ladybug"
+"Nino"
+"Ladybug"
+"Ladybug"
+"Adrien"
+"Cat Noir"
+"Marinette"
+"Marinette"
+"Ladybug"
+"Marinette"
+"Adrien"
+"Ladybug"
+"Ladybug"
+"Su-Han"
+"Zoé"
+"Chloé"
+"Ladybug"
+"Marinette"
+"Marinette"
+"Marinette"
+"Alya"
+"Ladybug"
+"Luka"
+"Scarabella"
+"Marinette"
+"Marinette"
+"Marinette"
+"Ladybug"
+"Gabriel"
+"Marinette"
+"Ladybug"
+"Didier Roustan"
+"Sabine"
+"Adrien"
+"Ladybug"
+"Alya"
+"Alya"
+"The Pharaoh"
+"Cat Noir"
+"Ladybug"
+"Cat Noir"
+"Evillustrator"
+"Ladybug"
+"Cat Noir"
+"Alya"
+"Nino"
+"Chloé"
+"Cat Noir"
+"Adrien"
+"Ladybug"
+"Cat Noir"
+"Chloé"
+"Manon"
+"Cat Noir"
+"Guitar Villain"
+"Jagged"
+"Princess Fragrance"
+"Cat Noir"
+"Cat Noir"
+"Cat Noir"
+"Alya"
+"Santa Claus"
+"Cat Noir"
+"Jean"
+"Cat Noir"
+"Tikki"
+"Ladybug"
+"Max"
+"Alya"
+"Ladybug"
+"Ladybug"
+"Ladybug"
+"Wayhem"
+"Luka"
+"Cat Noir"
+"Master Fu"
+"Marinette"
+"Jagged"
+"Anansi"
+"Marinette"
+"Marc"
+"Marinette"
+"Chloé"
+"Cat Noir"
+"Ladybug"
+"Tikki"
+"Cat Noir"
+"Cat Noir"
+"Tom"
+"Lila"
+"Chloé"
+"Rolland"
+"Silencer"
+"Marinette"
+"Plagg"
+"Mister Bug"
+"Cat Noir"
+"Chloé"
+"Marinette"
+"Aspik"
+"Ladybug"
+"Plagg"
+"Master Fu"
+"Kagami"
+"Bunnyx"
+"Adrien"
+"Cat Noir"
+"Bunnyx"
+"Félix"
+"Ladybug"
+"Chris"
+"Adrien"
+"Cat Noir"
+"Luka"
+"Kagami"
+"Alya"
+"Alya"
+"Marinette"
+"Marinette"
+"Marinette"
+"Rose"
+"Jagged"
+"Alya"
+"Alya"
+"Nino"
+"Mayor Bourgeois"
+"Marinette"
+"Cat Noir"
+"Rolland"
+"Cat Noir"
+"Tikki"
+"Cat Noir"
+"Nathalie"
+"Harry"
+"Cat Walker"
+"Ladybug"
+"Marinette"
+"Félix"
+"Cat Noir"
+"Manon"
+"Adrien"
+"Ladybug"
+"Lady Wifi"
+"Alix"
+"Mr. Pigeon"
+"Chloé"
+"Rogercop"
+"Copycat"
+"Tikki"
+"Chloé"
+"Tikki"
+"Marinette"
+"Chloé"
+"Gamer"
+"Nino"
+"Cat Noir"
+"Nadja"
+"Marinette"
+"Jagged"
+"Ladybug"
+"Tikki"
+"Simon Says"
+"Volpina"
+"Alya"
+"Ladybug"
+"Ladybug"
+"Collector"
+"Adrien"
+"Prime Queen"
+"Befana"
+"Marinette"
+"Ladybug"
+"Rose"
+"Dark Owl"
+"Marinette"
+"Marinette"
+"Marinette"
+"Anarka"
+"Chloé"
+"Adrien"
+"Alya"
+"Penny"
+"Nino"
+"Plagg"
+"Nathaniel"
+"Kagami"
+"Ladybug"
+"Queen Bee"
+"Audrey"
+"Lila"
+"Scarlet Moth"
+"Marinette"
+"Marinette"
+"Adrien"
+"Thomas"
+"Tikki"
+"Cat Noir"
+"Ladybug"
+"Marinette"
+"Reflekta"
+"Ladybug"
+"Cat Noir"
+"Nino"
+"Adrien"
+"Max"
+"Marinette"
+"Cat Noir"
+"Tikki"
+"Cat Noir"
+"Marinette"
+"Gamer 2.0"
+"Cat Blanc"
+"Gabriel"
+"Sentimonster Ladybug"
+"Ladybug"
+"Kagami"
+"Hawk Moth"
+"Tikki"
+"Cat Noir"
+"Cat Noir"
+"Marinette"
+"Ladybug"
+"Chloé"
+"Zoé"
+"Cat Noir"
+"Luka"
+"Shadow Moth"
+"Shadow Moth"
+"Marinette"
+"Mylène"
+"Ladybug"
+"Robostus"
+"Manon"
+"Ladybug"
+"Rolland"
+"Viperion"
+"Marinette"
+"Adrien"
+"Plagg"
+"Penalteam"
+"Ticket Inspector"
+"Gabriel"
+"Adrien"
+"Vincent"
+"Nino"
+"Marinette"
+"Alya"
+"Tom"
+"Hawk Moth"
+"Sabrina"
+"Chloé"
+"Marinette"
+"Ladybug"
+"Alya"
+"Alya"
+"Alya"
+"Wang Cheng"
+"Marinette"
+"Marinette"
+"Antibug"
+"Ladybug"
+"Vincent"
+"Bob"
+"Marinette"
+"Chloé"
+"Gabriel"
+"Adrien"
+"Marinette"
+"Cat Noir"
+"Cat Noir"
+"Gabriel"
+"Marinette"
+"Nadja"
+"Gina"
+"Kagami"
+"Cat Noir"
+"Mylène"
+"Mr. Damocles"
+"Glaciator"
+"Cat Noir"
+"Ladybug"
+"Alya"
+"Alya"
+"Plagg"
+"Adrien"
+"Bob"
+"Alya"
+"Nightmare Adrien"
+"Ladybug"
+"Philippe"
+"Marinette"
+"Queen Wasp"
+"Malediktator"
+"Adrien"
+"Rena Rouge"
+"Backwarder"
+"Sabine"
+"Miss Bustier"
+"Tikki"
+"Sabine"
+"Ladybug"
+"Plagg"
+"Nathalie"
+"Adrien"
+"Oni-Chan"
+"Miraculer"
+"Alya"
+"Luka"
+"Markov"
+"Adrien"
+"Marinette"
+"Tomoe"
+"Timetagger"
+"Ivan"
+"Game Voice"
+"Adrien"
+"Amelie"
+"Mayura"
+"Santa Claus"
+"Luka"
+"Miracle Queen"
+"Alya"
+"Ladybug"
+"Marinette"
+"Kagami"
+"Cat Noir"
+"André"
+"Nino"
+"Marinette"
+"Juleka"
+"Nathalie"
+"Cat Noir"
+"Adrien"
+"Marinette"
+"Viperion"
+"Shadow Moth"
+"Adrien"
+"Kagami"
+"Tom"
+"Su-Han"
+"Adrien"
+"Ladybug"
+"Adrien"
+"Cat Noir"
+"Roger"
+"Marinette"
+"Flairmidable"
+"Ladybug"
+"Bubbler"
+"Cat Noir"
+"Marinette"
+"Timebreaker"
+"Marinette"
+"Cat Noir"
+"Mr. Bourgeois"
+"Théo"
+"Cat Noir"
+"Ladybug"
+"Sabrina"
+"Tikki"
+"Kung Food"
+"Adrien"
+"Animan"
+"Vanisher"
+"Cat Noir"
+"Chloé"
+"XY"
+"Chloé"
+"Doorman"
+"Adrien"
+"Lila"
+"Ivan"
+"Adrien"
+"Santa Claus Claws"
+"Marinette"
+"Alya"
+"Chloé"
+"Cat Noir"
+"Riposte"
+"Markov"
+"Juleka"
+"Alya"
+"André"
+"Rena Rouge"
+"Hawk Moth"
+"Captain Hardrock"
+"Marinette"
+"Tikki"
+"Chloé"
+"Alec"
+"Marinette"
+"SandBoy"
+"Cat Noir"
+"Plagg"
+"Audrey"
+"Audrey"
+"Queen Bee"
+"Miss Bustier"
+"Carapace"
+"Master Fu"
+"Ladybug"
+"Ladybug"
+"Tom"
+"Hawk Moth"
+"Marinette"
+"Cat Noir"
+"Tikki"
+"Marinette"
+"Adrien"
+"Lila"
+"Manon"
+"Plagg"
+"Startrain"
+"Multimouse"
+"Wayzz"
+"Ladybug"
+"Alix"
+"Max"
+"Marinette"
+"Cat Noir"
+"Plagg"
+"Hawk Moth"
+"Cat Noir"
+"Ladybug"
+"Dragon Bug"
+"Shadow Moth"
+"Plagg"
+"Rose"
+"Adrien"
+"Wang Fu"
+"Sole Crusher"
+"Adrien"
+"Juleka"
+"Anarka"
+"Adrien"
+"Tikki"
+"Cat Noir"
+"Cat Noir"
+"Cat Noir"
+"Alya"
+"Tikki"
+"Adrien"
+"Gina"
+"Adrien"
+"Chloé"
+"Cat Noir"
+"Cat Noir"
+"Marinette"
+"Ladybug"
+"Nathalie"
+"Risk"
