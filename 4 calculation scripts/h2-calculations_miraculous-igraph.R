@@ -36,14 +36,50 @@ plot(gender_sociogram_igraph, edge.label = E(gender_sociogram_igraph)$weight, ma
       get_summary_stats(Sentiment, type = "mean_sd")
     gender_top_sentiment_df <- gender_top_sentiment_df[c("From", "To", "mean")]
     names(gender_top_sentiment_df)[3] <- "weight"
-    gender_top_sentiment_igraph<-graph_from_data_frame(gender_top_sentiment_df)
-    igraph.options(plot.layout=layout.circle, vertex.size=25,edge.curved=T, edge.label.y =0, edge.label.x =1.5)
-    par(bg = "#f7f7f7")
-    plot(simplify(gender_top_sentiment_igraph), edge.label = E(gender_top_sentiment_igraph)$weight, main=paste("Sentiment scores of most central characters and genders"))
-    par(bg = "white")
     
-    https://mr.schochastics.net/material/netvizr/ hier weiter
+    gender_top_sentiment_df[gender_top_sentiment_df == "female"] <- "Female"
+    gender_top_sentiment_df[gender_top_sentiment_df == "male"] <- "Male"
+    gender_top_sentiment_df[gender_top_sentiment_df == "Main"] <- "Role Model"
+    
+    gender_top_sentiment_igraph<-graph_from_data_frame(gender_top_sentiment_df)
+    igraph.options(plot.layout=layout.circle, edge.curved=T, edge.label.y =0, edge.label.x =1.5, edge.label.family="Helvetica", vertex.label.family="Helvetica")
+    #par(bg = "#f7f7f7")
+    #par(bg = "white")
+    #colrs <- c("gray50", "tomato", "gold")
+    #V(gender_top_sentiment_igraph)
+    #E(gender_top_sentiment_igraph)
 
+    plot(gender_top_sentiment_igraph, edge.label = E(gender_top_sentiment_igraph)$weight, #simplify(gender_top_sentiment_igraph)
+         #main=paste("Sentiment scores of most central characters and genders"), 
+         #vertex.frame.color = "Forestgreen",
+         vertex.shape="circle",
+         vertex.size=90,
+         vertex.frame.color="dark grey", vertex.label.color="black", vertex.color="tomato", 
+         vertex.label.cex=1.6, vertex.label.dist=0, 
+         edge.label.cex=1.3,
+         #edge.color="blue", alpha.f = .5,
+         # Edge color
+         edge.width=2,                                # Edge width, defaults to 1
+         edge.arrow.size=0.2,                         # Arrow size, defaults to 1
+         edge.arrow.width=1, 
+         edge.color="gray",
+         #edge.lty=c("solid"),
+         edge.label.dist=10)
+   #par(bg = "white")
+    
+    ggraph(graph = gender_top_sentiment_igraph) +
+      geom_node_circle(size = 1, mapping = aes(r =0.03), fill="goldenrod") +
+      geom_edge_link(mapping = aes (label = weight),
+                     arrow = arrow(type = "closed", angle = 15), 
+                     end_cap = circle(8, 'mm'), , 
+                     start_cap = circle(8, 'mm'), 
+                     colour="grey",
+                     label_dodge  = unit(5, "mm"),
+                     angle_calc = "along") +
+      geom_node_text(mapping = aes(label = "2")) +
+      theme_graph()
+    
+    #https://mr.schochastics.net/material/netvizr/ hier weiter
     
     describeBy(genderSozioTable_mf$Sentiment, list(genderSozioTable_mf$From,genderSozioTable_mf$To))
           
