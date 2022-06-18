@@ -29,7 +29,7 @@ source("./main.R")
       #plot_WCount_g<-plot_WCount_g+ geom_vline(aes(xintercept=mean(WCount)), color="blue", linetype="dashed", size=0,5) #mean
       #plot_WCount_g<-plot_WCount_g+scale_color_brewer(palette="Dark2")
       #mean - plot_WCount_g<-plot_WCount_g+geom_histogram(fill="white", position="dodge")+geom_vline(data=mu, aes(xintercept=grp.mean, color=Gender),linetype="dashed")+theme(legend.position="top")
-      plot_WCoung_d
+      plot_WCount_g
       
       #density
       ggplot(lineTable_gender_mf, aes(x=WCount,fill=Gender, color=Gender)) + 

@@ -32,8 +32,8 @@ twa9a_pht1 <- genderSozioTable_mf %>% #post-hoc-test
 twa9a_pht1
 
 #table nicht mit transformierten Daten
-genderSozioTable %>% #crosstable
-  group_by(From, To) %>%   #ändern
+genderSozioTable_mf %>% #crosstable
+  group_by(From) %>%   #ändern
   get_summary_stats(Sentiment, type = "mean_sd")
 
 #--Gender: female ---------
