@@ -202,7 +202,7 @@ genderSozioTable$From <- replace(genderSozioTable$From, genderSozioTable$From !=
 genderSozioTable$From <- replace(genderSozioTable$From, genderSozioTable$From != "Main" & genderSozioTable$Gender_From == "male", "male")
 genderSozioTable$To <- replace(genderSozioTable$To, genderSozioTable$To != "Main" & genderSozioTable$Gender_To == "female", "female")
 genderSozioTable$To <- replace(genderSozioTable$To, genderSozioTable$To != "Main" & genderSozioTable$Gender_To == "male", "male")
-gender_top_sentiment_df <- aggregate(genderSozioTable$Sentiment, list(genderSozioTable$To, genderSozioTable$From), mean)
+gender_top_sentiment_df <- aggregate(genderSozioTable$Sentiment, list(genderSozioTable$From, genderSozioTable$To), mean)
 genderSozioTable %>% #crosstable
   group_by(From, To) %>% 
   get_summary_stats(Sentiment, type = "mean_sd")
@@ -228,7 +228,7 @@ genderSozioTable$To <- replace(genderSozioTable$To, genderSozioTable$To != "Main
 genderSozioTable %>% #crosstable
   group_by(From, To) %>% 
   get_summary_stats(Sentiment, type = "mean_sd")
-gender_top_sentiment_df <- aggregate(genderSozioTable$Sentiment, list(genderSozioTable$To, genderSozioTable$From), mean)
+gender_top_sentiment_df <- aggregate(genderSozioTable$Sentiment, list(genderSozioTable$From, genderSozioTable$To), mean)
 names(gender_top_sentiment_df)[3] <- "weight"
 gender_top_sentiment_df$weight <- round(gender_top_sentiment_df$weight,digit=3)
 gender_top_sentiment_igraph<-graph_from_data_frame(gender_top_sentiment_df)
@@ -248,7 +248,7 @@ genderSozioTable$To <- replace(genderSozioTable$To, genderSozioTable$To != "Main
 genderSozioTable %>% #crosstable
   group_by(From, To) %>% 
   get_summary_stats(Sentiment, type = "mean_sd")
-gender_top_sentiment_df <- aggregate(genderSozioTable$Sentiment, list(genderSozioTable$To, genderSozioTable$From), mean)
+gender_top_sentiment_df <- aggregate(genderSozioTable$Sentiment, list(genderSozioTable$From, genderSozioTable$To), mean)
 names(gender_top_sentiment_df)[3] <- "weight"
 gender_top_sentiment_df$weight <- round(gender_top_sentiment_df$weight,digit=3)
 gender_top_sentiment_igraph<-graph_from_data_frame(gender_top_sentiment_df)
