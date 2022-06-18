@@ -42,6 +42,7 @@ source("./main.R")
 dialogTable_gender_mf %>%
     group_by(Gender_From) %>%
     summarize(Frequency=n())%>% arrange(desc(Frequency))
+
 dialogTable_gender_mf_r %>%
   group_by(Role_From) %>%
   summarize(Frequency=n())%>% arrange(desc(Frequency))
