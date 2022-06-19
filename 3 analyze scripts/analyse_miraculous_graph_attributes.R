@@ -3,9 +3,14 @@ plot(serie_graph)
 # Graph based
 serie_edge_density_value<-edge_density(serie_graph) 
 serie_reciprocity_value<-reciprocity(serie_graph)
+serie_assortativity_value<-assortativity_degree(serie_graph, directed = TRUE)
 serie_diameter_value<-diameter(serie_graph, directed=T)
-get_diameter(serie_graph, directed = T)
-farthest_vertices(serie_graph, directed = T)
+## Mean
+mean_edge_density_value<-mean(episodeTable$Edge_Density)
+mean_reciprocity_value<-mean(episodeTable$Reciprocity)
+mean_assortativity_value <- mean(episodeTable$Assortativity)
+mean_diameter_value<-mean(episodeTable$Diameter)
+
 #Node based
 serie_degree_in  <-degree(serie_graph, mode="in")
 serie_degree_out <-degree(serie_graph, mode="out")
@@ -29,6 +34,6 @@ role_sentiment_table <- data.frame(Role = role_sentiment_from$Role_From, In = ro
 # Debug Diameter
 debug_dialogTable <- dialogTable[dialogTable$Episode_Title == "Befana", ]
 debug_graph <- graph_from_adjacency_matrix(table(debug_dialogTable$From, debug_dialogTable$To), weighted=TRUE)
-plot(debug_graph, layout=layout.auto, edge.curved=FALSE, vertex.size=5)
-diameter(debug_graph)
+plot(debug_graph, layout=layout.auto, edge.curved=FALSE, vertex.size=10)
+diameter(debug_graph, directed = T)
 get_diameter(debug_graph, directed = T)
