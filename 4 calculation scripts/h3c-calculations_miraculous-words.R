@@ -120,13 +120,7 @@ source("./main.R")
         summarize(Frequency=n())%>% arrange(desc(Frequency))
       desc_words_by_gender_both<-desc_words_by_gender_both[order(desc_words_by_gender_both$Gender_From),]
       view(desc_words_by_gender_both) 
-      
-      #geht nicht
-      ggplot(dialogTable_gender_mf, aes(x=WCount, fill=Gender_From, color=Gender_From)) + 
-        geom_histogram(binwidth=15, alpha=0.5, position="dodge")+
-        theme(legend.position="right")+
-        labs(title="Histogram plot of word count per gender_from over lines",x="Word count", y = "No. of lines")+
-        theme_classic()      
+    
       
       plot_WCount_gboth<-ggarrange(plot_WCount_gfrom, plot_WCount_gto + rremove("x.text"),common.legend=F, legend ="bottom",
                 labels = c("A", "B"),
