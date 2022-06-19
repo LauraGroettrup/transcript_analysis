@@ -8,6 +8,7 @@
 #install.packages("quanteda")
 #install.packages('data.table')
 #install.packages('vader')
+#install.packages('rlang')
 
 library(data.table)
 library(dplyr)

@@ -32,12 +32,15 @@ dialogTable_gender_role_mv<-dialogTable_gender_role_mv[dialogTable_gender_role_m
 #find out if subset worked - just main&villain groups
 dialogTable_gender_role_mv %>%
 group_by(Role_From, Role_To) %>%
-summarize(Frequency=n())%>% arrange(desc(Frequency))  
-#Subset Ende
+  dplyr::summarize(Frequency=n()) %>% 
+  arrange(desc(Frequency))  
 
 twa6 <- aov(Sentiment_transformed_z ~ Role_From * Role_To, data=dialogTable_gender_role_mv)
 Anova(twa6, type=3)
 summary(twa6)
+
+#effect size:
+eta_squared(car::Anova(twa6, type = 3))
 
 twa6_pht1 <- dialogTable_gender_role_mv %>% #post-hoc-test
   pairwise_t_test(
@@ -63,5 +66,13 @@ dialogTable_gender_role_mv %>% #crosstable twa1_pht1
 
 #plots
 #to do
+#Anova input
+twa6_bar_chart <- dialogTable_gender_role_mv %>% #crosstable twa1_pht1
+  group_by(Role_From,Role_To) %>%   #ändern
+  get_summary_stats(Sentiment, type = "mean_sd")
+ggplot(twa6_bar_chart, aes(x = Role_From, y = mean, fill = Role_To)) +
+  geom_bar(stat = "identity", position = "dodge") + 
+  geom_errorbar(aes(ymin=mean-sd, ymax=mean+sd), width=.2,position=position_dodge(.9))+
+  ylab('Sentiment')
 
 #-END ANOVA6--------------------------------------
