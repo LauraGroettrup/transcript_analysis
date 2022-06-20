@@ -47,7 +47,7 @@ source("./main.R")
           gt(
           ) %>% 
           gt_theme_espn() %>%
-          tab_header(title = md("**Lines**"), subtitle = md("Number of Lines by gender*role")) 
+          tab_header(title = md("**Speech Prompts**"), subtitle = md("Number of Lines by gender*role")) 
       #or
         chi2_intermediate %>% #table: Lines per gender & Role
           gt(rownames_to_stub = T, rowname_col = "name" 
@@ -55,7 +55,7 @@ source("./main.R")
           gt_theme_espn() %>%
           tab_row_group(label = "Gender", rows = c("female", "male")) %>%
           tab_spanner(label = "Role", columns = c("friends_other", "main", "villain")) %>%
-          tab_header(title = md("**Lines**"), subtitle = md("Number of lines by gender*role"))
+          tab_header(title = md("**Speech Prompts**"), subtitle = md("Number of lines by gender*role"))
       #or
           tbl_summary(desc_lines_by_gender_role)
 #---------------------------------------------------------------------------------------------
